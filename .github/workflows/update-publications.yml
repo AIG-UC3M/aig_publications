@@ -1,39 +1,66 @@
-name: publications
+
+name: Actualizar publicaciones ORCID
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - "researchers.json"
-      - "generate_bibtex.py"
-      - ".github/workflows/publications.yml"
-  schedule:
-    - cron: "0 6 * * 1"
 
 permissions:
   contents: write
 
 jobs:
-  update-bibtex:
+  actualizar-publicaciones:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Descargar el repositorio
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Instalar Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: "3.11"
 
-      - name: Install requests
-        run: python -m pip install requests
+      - name: Instalar dependencias
+        run: pip install requests
 
-      - name: Generate BibTeX
-        run: python generate_bibtex.py
+      - name: Obtener token de ORCID
+        env:
+          ORCID_CLIENT_ID: ${{ secrets.ORCID_CLIENT_ID }}
+          ORCID_CLIENT_SECRET: ${{ secrets.ORCID_CLIENT_SECRET }}
+        run: |
+          python - <<'PY'
+          import os
+          import requests
 
-      - name: Commit publications.bib
-        uses: stefanzweifel/git-auto-commit-action@v5
-        with:
-          commit_message: "Update publications.bib"
-          file_pattern: "publications.bib"
+          response = requests.post(
+              "https://orcid.org/oauth/token",
+              headers={"Accept": "application/json"},
+              data={
+                  "client_id": os.environ["ORCID_CLIENT_ID"],
+                  "client_secret": os.environ["ORCID_CLIENT_SECRET"],
+                  "grant_type": "client_credentials",
+                  "scope": "/read-public",
+              },
+              timeout=60,
+          )
+
+          response.raise_for_status()
+          token = response.json()["access_token"]
+
+          with open(os.environ["GITHUB_ENV"], "a") as file:
+              file.write(f"ORCID_ACCESS_TOKEN={token}\n")
+          PY
+
+      - name: Ejecutar programa
+        run: python orcid_publications.py
+
+      - name: Guardar archivos generados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add publications.json publications.html publications.bib
+
+          git diff --cached --quiet || git commit -m "Actualizar publicaciones ORCID"
+
+          git push
