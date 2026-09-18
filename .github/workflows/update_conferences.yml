@@ -1,0 +1,71 @@
+name: Actualizar comunicaciones de congresos ORCID
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  actualizar-congresos:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Instalar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Instalar dependencias
+        run: pip install requests
+
+      - name: Obtener token de ORCID
+        env:
+          ORCID_CLIENT_ID: ${{ secrets.ORCID_CLIENT_ID }}
+          ORCID_CLIENT_SECRET: ${{ secrets.ORCID_CLIENT_SECRET }}
+        run: |
+          python - <<'PY'
+          import os
+          import requests
+
+          response = requests.post(
+              "https://orcid.org/oauth/token",
+              headers={"Accept": "application/json"},
+              data={
+                  "client_id": os.environ["ORCID_CLIENT_ID"],
+                  "client_secret": os.environ["ORCID_CLIENT_SECRET"],
+                  "grant_type": "client_credentials",
+                  "scope": "/read-public",
+              },
+              timeout=60,
+          )
+
+          response.raise_for_status()
+          token = response.json()["access_token"]
+
+          with open(os.environ["GITHUB_ENV"], "a") as file:
+              file.write(f"ORCID_ACCESS_TOKEN={token}\n")
+          PY
+
+      - name: Ejecutar programa de congresos
+        run: python orcid_conferences.py
+
+      - name: Guardar archivos generados
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add \
+            conference_publications.json \
+            conference_publications_all_orcid.json \
+            conference_publications_excluded.json \
+            conference_publications.html \
+            conference_publications.bib
+
+          git diff --cached --quiet || \
+            git commit -m "Actualizar comunicaciones de congresos ORCID"
+
+          git push
