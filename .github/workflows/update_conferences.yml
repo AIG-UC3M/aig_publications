@@ -1,6 +1,8 @@
 name: Actualizar comunicaciones de congresos ORCID
 
 on:
+  schedule:
+    - cron: "0 7 * * 1"
   workflow_dispatch:
 
 permissions:
