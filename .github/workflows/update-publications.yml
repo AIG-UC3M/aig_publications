@@ -2,7 +2,7 @@ name: Actualizar publicaciones ORCID
 
 on:
   schedule:
-    - cron: "0 9 * * 1"
+    - cron: "15 15 * * 1"
       timezone: "Europe/Madrid"
   workflow_dispatch:
 
