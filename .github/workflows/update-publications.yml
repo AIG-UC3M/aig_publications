@@ -1,9 +1,9 @@
-
 name: Actualizar publicaciones ORCID
 
 on:
   schedule:
-    - cron: "0 7 * * 1"
+    - cron: "0 9 * * 1"
+      timezone: "Europe/Madrid"
   workflow_dispatch:
 
 permissions:
@@ -15,15 +15,17 @@ jobs:
 
     steps:
       - name: Descargar el repositorio
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Instalar Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.11"
 
       - name: Instalar dependencias
-        run: pip install requests
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install requests
 
       - name: Obtener token de ORCID
         env:
@@ -63,6 +65,9 @@ jobs:
 
           git add publications.json publications.html publications.bib
 
-          git diff --cached --quiet || git commit -m "Actualizar publicaciones ORCID"
-
-          git push
+          if ! git diff --cached --quiet; then
+            git commit -m "Actualizar publicaciones ORCID"
+            git push
+          else
+            echo "No hay cambios que guardar."
+          fi
