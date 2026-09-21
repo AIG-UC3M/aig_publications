@@ -2,6 +2,8 @@
 name: Actualizar publicaciones ORCID
 
 on:
+  schedule:
+    - cron: "0 4 * * 1"
   workflow_dispatch:
 
 permissions:
