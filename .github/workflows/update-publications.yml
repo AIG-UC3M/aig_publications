@@ -3,7 +3,7 @@ name: Actualizar publicaciones ORCID
 on:
   workflow_dispatch:
   schedule:
-    - cron: "16 01 * * 1"
+    - cron: "*/5 * * * *"
       timezone: "Europe/Madrid"
 
 permissions:
