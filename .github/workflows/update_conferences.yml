@@ -2,7 +2,7 @@ name: Actualizar comunicaciones de congresos ORCID
 
 on:
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "5 6 * * 1"
       timezone: "Europe/Madrid"
   workflow_dispatch:
 
