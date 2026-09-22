@@ -3,6 +3,7 @@ import re
 import requests
 from collections import defaultdict
 
+
 OPENALEX = "https://api.openalex.org/works"
 OUTPUT_BIB = "publications.bib"
 
