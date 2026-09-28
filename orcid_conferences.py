@@ -1,4 +1,3 @@
-
 import json
 import os
 import re
@@ -28,6 +27,32 @@ API_BASE = "https://pub.orcid.org/v3.0"
 ROWS_PER_PAGE = 100
 MAX_PAGES = 1000
 REQUEST_TIMEOUT = 30
+
+
+# ============================================================
+# MAPEO Y NORMALIZACIÓN DE AUTORES
+# ============================================================
+# Añade aquí todas las variantes de nombres que detectes en tu desplegable
+# y pon a la derecha el nombre único y oficial que deseas mostrar.
+
+AUTHOR_MAPPING = {
+    "Diaz-De-Maria, F.": "Díaz-de-María, F.",
+    "Díaz-De-maría, F.": "Díaz-de-María, F.",
+    "Diaz-de-Maria, Fernando": "Díaz-de-María, F.",
+    "Fernando, D.-D.-M.": "Díaz-de-María, F.",
+    "Gonzalez-Diaz, I.": "González-Díaz, I.",
+    "Hernández-García, A.": "Hernández-García, A.",
+    "Fernández-Martínez, F.": "Fernández-Martínez, F.",
+}
+
+
+def normalize_author_name(name):
+    name = clean_text(name)
+    if not name:
+        return ""
+    # Si el nombre está en nuestro diccionario, devuelve la versión unificada.
+    # Si no, devuelve el nombre original.
+    return AUTHOR_MAPPING.get(name, name)
 
 
 # ============================================================
@@ -414,7 +439,8 @@ def extract_authors(work):
             name = clean_text(credit_name)
 
         if name:
-            authors.append(name)
+            # NORMALIZAMOS EL NOMBRE DE AUTOR SEGÚN AUTHOR_MAPPING
+            authors.append(normalize_author_name(name))
 
     return authors
 
@@ -1029,7 +1055,7 @@ def main():
     print("RESULTADOS")
     print("=" * 70)
 
-    print(f"Trabajos ORCID:        {len(all_publications)}")
+    print(f"Trabajos ORCID:         {len(all_publications)}")
     print(f"Tras deduplicación:    {len(unique_publications)}")
     print(f"Congresos incluidos:   {len(conferences)}")
     print(f"Trabajos excluidos:    {len(excluded)}")
