@@ -1133,85 +1133,111 @@ def save_bibtex(publications, filename):
 
 
 # ============================================================
-# HTML (Sin f-strings para evitar colisión con CSS)
+# HTML
 # ============================================================
 
 def save_html(publications, filename):
     rows = []
 
     for pub in publications:
-        title = html.escape(pub.get("title") or "")
-        work_type = html.escape(pub.get("type") or "")
-        journal = html.escape(pub.get("journal") or "")
-        year = html.escape(pub.get("year") or "")
-        researcher = html.escape(pub.get("researcher") or "")
+        title = html.escape(
+            pub.get("title") or ""
+        )
 
-        doi = clean_text(pub.get("doi"))
-        url = clean_text(pub.get("url"))
+        work_type = html.escape(
+            pub.get("type") or ""
+        )
+
+        journal = html.escape(
+            pub.get("journal") or ""
+        )
+
+        year = html.escape(
+            pub.get("year") or ""
+        )
+
+        researcher = html.escape(
+            pub.get("researcher") or ""
+        )
+
+        doi = clean_text(
+            pub.get("doi")
+        )
+
+        url = clean_text(
+            pub.get("url")
+        )
 
         if doi:
-            doi_url = "https://doi.org/" + quote(doi)
+            doi_url = (
+                "https://doi.org/"
+                + quote(doi)
+            )
+
             doi_html = (
-                '<a href="' + html.escape(doi_url) + '" target="_blank" rel="noopener">'
-                + html.escape(doi) +
-                '</a>'
+                f'<a href="{html.escape(doi_url)}" '
+                'target="_blank" rel="noopener">'
+                f'{html.escape(doi)}'
+                "</a>"
             )
         else:
             doi_html = ""
 
         if url:
             url_html = (
-                '<a href="' + html.escape(url) + '" target="_blank" rel="noopener">Enlace</a>'
+                f'<a href="{html.escape(url)}" '
+                'target="_blank" rel="noopener">'
+                "Enlace"
+                "</a>"
             )
         else:
             url_html = ""
 
         rows.append(
             "<tr>"
-            "<td>" + researcher + "</td>"
-            "<td>" + work_type + "</td>"
-            "<td>" + title + "</td>"
-            "<td>" + journal + "</td>"
-            "<td>" + year + "</td>"
-            "<td>" + doi_html + "</td>"
-            "<td>" + url_html + "</td>"
+            f"<td>{researcher}</td>"
+            f"<td>{work_type}</td>"
+            f"<td>{title}</td>"
+            f"<td>{journal}</td>"
+            f"<td>{year}</td>"
+            f"<td>{doi_html}</td>"
+            f"<td>{url_html}</td>"
             "</tr>"
         )
 
-    rows_str = "".join(rows)
-
-    document_template = """<!DOCTYPE html>
+    document = f"""<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1">
 <title>Otros trabajos ORCID</title>
 
 <style>
-body {
+body {{
     font-family: Arial, sans-serif;
     margin: 30px;
-}
+}}
 
-table {
+table {{
     border-collapse: collapse;
     width: 100%;
-}
+}}
 
-th, td {
+th, td {{
     border: 1px solid #ccc;
     padding: 8px;
     vertical-align: top;
     text-align: left;
-}
+}}
 
-th {
+th {{
     background: #eee;
-}
+}}
 
-a {
+a {{
     overflow-wrap: anywhere;
-}
+}}
 </style>
 </head>
 
@@ -1233,7 +1259,7 @@ a {
 </thead>
 
 <tbody>
-<!--ROWS-->
+{"".join(rows)}
 </tbody>
 
 </table>
@@ -1241,8 +1267,6 @@ a {
 </body>
 </html>
 """
-
-    document = document_template.replace("<!--ROWS-->", rows_str)
 
     with open(
         filename,
