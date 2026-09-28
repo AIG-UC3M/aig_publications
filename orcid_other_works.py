@@ -1133,63 +1133,34 @@ def save_bibtex(publications, filename):
 
 
 # ============================================================
-# HTML (Con llaves escapadas {{ }} para evitar SyntaxError)
+# HTML (Sin f-strings para evitar colisión con CSS)
 # ============================================================
 
 def save_html(publications, filename):
     rows = []
 
     for pub in publications:
-        title = html.escape(
-            pub.get("title") or ""
-        )
+        title = html.escape(pub.get("title") or "")
+        work_type = html.escape(pub.get("type") or "")
+        journal = html.escape(pub.get("journal") or "")
+        year = html.escape(pub.get("year") or "")
+        researcher = html.escape(pub.get("researcher") or "")
 
-        work_type = html.escape(
-            pub.get("type") or ""
-        )
-
-        journal = html.escape(
-            pub.get("journal") or ""
-        )
-
-        year = html.escape(
-            pub.get("year") or ""
-        )
-
-        researcher = html.escape(
-            pub.get("researcher") or ""
-        )
-
-        doi = clean_text(
-            pub.get("doi")
-        )
-
-        url = clean_text(
-            pub.get("url")
-        )
+        doi = clean_text(pub.get("doi"))
+        url = clean_text(pub.get("url"))
 
         if doi:
-            doi_url = (
-                "https://doi.org/"
-                + quote(doi)
-            )
-
+            doi_url = "https://doi.org/" + quote(doi)
             doi_html = (
-                f'<a href="{html.escape(doi_url)}" '
-                'target="_blank" rel="noopener">'
-                f'{html.escape(doi)}'
-                "</a>"
-            )
+                '<a href="{}" target="_blank" rel="noopener">{}</a>'
+            ).format(html.escape(doi_url), html.escape(doi))
         else:
             doi_html = ""
 
         if url:
             url_html = (
-                f'<a href="{html.escape(url)}" '
-                'target="_blank" rel="noopener">'
-                "Enlace"
-                "</a>"
-            )
+                '<a href="{}" target="_blank" rel="noopener">Enlace</a>'
+            ).format(html.escape(url))
         else:
             url_html = ""
 
@@ -1207,39 +1178,38 @@ def save_html(publications, filename):
 
     rows_str = "".join(rows)
 
-    document = f"""<!DOCTYPE html>
+    document_template = """<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport"
-      content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Otros trabajos ORCID</title>
 
 <style>
-body {{
+body {
     font-family: Arial, sans-serif;
     margin: 30px;
-}}
+}
 
-table {{
+table {
     border-collapse: collapse;
     width: 100%;
-}}
+}
 
-th, td {{
+th, td {
     border: 1px solid #ccc;
     padding: 8px;
     vertical-align: top;
     text-align: left;
-}}
+}
 
-th {{
+th {
     background: #eee;
-}}
+}
 
-a {{
+a {
     overflow-wrap: anywhere;
-}}
+}
 </style>
 </head>
 
@@ -1261,7 +1231,7 @@ a {{
 </thead>
 
 <tbody>
-{rows_str}
+{}
 </tbody>
 
 </table>
@@ -1269,6 +1239,8 @@ a {{
 </body>
 </html>
 """
+
+    document = document_template.format(rows_str)
 
     with open(
         filename,
