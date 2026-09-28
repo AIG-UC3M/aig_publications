@@ -1133,7 +1133,7 @@ def save_bibtex(publications, filename):
 
 
 # ============================================================
-# HTML
+# HTML (Con llaves escapadas {{ }} para evitar SyntaxError)
 # ============================================================
 
 def save_html(publications, filename):
@@ -1205,6 +1205,8 @@ def save_html(publications, filename):
             "</tr>"
         )
 
+    rows_str = "".join(rows)
+
     document = f"""<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -1259,7 +1261,7 @@ a {{
 </thead>
 
 <tbody>
-{"".join(rows)}
+{rows_str}
 </tbody>
 
 </table>
