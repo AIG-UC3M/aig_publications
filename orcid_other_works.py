@@ -33,8 +33,6 @@ REQUEST_TIMEOUT = 30
 # ============================================================
 # MAPEO Y NORMALIZACIÓN DE AUTORES
 # ============================================================
-# Añade aquí las variantes de nombres de autor que quieras unificar
-# para que WordPress no cree opciones duplicadas en el desplegable.
 
 AUTHOR_MAPPING = {
     "Diaz-De-Maria, F.": "Díaz-de-María, F.",
@@ -576,7 +574,6 @@ def extract_authors(work):
             name = clean_text(credit_name)
 
         if name:
-            # NORMALIZAMOS CADA NOMBRE DE AUTOR
             authors.append(normalize_author_name(name))
 
     return authors
@@ -863,13 +860,6 @@ def looks_like_conference(pub):
 
 
 def is_other_work(pub):
-    """
-    Devuelve True únicamente para trabajos que
-    no están cubiertos por nuestros dos extractores
-    actuales:
-      - artículos
-      - congresos
-    """
     return (
         not looks_like_article(pub)
         and not looks_like_conference(pub)
@@ -1526,7 +1516,6 @@ def main():
         f"{len(all_publications)}"
     )
 
-    # Guardamos absolutamente todo lo recuperado antes de filtrar
     save_json(
         all_publications,
         OUTPUT_ALL,
@@ -1549,7 +1538,6 @@ def main():
         if is_other_work(pub):
             other_works.append(pub)
 
-    # Orden cronológico descendente
     other_works.sort(
         key=lambda pub: (
             -int(pub["year"])
@@ -1563,10 +1551,6 @@ def main():
         other_works,
         OUTPUT_JSON,
     )
-
-    # ========================================================
-    # AGRUPAR POR TIPO (NORMALIZANDO LA CLAVE)
-    # ========================================================
 
     by_type = {}
 
@@ -1583,10 +1567,6 @@ def main():
         OUTPUT_BY_TYPE,
     )
 
-    # ========================================================
-    # BIBTEX Y HTML
-    # ========================================================
-
     save_bibtex(
         other_works,
         OUTPUT_BIB,
@@ -1601,10 +1581,6 @@ def main():
         time.time()
         - start_time
     )
-
-    # ========================================================
-    # RESUMEN
-    # ========================================================
 
     type_counter = Counter(
         normalize_work_type_key(pub.get("type"))
