@@ -31,6 +31,40 @@ REQUEST_TIMEOUT = 30
 
 
 # ============================================================
+# MAPEO Y NORMALIZACIÓN DE AUTORES
+# ============================================================
+# Añade aquí las variantes de nombres de autor que quieras unificar
+# para que WordPress no cree opciones duplicadas en el desplegable.
+
+AUTHOR_MAPPING = {
+    "Diaz-De-Maria, F.": "Díaz-de-María, F.",
+    "Díaz-De-maría, F.": "Díaz-de-María, F.",
+    "Diaz-de-Maria, Fernando": "Díaz-de-María, F.",
+    "Fernando, D.-D.-M.": "Díaz-de-María, F.",
+    "Gonzalez-Diaz, I.": "González-Díaz, I.",
+    "Hernández-García, A.": "Hernández-García, A.",
+    "Fernández-Martínez, F.": "Fernández-Martínez, F.",
+    "Pelaez-Moreno, C.": "Peláez-Moreno, C.",
+    "Gallardo-Antolin, A.": "Gallardo-Antolín, A.",
+    "Ascensión Gallardo-Antolín": "Gallardo-Antolín, A.",
+    "Ascension Gallardo-Antolin": "Gallardo-Antolín, A.",
+}
+
+
+def normalize_author_name(name):
+    name = clean_text(name)
+    if not name:
+        return ""
+    return AUTHOR_MAPPING.get(name, name)
+
+
+def normalize_work_type_key(work_type):
+    if not work_type:
+        return "unknown"
+    return clean_text(work_type).lower().replace("_", "-").replace(" ", "-")
+
+
+# ============================================================
 # TOKEN ORCID
 # ============================================================
 
@@ -82,7 +116,9 @@ def clean_text(value):
     if value is None:
         return ""
 
-    return str(value).strip()
+    text = str(value).strip()
+    text = re.sub(r"\s+", " ", text)
+    return text
 
 
 def normalize_title(title):
@@ -150,9 +186,9 @@ def get_date(date_obj):
     if not year:
         return ""
 
-    year = str(year)
-    month = str(month).zfill(2) if month else "01"
-    day = str(day).zfill(2) if day else "01"
+    year = str(year).strip()
+    month = str(month).strip().zfill(2) if month else "01"
+    day = str(day).strip().zfill(2) if day else "01"
 
     return f"{year}-{month}-{day}"
 
@@ -336,32 +372,30 @@ def extract_external_ids(work):
             continue
 
         if id_type == "doi":
-            doi = value.lower()
-
+            doi = value.lower().strip()
             doi = re.sub(
                 r"^https?://doi\.org/",
                 "",
                 doi,
             )
-
-            doi = doi.replace(
-                "doi:",
-                "",
-            ).strip()
-
+            doi = doi.replace("doi:", "").strip()
             result["doi"] = doi
 
         elif id_type in ("pmid", "pubmed"):
-            result["pmid"] = value
+            pmid = re.sub(r"(?i)^pmid:\s*", "", value.strip()).lower()
+            result["pmid"] = pmid
 
         elif id_type == "pmcid":
-            result["pmcid"] = value
+            pmcid = re.sub(r"(?i)^pmcid:\s*", "", value.strip()).lower()
+            result["pmcid"] = pmcid
 
         elif id_type == "isbn":
-            result["isbn"] = value
+            isbn = re.sub(r"[^\dX]", "", value.upper())
+            result["isbn"] = isbn or value.strip()
 
         elif id_type in ("issn", "eissn"):
-            result["issn"] = value
+            issn = value.upper().strip()
+            result["issn"] = issn
 
         else:
             result["other_ids"].append(
@@ -542,7 +576,8 @@ def extract_authors(work):
             name = clean_text(credit_name)
 
         if name:
-            authors.append(name)
+            # NORMALIZAMOS CADA NOMBRE DE AUTOR
+            authors.append(normalize_author_name(name))
 
     return authors
 
@@ -660,7 +695,7 @@ def work_to_publication(work, summary=None):
 
     return {
         "put_code": (
-            str(put_code)
+            str(put_code).strip()
             if put_code is not None
             else ""
         ),
@@ -848,7 +883,7 @@ def is_other_work(pub):
 def publication_key(pub):
     doi = clean_text(
         pub.get("doi")
-    ).lower()
+    ).lower().strip()
 
     if doi:
         return (
@@ -858,7 +893,7 @@ def publication_key(pub):
 
     pmid = clean_text(
         pub.get("pmid")
-    ).lower()
+    ).lower().strip()
 
     if pmid:
         return (
@@ -868,7 +903,7 @@ def publication_key(pub):
 
     pmcid = clean_text(
         pub.get("pmcid")
-    ).lower()
+    ).lower().strip()
 
     if pmcid:
         return (
@@ -884,9 +919,9 @@ def publication_key(pub):
         pub.get("year")
     )
 
-    work_type = clean_text(
+    work_type = normalize_work_type_key(
         pub.get("type")
-    ).lower()
+    )
 
     return (
         "fallback",
@@ -968,8 +1003,10 @@ def bibtex_entry_type(work_type):
         "other": "misc",
     }
 
+    normalized_type = normalize_work_type_key(work_type)
+
     return mapping.get(
-        work_type.lower(),
+        normalized_type,
         "misc",
     )
 
@@ -1023,7 +1060,7 @@ def publication_to_bibtex(pub, index):
     if pub.get("title"):
         lines.append(
             "  title = "
-            f"{{{bibtex_escape(pub['title'])}}},"
+            f"{{{bibtex_escape(pub['title'])}},"
         )
 
     if author_text:
@@ -1040,37 +1077,37 @@ def publication_to_bibtex(pub, index):
 
         lines.append(
             f"  {field_name} = "
-            f"{{{bibtex_escape(pub['journal'])}}},"
+            f"{{{bibtex_escape(pub['journal'])}},"
         )
 
     if pub.get("year"):
         lines.append(
             "  year = "
-            f"{{{bibtex_escape(pub['year'])}}},"
+            f"{{{bibtex_escape(pub['year'])}},"
         )
 
     if pub.get("doi"):
         lines.append(
             "  doi = "
-            f"{{{bibtex_escape(pub['doi'])}}},"
+            f"{{{bibtex_escape(pub['doi'])}},"
         )
 
     if pub.get("isbn"):
         lines.append(
             "  isbn = "
-            f"{{{bibtex_escape(pub['isbn'])}}},"
+            f"{{{bibtex_escape(pub['isbn'])}},"
         )
 
     if pub.get("issn"):
         lines.append(
             "  issn = "
-            f"{{{bibtex_escape(pub['issn'])}}},"
+            f"{{{bibtex_escape(pub['issn'])}},"
         )
 
     if pub.get("url"):
         lines.append(
             "  url = "
-            f"{{{bibtex_escape(pub['url'])}}},"
+            f"{{{bibtex_escape(pub['url'])}},"
         )
 
     lines.append("}")
@@ -1489,8 +1526,7 @@ def main():
         f"{len(all_publications)}"
     )
 
-    # Guardamos absolutamente todo lo recuperado
-    # antes de aplicar ningún filtro.
+    # Guardamos absolutamente todo lo recuperado antes de filtrar
     save_json(
         all_publications,
         OUTPUT_ALL,
@@ -1529,16 +1565,13 @@ def main():
     )
 
     # ========================================================
-    # AGRUPAR POR TIPO
+    # AGRUPAR POR TIPO (NORMALIZANDO LA CLAVE)
     # ========================================================
 
     by_type = {}
 
     for pub in other_works:
-        work_type = (
-            clean_text(pub.get("type"))
-            or "unknown"
-        )
+        work_type = normalize_work_type_key(pub.get("type"))
 
         by_type.setdefault(
             work_type,
@@ -1574,76 +1607,21 @@ def main():
     # ========================================================
 
     type_counter = Counter(
-        clean_text(pub.get("type"))
-        or "unknown"
+        normalize_work_type_key(pub.get("type"))
         for pub in other_works
     )
 
     print()
     print("=" * 70)
-    print("RESULTADOS")
+    print("RESULTADOS FINALIZADOS")
     print("=" * 70)
-
-    print(
-        f"Trabajos ORCID:          "
-        f"{len(all_publications)}"
-    )
-
-    print(
-        f"Tras deduplicación:      "
-        f"{len(unique_publications)}"
-    )
-
-    print(
-        f"Otros trabajos incluidos:"
-        f" {len(other_works)}"
-    )
-
-    print(
-        f"Tiempo total:            "
-        f"{elapsed:.1f} segundos"
-    )
-
-    print()
-    print("TIPOS ENCONTRADOS")
-    print("-" * 70)
-
-    for work_type, count in sorted(
-        type_counter.items(),
-        key=lambda item: (
-            -item[1],
-            item[0].lower(),
-        ),
-    ):
-        print(
-            f"{work_type}: {count}"
-        )
-
-    print()
-    print("Archivos generados:")
-    print(
-        f"  - {OUTPUT_ALL}"
-    )
-    print(
-        f"  - {OUTPUT_JSON}"
-    )
-    print(
-        f"  - {OUTPUT_BY_TYPE}"
-    )
-    print(
-        f"  - {OUTPUT_HTML}"
-    )
-    print(
-        f"  - {OUTPUT_BIB}"
-    )
-
-    print()
-    print(
-        "NOTA: "
-        "este script excluye los trabajos "
-        "que ya son clasificados por nuestros "
-        "extractores de artículos y congresos."
-    )
+    print(f"Trabajos ORCID totales:  {len(all_publications)}")
+    print(f"Tras deduplicación:      {len(unique_publications)}")
+    print(f"Otros trabajos finales:  {len(other_works)}")
+    print(f"Tiempo de ejecución:     {elapsed:.1f} segundos")
+    print("\nDesglose por tipos de trabajo:")
+    for w_type, count in type_counter.items():
+        print(f"  - {w_type}: {count}")
 
 
 # ============================================================
