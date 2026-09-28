@@ -1152,27 +1152,29 @@ def save_html(publications, filename):
         if doi:
             doi_url = "https://doi.org/" + quote(doi)
             doi_html = (
-                '<a href="{}" target="_blank" rel="noopener">{}</a>'
-            ).format(html.escape(doi_url), html.escape(doi))
+                '<a href="' + html.escape(doi_url) + '" target="_blank" rel="noopener">'
+                + html.escape(doi) +
+                '</a>'
+            )
         else:
             doi_html = ""
 
         if url:
             url_html = (
-                '<a href="{}" target="_blank" rel="noopener">Enlace</a>'
-            ).format(html.escape(url))
+                '<a href="' + html.escape(url) + '" target="_blank" rel="noopener">Enlace</a>'
+            )
         else:
             url_html = ""
 
         rows.append(
             "<tr>"
-            f"<td>{researcher}</td>"
-            f"<td>{work_type}</td>"
-            f"<td>{title}</td>"
-            f"<td>{journal}</td>"
-            f"<td>{year}</td>"
-            f"<td>{doi_html}</td>"
-            f"<td>{url_html}</td>"
+            "<td>" + researcher + "</td>"
+            "<td>" + work_type + "</td>"
+            "<td>" + title + "</td>"
+            "<td>" + journal + "</td>"
+            "<td>" + year + "</td>"
+            "<td>" + doi_html + "</td>"
+            "<td>" + url_html + "</td>"
             "</tr>"
         )
 
@@ -1231,7 +1233,7 @@ a {
 </thead>
 
 <tbody>
-{}
+<!--ROWS-->
 </tbody>
 
 </table>
@@ -1240,7 +1242,7 @@ a {
 </html>
 """
 
-    document = document_template.format(rows_str)
+    document = document_template.replace("<!--ROWS-->", rows_str)
 
     with open(
         filename,
