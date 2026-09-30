@@ -6,7 +6,8 @@ def find_input_bib_file():
     """Busca el archivo .bib en el directorio actual."""
     candidates = [
         "publications.bib", 
-        "conference_publications.bib", 
+        "conference_publications.bib",
+        "other_works.bib"
         "input.bib"
     ]
     for candidate in candidates:
