@@ -34,7 +34,7 @@ def normalize_specific_author(author):
         
     # 2. Ascensión Gallardo Antolín
     if re.search(r'Gallardo\s*[-_]?\s*Antol[ií]n', clean_a, re.IGNORECASE):
-        return "Gallardo Antolín, A."
+        return "Gallardo-Antolín, A."
         
     # 3. Carmen Peláez Moreno
     if re.search(r'Pel[aá]ez\s*[-_]?\s*Moreno', clean_a, re.IGNORECASE):
