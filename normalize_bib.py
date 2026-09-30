@@ -43,7 +43,7 @@ def normalize_specific_author(author):
     # 4. Iván González Díaz
     # Captura variaciones con un solo apellido o ambos ("Ivan Gonzalez", "González Díaz, Iván", etc.)
     if re.search(r'Gonz[aá]lez(\s*D[ií]az)?', clean_a, re.IGNORECASE) and re.search(r'(Iv[aá]n|I\.)', clean_a, re.IGNORECASE):
-        return "González-Díaz, I."
+        return "González-Díaz,I."
         
     # 5. Miguel Ángel Fernández Torres
     if re.search(r'Fern[aá]ndez\s*Torres', clean_a, re.IGNORECASE):
