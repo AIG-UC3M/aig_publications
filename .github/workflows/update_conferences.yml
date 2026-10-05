@@ -9,13 +9,19 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: actualizar-main
+  cancel-in-progress: false
+
 jobs:
   actualizar-congresos:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Descargar el repositorio
-        uses: actions/checkout@v7
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
 
       - name: Instalar Python
         uses: actions/setup-python@v7
@@ -72,7 +78,10 @@ jobs:
 
           if ! git diff --cached --quiet; then
             git commit -m "Actualizar comunicaciones de congresos ORCID"
-            git push
+
+            git pull --rebase origin main
+
+            git push origin main
           else
             echo "No hay cambios que guardar."
           fi
