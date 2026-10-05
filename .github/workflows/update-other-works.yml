@@ -9,6 +9,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: actualizar-main
+  cancel-in-progress: false
+
 jobs:
   actualizar-otros-trabajos:
     runs-on: ubuntu-latest
@@ -16,6 +20,8 @@ jobs:
     steps:
       - name: Descargar el repositorio
         uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
 
       - name: Instalar Python
         uses: actions/setup-python@v7
@@ -72,7 +78,10 @@ jobs:
 
           if ! git diff --cached --quiet; then
             git commit -m "Actualizar otros trabajos ORCID"
-            git push
+
+            git pull --rebase origin main
+
+            git push origin main
           else
             echo "No hay cambios que guardar."
           fi
