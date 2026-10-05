@@ -9,8 +9,8 @@ on:
 permissions:
   contents: write
 
-# Evita que este workflow se ejecute a la vez que los otros
-# workflows que también modifican main.
+# Evita que este workflow se ejecute al mismo tiempo
+# que los otros workflows que también modifican main.
 concurrency:
   group: actualizar-main
   cancel-in-progress: false
@@ -76,8 +76,8 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m "Actualizar publicaciones ORCID"
 
-            # Incorporar cualquier cambio reciente de main
-            # antes de hacer push.
+            # Traer cualquier cambio que haya llegado a main
+            # antes de intentar hacer push.
             git pull --rebase origin main
 
             git push origin main
