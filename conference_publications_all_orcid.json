@@ -117,6 +117,31 @@
     "orcid": "0000-0002-6437-914X"
   },
   {
+    "put_code": "229351861",
+    "title": "Learning RL policies for anticipative assistive robots by simulating human-robot interactions in real scenarios using egocentric videos",
+    "type": "conference-paper",
+    "journal": "",
+    "date": "2023-12-01",
+    "year": "2023",
+    "doi": "10.1109/robio58561.2023.10354837",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.1109/ROBIO58561.2023.10354837",
+    "authors": [
+      "Silvia Abal-Fernández",
+      "César Caramazana-Zarzosa",
+      "María Beatriz Loureiro-Casalderrey",
+      "Santiago Martínez",
+      "Carlos Balaguer",
+      "Fernando Díaz-de-María",
+      "Iván González-Díaz"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "conference-paper",
+    "researcher": "Fernando Díaz-de-María",
+    "orcid": "0000-0002-6437-914X"
+  },
+  {
     "put_code": "138623844",
     "title": "Pain Level and Pain-Related Behaviour Classification Using GRU-Based Sparsely-Connected RNNs",
     "type": "journal-article",
@@ -7481,6 +7506,31 @@
     ],
     "source": "{'value': 'Crossref'}",
     "raw_type": "journal-article",
+    "researcher": "IVAN GONZALEZ",
+    "orcid": "0000-0003-4644-8479"
+  },
+  {
+    "put_code": "229381341",
+    "title": "Learning RL policies for anticipative assistive robots by simulating human-robot interactions in real scenarios using egocentric videos",
+    "type": "conference-paper",
+    "journal": "",
+    "date": "2023-12-01",
+    "year": "2023",
+    "doi": "10.1109/robio58561.2023.10354837",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.1109/ROBIO58561.2023.10354837",
+    "authors": [
+      "Silvia Abal-Fernández",
+      "César Caramazana-Zarzosa",
+      "María Beatriz Loureiro-Casalderrey",
+      "Santiago Martínez",
+      "Carlos Balaguer",
+      "Fernando Díaz-de-María",
+      "Iván González-Díaz"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "conference-paper",
     "researcher": "IVAN GONZALEZ",
     "orcid": "0000-0003-4644-8479"
   },
