@@ -4604,6 +4604,39 @@
   ],
   "conference": [
     {
+      "title": "Learning RL policies for anticipative assistive robots by simulating human-robot interactions in real scenarios using egocentric videos",
+      "translated_title": "",
+      "authors": [
+        "Silvia Abal-Fernández",
+        "César Caramazana-Zarzosa",
+        "María Beatriz Loureiro-Casalderrey",
+        "Santiago Martínez",
+        "Carlos Balaguer",
+        "Fernando Díaz-de-María",
+        "Iván González-Díaz"
+      ],
+      "researcher": "Fernando Díaz-de-María",
+      "orcid": "0000-0002-6437-914X",
+      "year": 2023,
+      "month": 12,
+      "day": null,
+      "type": "conference",
+      "journal": "",
+      "url": "https://doi.org/10.1109/ROBIO58561.2023.10354837",
+      "description": "",
+      "language": "",
+      "country": "",
+      "citation": "",
+      "put_code": 229351861,
+      "orcid_work_url": "https://orcid.org/0000-0002-6437-914X",
+      "doi": "10.1109/ROBIO58561.2023.10354837",
+      "pmid": "",
+      "pmcid": "",
+      "isbn": "",
+      "issn": "",
+      "others": []
+    },
+    {
       "title": "Automatic Learning of Image Representations Combining Content and Metadata",
       "translated_title": "",
       "authors": [
