@@ -42,7 +42,7 @@ El sistema permite mantener actualizada automáticamente la producción científ
 
 ## 🔄 Diagrama Explicativo del Flujo del Sistema
 
-El siguiente diagrama detalla la arquitectura completa del repositorio, ilustrando cómo interactúan los datos de entrada, los workflows de CI/CD, las API externas, los scripts de procesamiento y la publicación final:
+El siguiente diagrama detalla la arquitectura completa del repositorio, ilustrando cómo interactúan los datos de entrada, los workflows de CI/CD (Integración Continua y Despliegue Continuo), las API externas, los scripts de procesamiento y la publicación final:
 
 ```mermaid
 flowchart TD
