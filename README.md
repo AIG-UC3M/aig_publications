@@ -47,7 +47,7 @@ El siguiente diagrama detalla la arquitectura completa del repositorio, ilustran
 ```
 flowchart TD
     subgraph Entrada [Entrada de Datos]
-        A[researchers1.json] --&gt;|ORCID IDs / Nombres| B
+        A[researchers1.json] --> |ORCID IDs / Nombres| B
     end
 
     subgraph Workflows [GitHub Actions CI/CD]
