@@ -51,38 +51,38 @@ flowchart TD
     end
 
     subgraph Workflows [GitHub Actions CI/CD]
-        Cron[Cron Semanal: Lunes 06:05] --&gt;|Trigger| GHA_Update
-        PushBib[Push en **.bib] --&gt;|Trigger| GHA_Norm
+        Cron[Cron Semanal: Lunes 06:05] --> |Trigger| GHA_Update
+        PushBib[Push en **.bib] --> ;|Trigger| GHA_Norm
         GHA_Update[Workflows update-*_auto.yml]
         GHA_Norm[Workflow normalize_bib_auto.yml]
     end
 
     subgraph Auth [Autenticación &amp; API Client]
-        GHA_Update --&gt;|OAuth POST| OAuth[API ORCID /oauth/token]
-        OAuth --&gt;|ORCID_ACCESS_TOKEN| B[Scripts Python: orcid_*.py / generate_bibtex.py]
-        B --&gt;|Peticiones REST v3.0| ORCID_API[API Pública ORCID &amp; OpenAlex]
+        GHA_Update -->;|OAuth POST| OAuth[API ORCID /oauth/token]
+        OAuth -->;|ORCID_ACCESS_TOKEN| B[Scripts Python: orcid_*.py / generate_bibtex.py]
+        B -->;|Peticiones REST v3.0| ORCID_API[API Pública ORCID &amp; OpenAlex]
     end
 
     subgraph Process [Procesamiento y Normalización]
-        ORCID_API --&gt;|JSON crudo| C[Clasificación por Tipo de Obra]
-        C --&gt; D[Normalización de Autores]
-        D --&gt;|1. Mapeo por ORCID ID| D1[Nombre Canónico]
-        D --&gt;|2. Fallback Firma/Regex| D2[Iniciales y Apellidos]
-        D --&gt; E[Deduplicación Jerárquica]
-        E --&gt;|DOI &gt; PMID &gt; PMCID &gt; Título+Año| F[Escapado de Caracteres BibTeX]
+        ORCID_API -->;|JSON crudo| C[Clasificación por Tipo de Obra]
+        C -->; D[Normalización de Autores]
+        D -->;|1. Mapeo por ORCID ID| D1[Nombre Canónico]
+        D -->;|2. Fallback Firma/Regex| D2[Iniciales y Apellidos]
+        D -->; E[Deduplicación Jerárquica]
+        E -->;|DOI >; PMID >; PMCID >; Título+Año| F[Escapado de Caracteres BibTeX]
     end
 
     subgraph NormStep [Normalización Post-Process]
-        GHA_Norm --&gt; N1[normalize_bib.py]
-        F --&gt;|Genera .bib| N1
-        N1 --&gt;|Limpia y estandariza author = {...}| N2[Archivos BibTeX Limpios]
+        GHA_Norm -->; N1[normalize_bib.py]
+        F -->;|Genera .bib| N1
+        N1 -->;|Limpia y estandariza author = {...}| N2[Archivos BibTeX Limpios]
     end
 
     subgraph Salida [Generación de Artefactos]
-        F --&gt; OutJSON[Archivos .json]
-        F --&gt; OutHTML[Archivos .html]
-        N2 --&gt; OutBIB[Archivos .bib Finales]
-        OutJSON &amp; OutHTML &amp; OutBIB --&gt;|Git Commit &amp; Push| Repo[Repositorio GitHub main]
+        F -->; OutJSON[Archivos .json]
+        F -->; OutHTML[Archivos .html]
+        N2 -->; OutBIB[Archivos .bib Finales]
+        OutJSON &amp; OutHTML &amp; OutBIB -->;|Git Commit &amp; Push| Repo[Repositorio GitHub main]
     end
 
 ```
