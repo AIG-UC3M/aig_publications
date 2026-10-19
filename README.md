@@ -1,109 +1,110 @@
 # Sistema de Gestión Bibliográfica Automatizada desde ORCID y OpenAlex
 
-Este repositorio contiene un sistema automatizado desarrollado en Python y GitHub Actions para la extracción, normalización, clasificación, deduplicación y generación de bibliografías académicas en formatos **BibTeX (`.bib`)**, **JSON** y **HTML** a partir de los perfiles de **ORCID** y la API de **OpenAlex**.
+Este repositorio contiene un sistema automatizado desarrollado en Python y GitHub Actions para la extracción, normalización, clasificación, deduplicación y generación de bibliografías académicas en formatos **BibTeX (`.bib`)**, **JSON** y **HTML** a partir de los perfiles de **ORCID** (fuente principal) y la API de **OpenAlex** (herramienta auxiliar).
 
 ---
 
 ## 📋 Índice
 
-- [Descripción General](#-descripción-general)
-- [Diagrama Explicativo del Flujo del Sistema](#-diagrama-explicativo-del-flujo-del-sistema)
-- [Detalle de la Normalización y Deduplicación de Autores](#-detalle-de-la-normalización-y-deduplicación-de-autores)
-- [Explicación Detallada del Flujo de GitHub Actions](#-explicación-detallada-del-flujo-de-github-actions)
-- [Estructura del Repositorio](#-estructura-del-repositorio)
+- [Descripción General](#descripción-general)
+- [Diagrama Explicativo del Flujo del Sistema](#diagrama-explicativo-del-flujo-del-sistema)
+- [Estructura del Repositorio](#estructura-del-repositorio)
   - [Scripts en Python (`.py`)](#scripts-en-python-py)
   - [Workflows de GitHub Actions (`.yml`)](#workflows-de-github-actions-yml)
-- [Características Principales](#-características-principales)
-- [Archivos de Entrada y Salida](#-archivos-de-entrada-y-salida)
+- [Características Principales](#características-principales)
+- [Detalle de la Normalización y Deduplicación de Autores](#detalle-de-la-normalización-y-deduplicación-de-autores)
+- [Explicación Detallada del Flujo de GitHub Actions](#explicación-detallada-del-flujo-de-github-actions)
+- [Archivos de Entrada y Salida](#archivos-de-entrada-y-salida)
   - [Entrada](#entrada)
   - [Salida Generada](#salida-generada)
-- [Configuración y Requisitos](#-configuración-y-requisitos)
+- [Configuración y Requisitos](#configuración-y-requisitos)
   - [Requisitos de Python](#requisitos-de-python)
   - [Secretos de GitHub Actions](#secretos-de-github-actions)
-- [Guía de Uso](#-guía-de-uso)
+- [Guía de Uso](#guía-de-uso)
   - [Ejecución en Local](#ejecución-en-local)
   - [Ejecución Automatizada en GitHub Actions](#ejecución-automatizada-en-github-actions)
-- [Normalización y Deduplicación de Autores](#-normalización-y-deduplicación-de-autores)
 
 ---
 
-## 🔍 Descripción General
+## Descripción General
 
-El sistema permite mantener actualizada automáticamente la producción científica de un grupo de investigadores. A partir de un archivo JSON con los datos y ORCID ID de cada investigador, el sistema realiza solicitudes a las API públicas de ORCID (v3.0) y OpenAlex para:
+El sistema permite mantener actualizada automáticamente la producción científica de un grupo de investigadores. A partir de un archivo JSON (`researchers1.json`) que contiene los nombres y **ORCID IDs** de cada investigador:
 
-1. **Recuperar** todas las obras registradas.
-2. **Clasificar** los trabajos en publicaciones en revistas, comunicaciones a congresos y otros trabajos académicos (libros, capítulos, informes, preprints, patentes, etc.).
-3. **Normalizar** los nombres de los autores y escapar caracteres especiales para garantizar la sintaxis correcta en BibTeX.
-4. **Deduplicar** registros mediante DOI, PMID, PMCID o coincidencia de título, año y revista.
-5. **Generar** automáticamente archivos `.bib`, `.json` y `.html` listos para su difusión o inclusión en la web institucional.
+1. **Flujo Principal (ORCID)**: El núcleo del sistema consulta semanalmente la API pública v3.0 de **ORCID** para extraer, clasificar (artículos de revista, congresos y otros trabajos), normalizar autores y deduplicar registros.
+2. **Herramienta Auxiliar (OpenAlex)**: Se incluye el script `generate_bibtex.py` como utilidad independiente para realizar consultas secundarias o complementarias en la API de **OpenAlex**.
+3. **Generación Multiformato**: Produce automáticamente archivos `.bib`, `.json` y `.html` listos para su difusión o inclusión en la web institucional.
 
 ---
 
+## Diagrama Explicativo del Flujo del Sistema
 
-## 🔄 Diagrama Explicativo del Flujo del Sistema
+El siguiente diagrama ilustra la arquitectura del sistema, destacando el **flujo principal automatizado con ORCID** y el **flujo auxiliar con OpenAlex**:
 
-El siguiente diagrama detalla la arquitectura completa del repositorio, ilustrando cómo interactúan los datos de entrada, los workflows de CI/CD (Integración Continua y Despliegue Continuo), las API externas, los scripts de procesamiento y la publicación final:
-
-```
+```mermaid
 flowchart TD
-    subgraph Entrada [Entrada de Datos]
-        A[researchers1.json] --> |ORCID IDs / Nombres| B
+    subgraph Entrada["Entrada de datos"]
+        A["researchers1.json"] -->|"ORCID IDs / nombres"| B
+        A -->|"ORCID IDs"| OA_Script["generate_bibtex.py"]
     end
 
-    subgraph Workflows [GitHub Actions CI/CD]
-        Cron[Cron Semanal: Lunes 06:05] --> |Trigger| GHA_Update
-        PushBib[Push en **.bib] --> |Trigger| GHA_Norm
-        GHA_Update[Workflows update-*.yml]
-        GHA_Norm[Workflow normalize_bib.yml]
+    subgraph Workflows["GitHub Actions CI/CD - Semanal"]
+        Cron["Cron semanal: lunes 06:05"] -->|"Trigger"| GHA_Update["Workflows update-*.yml"]
+        PushBib["Push en archivos .bib"] -->|"Trigger"| GHA_Norm["Workflow normalize_bib.yml"]
     end
 
-    subgraph Auth [Autenticación & API Client]
-        GHA_Update --> |OAuth POST| OAuth[API ORCID /oauth/token]
-        OAuth --> |ORCID_ACCESS_TOKEN| B[Scripts Python: orcid_*.py / generate_bibtex.py]
-        B --> |Peticiones REST v3.0| ORCID_API[API Pública ORCID OpenAlex]
+    subgraph Auth["Autenticación y cliente API"]
+        GHA_Update -->|"OAuth POST"| OAuth["API ORCID /oauth/token"]
+        OAuth -->|"ORCID_ACCESS_TOKEN"| B["Scripts ORCID: orcid_*.py"]
+        B -->|"Peticiones REST v3.0"| ORCID_API["API pública ORCID - pub.orcid.org"]
     end
 
-    subgraph Process [Procesamiento y Normalización]
-        ORCID_API -->;|JSON crudo| C[Clasificación por Tipo de Obra]
-        C --> D[Normalización de Autores]
-        D --> |1. Mapeo por ORCID ID| D1[Nombre Canónico]
-        D --> |2. Fallback Firma/Regex| D2[Iniciales y Apellidos]
-        D --> E[Deduplicación Jerárquica]
-        E --> |DOI >; PMID >; PMCID >; Título+Año| F[Escapado de Caracteres BibTeX]
+    subgraph Process["Procesamiento y normalización ORCID"]
+        ORCID_API -->|"JSON crudo"| C["Clasificación por tipo de obra"]
+        C --> D["Normalización de autores"]
+        D -->|"1. Mapeo por ORCID ID"| D1["Nombre canónico"]
+        D -->|"2. Fallback por firma o regex"| D2["Iniciales y apellidos"]
+        D --> E["Deduplicación jerárquica"]
+        E -->|"DOI > PMID > PMCID > título + año"| F["Escapado de caracteres BibTeX"]
     end
 
-    subgraph NormStep [Normalización Post-Process]
-        GHA_Norm --> N1[normalize_bib.py]
-        F --> |Genera .bib| N1
-        N1 --> |Limpia y estandariza author = {...}| N2[Archivos BibTeX Limpios]
+    subgraph NormStep["Normalización posterior"]
+        GHA_Norm --> N1["normalize_bib.py"]
+        F -->|"Genera .bib"| N1
+        N1 -->|"Limpia y estandariza author = {...}"| N2["Archivos BibTeX limpios"]
     end
 
-    subgraph Salida [Generación de Artefactos]
-        F --> OutJSON[Archivos .json]
-        F --> OutHTML[Archivos .html]
-        N2 --> OutBIB[Archivos .bib Finales]
-        OutJSON ; OutHTML ; OutBIB --> |Git Commit ; Push| Repo[Repositorio GitHub main]
+    subgraph Salida["Generación de archivos ORCID"]
+        F --> OutJSON["Archivos .json"]
+        F --> OutHTML["Archivos .html"]
+        N2 --> OutBIB["Archivos .bib finales"]
+        OutJSON -->|"Git commit y push"| Repo["Repositorio GitHub - main"]
+        OutHTML -->|"Git commit y push"| Repo
+        OutBIB -->|"Git commit y push"| Repo
     end
 
+    subgraph Auxiliar["Herramienta auxiliar independiente"]
+        OA_Script -->|"Consulta REST"| OpenAlex_API["API OpenAlex"]
+        OpenAlex_API -->|"Filtra preprints y repositorios"| OA_BIB["publications.bib auxiliar"]
+    end
 ```
-
 ---
 
-## 📁 Estructura del Repositorio
+## Estructura del Repositorio
 
 ```
 .
 ├── .github/workflows/
-│   ├── update-publications.yml   # Workflow semanal para artículos de revista
-│   ├── update_conferences.yml    # Workflow semanal para actas/comunicaciones de congresos
-│   ├── update-other-works.yml    # Workflow semanal para otros trabajos académicos
+│   ├── update-publications.yml   # Workflow semanal para artículos de revista (ORCID)
+│   ├── update_conferences.yml    # Workflow semanal para actas/comunicaciones de congresos (ORCID)
+│   ├── update-other-works.yml    # Workflow semanal para otros trabajos académicos (ORCID)
 │   └── normalize_bib.yml         # Workflow disparado al modificar archivos .bib
 │
 ├── orcid_publications.py              # Extracción y procesado de artículos de revista desde ORCID
 ├── orcid_conferences.py               # Extracción y procesado de ponencias/congresos desde ORCID
 ├── orcid_other_works.py               # Extracción y procesado de otros trabajos desde ORCID
-├── generate_bibtex.py                 # Extracción y generación de BibTeX desde OpenAlex API
 ├── normalize_bib.py                   # Limpieza y normalización de firmas de autores en BibTeX
+│
+├── generate_bibtex.py                 # [Auxiliar] Extracción y generación de BibTeX desde OpenAlex API
 │
 ├── researchers1.json                  # Archivo de entrada con el listado de investigadores y ORCIDs
 └── README.md                          # Documentación del proyecto
@@ -111,10 +112,11 @@ flowchart TD
 
 ### Scripts en Python (`.py`)
 
+#### Flujo Principal (API ORCID)
 - **`orcid_publications.py`**:
-  - Conecta a la API v3.0 de ORCID.
+  - Conecta a la API v3.0 de ORCID (`pub.orcid.org`).
   - Procesa la lista de investigadores de `researchers1.json`.
-  - Filtra artículos de revista e implemta deduplicación y normalización.
+  - Filtra artículos de revista e implementa deduplicación y normalización.
   - Genera `publications.bib`, `publications.json` y `publications.html`.
 
 - **`orcid_conferences.py`**:
@@ -124,41 +126,51 @@ flowchart TD
 
 - **`orcid_other_works.py`**:
   - Recupera libros, capítulos, informes, preprints, patentes y datasets desde ORCID.
+  - Construye un mapa canónico de nombres por ORCID ID.
   - Genera `other_works.bib`, `other_works.json` y `other_works.html`.
 
-- **`generate_bibtex.py`**:
-  - Consulta la API de OpenAlex para obtener publicaciones por ORCID.
-  - Descarta preprints y repositorios de datos (Zenodo, arXiv, Figshare, OSF).
-  - Genera `publications.bib` con claves únicas autor-año.
-
+#### Post-Procesamiento de Bibliografía
 - **`normalize_bib.py`**:
   - Normaliza firmas de autores en archivos `.bib` a iniciales y apellidos oficiales.
+  - Escapa caracteres especiales en LaTeX/BibTeX.
+
+#### Herramienta Auxiliar (API OpenAlex)
+- **`generate_bibtex.py`**:
+  - Utility independiente para consultar la API de OpenAlex por ORCID ID.
+  - Descarta preprints y repositorios de datos (Zenodo, arXiv, Figshare, OSF).
+  - Genera un `publications.bib` alternativo con claves autor-año.
+
+### Workflows de GitHub Actions (`.yml`)
+
+- **`update-publications.yml`**:
+  - Sincronización semanal de artículos de revista desde ORCID.
+- **`update_conferences.yml`**:
+  - Sincronización semanal de actas y comunicaciones de congresos desde ORCID.
+- **`update-other-works.yml`**:
+  - Sincronización semanal de otros trabajos científicos desde ORCID.
+- **`normalize_bib.yml`**:
+  - Integración continua que estandariza automáticamente cualquier archivo `.bib` modificado en el repositorio.
 
 ---
 
-## 🛠️ Configuración y Requisitos
+## Características Principales
 
-### Requisitos de Python
-
-- Python 3.11+
-- Librerías: `requests`
-
-### Secretos de GitHub Actions
-
-Configurar en el repositorio (`Settings > Secrets > Actions`):
-- `ORCID_CLIENT_ID`
-- `ORCID_CLIENT_SECRET`
+- **Sincronización Automática Semanal**: Mantiene la producción científica al día de forma desatendida mediante GitHub Actions.
+- **Uso Oficial de API ORCID**: Autenticación segura mediante OAuth 2.0 Client Credentials (`/read-public`).
+- **Normalización Estricta de Autores**: Mapeo inteligente de firmas de autor para corregir variantes de acentuación, guiones e iniciales.
+- **Escapado de Caracteres BibTeX**: Manejo correcto de caracteres especiales (`&`, `%`, `#`, `_`, `{`, `}`) evitando errores de compilación en LaTeX.
+- **Deduplicación Robusta**: Detección de duplicados basada en jerarquía: `DOI` → `PMID` → `PMCID` → `Título + Año + Revista`.
+- **Multiformato de Salida**: Salidas estructuradas en `.bib` (para LaTeX/Mendeley/Zotero), `.json` (para APIs internas) y `.html` (para renderizado directo en la web).
 
 ---
 
-
-## 👤 Detalle de la Normalización y Deduplicación de Autores
+## Detalle de la Normalización y Deduplicación de Autores
 
 El proceso de normalización de nombres de autores se ejecuta en tres capas complementarias dentro del código para garantizar firmas bibliográficas uniformes y sin errores de sintaxis:
 
 ### Capa A: Normalización Directa por ORCID ID y Mapeo Canónico
 En la extracción de datos desde ORCID (`orcid_other_works.py`), el sistema prioriza la identidad única del investigador antes que el texto registrado en el trabajo:
-1. **Mapa Canónico por ORCID**: Se construye una tabla `canonical_by_orcid` en la que cada `ORCID ID` extraído de `researchers1.json` se vincula estrictamente a su nombre oficial preferido.
+1. **Mapa Canónico por ORCID**: Se construye una tabla `canonical_by_orcid` en la que cada `ORCID ID` extraído de `researchers1.json` se vincula strictly a su nombre oficial preferido.
 2. **Sustitución Directa**: Al leer los contribuidores de cada obra, si el contribuidor tiene un `contributor-orcid` coincidente, el script reemplaza el nombre escrito por el nombre canónico oficial.
 3. **Fallback por Firma de Nombre**: Si el registro en ORCID carece del ID del coautor, se genera una firma conservadora (`name_signature`) basada en la primera inicial y el primer apellido normalizado para identificar al investigador.
 
@@ -183,8 +195,7 @@ Cuando se procesan o refinan los archivos `.bib`, el script `normalize_bib.py` r
 
 ---
 
-
-## ⚙️ Explicación Detallada del Flujo de GitHub Actions
+## Explicación Detallada del Flujo de GitHub Actions
 
 La automatización de la integración continua (CI/CD) se organiza mediante cuatro workflows YAML dentro de `.github/workflows/`:
 
@@ -213,4 +224,96 @@ Cada runner de GitHub Actions (`ubuntu-latest` / `ubuntu-24.04`) ejecuta la sigu
 - **`concurrency`**: Asegura que si dos tareas se disparan a la vez, se ejecuten en serie para prevenir colisiones de git rebase.
 
 ---
+
+## Archivos de Entrada y Salida
+
+### Entrada
+
+- **`researchers1.json`**:
+```json
+{
+  "researchers": [
+    {
+      "name": "Fernando Díaz de María",
+      "orcid": "0000-0002-XXXX-XXXX"
+    },
+    {
+      "name": "Ascensión Gallardo Antolín",
+      "orcid": "0000-0003-XXXX-XXXX"
+    }
+  ]
+}
+```
+
+### Salida Generada
+
+| Categoría | Archivo JSON | Archivo BibTeX | Archivo HTML | Archivos Adicionales |
+| :--- | :--- | :--- | :--- | :--- |
+| **Revistas** | `publications.json` | `publications.bib` | `publications.html` | `publications_all_orcid.json`, `publications_excluded.json` |
+| **Congresos** | `conference_publications.json` | `conference_publications.bib` | `conference_publications.html` | `conference_publications_all_orcid.json`, `conference_publications_excluded.json` |
+| **Otros Trabajos** | `other_works.json` | `other_works.bib` | `other_works.html` | `other_works_all_orcid.json`, `other_works_by_type.json` |
+
+---
+
+## Configuración y Requisitos
+
+### Requisitos de Python
+
+- Python 3.11+
+- Librerías necesarias:
+  ```bash
+  pip install requests
+  ```
+
+### Secretos de GitHub Actions
+
+Configurar en el repositorio (`Settings > Secrets and variables > Actions`):
+- `ORCID_CLIENT_ID`: Client ID de la API pública de ORCID.
+- `ORCID_CLIENT_SECRET`: Client Secret de la API pública de ORCID.
+
+---
+
+## Guía de Uso
+
+### Ejecución en Local
+
+1. **Obtener Token de ORCID**:
+   ```bash
+   export ORCID_CLIENT_ID="TU_CLIENT_ID"
+   export ORCID_CLIENT_SECRET="TU_CLIENT_SECRET"
+
+   export ORCID_ACCESS_TOKEN=$(curl -s -X POST "https://orcid.org/oauth/token"      -H "Accept: application/json"      -d "client_id=$ORCID_CLIENT_ID"      -d "client_secret=$ORCID_CLIENT_SECRET"      -d "grant_type=client_credentials"      -d "scope=/read-public" | jq -r '.access_token')
+   ```
+
+2. **Ejecutar Extracción de Artículos**:
+   ```bash
+   python orcid_publications.py
+   ```
+
+3. **Ejecutar Extracción de Congresos**:
+   ```bash
+   python orcid_conferences.py
+   ```
+
+4. **Ejecutar Extracción de Otros Trabajos**:
+   ```bash
+   python orcid_other_works.py
+   ```
+
+5. **Generar BibTeX mediante OpenAlex**:
+   ```bash
+   python generate_bibtex.py
+   ```
+
+6. **Normalizar Archivo BibTeX Manualmente**:
+   ```bash
+   python normalize_bib.py publicaciones.bib
+   ```
+
+### Ejecución Automatizada en GitHub Actions
+
+Todos los scripts están enlazados a sus respectivos workflows en `.github/workflows/`. Se pueden desencadenar manualmente en la pestaña **Actions** de GitHub mediante el botón **Run workflow** (`workflow_dispatch`), o bien esperar a la ejecución automática programada todos los lunes a las 06:05 AM (UTC+2).
+
+---
+
 
