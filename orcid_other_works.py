@@ -1503,13 +1503,8 @@ def process_researcher(
     Procesa todos los trabajos de un investigador.
     """
 
-    name = get_researcher_name(
-        researcher
-    )
-
-    orcid = get_researcher_orcid(
-        researcher
-    )
+    name = get_researcher_name(researcher)
+    orcid = get_researcher_orcid(researcher)
 
     if not name:
         print(
@@ -1530,13 +1525,8 @@ def process_researcher(
         f"{name} ({orcid})"
     )
 
-    groups = get_orcid_work_groups(
-        orcid
-    )
-
-    summaries = extract_all_summaries(
-        groups
-    )
+    groups = get_orcid_work_groups(orcid)
+    summaries = extract_all_summaries(groups)
 
     print(
         f"    Works encontrados: {len(summaries)}"
@@ -1545,44 +1535,31 @@ def process_researcher(
     publications = []
 
     for summary in summaries:
+        put_code = summary.get("put-code")
 
-        put_code = summary.get(
-            "put-code"
-        )
-
-        if put_code is None:
+        if not put_code:
             continue
 
-        work = get_orcid_work(
-            orcid,
-            put_code,
-        )
+        work = get_orcid_work(orcid, put_code)
 
         if not work:
             continue
 
-        publication = work_to_publication(
-            work=work,
-            summary=summary,
-            researcher_name=name,
-            researcher_orcid=orcid,
-            canonical_by_orcid=canonical_by_orcid,
-            fallback_by_name=fallback_by_name,
+        # Convertimos a publicación
+        pub = work_to_publication(
+            work,
+            summary,
+            name,
+            orcid,
+            canonical_by_orcid,
+            fallback_by_name,
         )
 
-        publications.append(
-            publication
-        )
-
-        time.sleep(0.05)
-
-    print(
-        f"    Publications procesadas: "
-        f"{len(publications)}"
-    )
+        # SOLO guardamos si la función no devolvió None
+        if pub is not None:
+            publications.append(pub)
 
     return publications
-
 
 # ============================================================
 # AGRUPACIÓN
