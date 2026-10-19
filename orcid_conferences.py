@@ -110,13 +110,26 @@ def clean_text(value):
     return str(value).strip()
 
 
+import unicodedata
+
+
 def normalize_title(title):
     if not title:
         return ""
 
     title = str(title).lower()
+
+    # Normalizar Unicode para separar acentos de las letras (ej. 'ó' -> 'o' + '´')
+    title = unicodedata.normalize("NFKD", title)
+    title = "".join(
+        char for char in title if not unicodedata.combining(char)
+    )
+
+    # Eliminar puntuación dejando solo letras/números
+    title = re.sub(r"[^\w\s]", " ", title)
+
+    # Colapsar espacios múltiples
     title = re.sub(r"\s+", " ", title)
-    title = re.sub(r"[^\w\s]", "", title)
 
     return title.strip()
 
