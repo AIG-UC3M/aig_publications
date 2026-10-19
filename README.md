@@ -214,4 +214,3 @@ Cada runner de GitHub Actions (`ubuntu-latest` / `ubuntu-24.04`) ejecuta la sigu
 
 ---
 
-*README generado para la documentación completa del repositorio bibliográfico.*
