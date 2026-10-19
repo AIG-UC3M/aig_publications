@@ -645,20 +645,47 @@ def publication_key(pub):
 
 
 def deduplicate_publications(publications):
-    seen = set()
-    result = []
+    seen = {}
 
     for pub in publications:
         key = publication_key(pub)
 
-        if key in seen:
+        # Si el título/DOI es completamente vacío, no deduplicamos a ciegas
+        if key == ("fallback", "", ""):
+            seen[id(pub)] = pub
             continue
 
-        seen.add(key)
-        result.append(pub)
+        if key in seen:
+            existing = seen[key]
 
-    return result
+            # 1. Combinar nombres de investigadores si son distintos
+            res_list = [
+                r.strip()
+                for r in existing.get("researcher", "").split(";")
+                if r.strip()
+            ]
+            new_res = pub.get("researcher", "").strip()
 
+            if new_res and new_res not in res_list:
+                res_list.append(new_res)
+                existing["researcher"] = "; ".join(res_list)
+
+            # 2. Completar campos que pudieran estar vacíos en el registro guardado
+            for field in [
+                "authors",
+                "journal",
+                "doi",
+                "pmid",
+                "pmcid",
+                "url",
+            ]:
+                if not existing.get(field) and pub.get(field):
+                    existing[field] = pub[field]
+        else:
+            # Copiamos la publicación para evitar mutaciones no deseadas
+            seen[key] = dict(pub)
+
+    return list(seen.values())
 
 # ============================================================
 # BIBTEX
