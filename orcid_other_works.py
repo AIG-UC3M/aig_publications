@@ -1041,10 +1041,14 @@ def work_to_publication(
     canonical_by_orcid,
     fallback_by_name,
 ):
-    # 1. Obtenemos la clasificación
+    """
+    Convierte un work ORCID en nuestro formato interno.
+    Devuelve None si el trabajo no entra en la clasificación deseada.
+    """
+
     work_type = classify_work(work)
 
-    # 2. Si es None (fue descartado), cortamos aquí
+    # Si es un artículo de revista o ponencia de congreso, devolvemos None para descartarlo
     if work_type is None:
         return None
 
@@ -1054,7 +1058,58 @@ def work_to_publication(
     if subtitle:
         title = f"{title}: {subtitle}"
 
-    # ... resto del código sin cambios ...
+    translated_title = extract_translated_title(work)
+    journal = extract_journal(work)
+    url = extract_url(work)
+    description = extract_short_description(work)
+    language = extract_language(work)
+    country = extract_country(work)
+    citation = extract_citation(work)
+
+    authors = extract_authors(
+        work,
+        canonical_by_orcid,
+        fallback_by_name,
+    )
+
+    external_ids = extract_external_ids(work)
+
+    publication_date = work.get("publication-date")
+    year, month, day = extract_date(publication_date)
+
+    if not year:
+        year, month, day = extract_date(
+            summary.get("publication-date")
+        )
+
+    put_code = work.get("put-code")
+
+    publication = {
+        "title": title,
+        "translated_title": translated_title,
+        "authors": authors,
+        "researcher": researcher_name,
+        "orcid": researcher_orcid,
+        "year": year,
+        "month": month,
+        "day": day,
+        "type": work_type,
+        "journal": journal,
+        "url": url,
+        "description": description,
+        "language": language,
+        "country": country,
+        "citation": citation,
+        "put_code": put_code,
+        "orcid_work_url": (
+            f"https://orcid.org/{researcher_orcid}"
+            if researcher_orcid
+            else ""
+        ),
+        **external_ids,
+    }
+
+    return publication
 
 
 # ============================================================
