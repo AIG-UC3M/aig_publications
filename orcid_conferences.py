@@ -620,27 +620,27 @@ def looks_like_conference(pub):
 # ============================================================
 
 def publication_key(pub):
+    # 1. Identificadores estándar (Globales)
     doi = clean_text(pub.get("doi")).lower()
-
     if doi:
         return ("doi", doi)
 
     pmid = clean_text(pub.get("pmid")).lower()
-
     if pmid:
         return ("pmid", pmid)
 
     pmcid = clean_text(pub.get("pmcid")).lower()
-
     if pmcid:
         return ("pmcid", pmcid)
 
+    # 2. Fallback sin incluir 'orcid'
+    title = normalize_title(pub.get("title"))
+    year = clean_text(pub.get("year"))
+
     return (
         "fallback",
-        normalize_title(pub.get("title")),
-        clean_text(pub.get("year")),
-        normalize_title(pub.get("journal")),
-        clean_text(pub.get("orcid")),
+        title,
+        year,
     )
 
 
