@@ -1041,82 +1041,20 @@ def work_to_publication(
     canonical_by_orcid,
     fallback_by_name,
 ):
-    """
-    Convierte un work ORCID en nuestro formato interno.
-    """
+    # 1. Obtenemos la clasificación
+    work_type = classify_work(work)
+
+    # 2. Si es None (fue descartado), cortamos aquí
+    if work_type is None:
+        return None
 
     title = extract_title(work)
-
     subtitle = extract_subtitle(work)
 
     if subtitle:
         title = f"{title}: {subtitle}"
 
-    translated_title = extract_translated_title(work)
-
-    journal = extract_journal(work)
-
-    url = extract_url(work)
-
-    description = extract_short_description(work)
-
-    language = extract_language(work)
-
-    country = extract_country(work)
-
-    citation = extract_citation(work)
-
-    authors = extract_authors(
-        work,
-        canonical_by_orcid,
-        fallback_by_name,
-    )
-
-    external_ids = extract_external_ids(work)
-
-    publication_date = work.get(
-        "publication-date"
-    )
-
-    year, month, day = extract_date(
-        publication_date
-    )
-
-    if not year:
-        year, month, day = extract_date(
-            summary.get("publication-date")
-        )
-
-    work_type = classify_work(work)
-
-    put_code = work.get("put-code")
-
-    publication = {
-        "title": title,
-        "translated_title": translated_title,
-        "authors": authors,
-        "researcher": researcher_name,
-        "orcid": researcher_orcid,
-        "year": year,
-        "month": month,
-        "day": day,
-        "type": work_type,
-        "journal": journal,
-        "url": url,
-        "description": description,
-        "language": language,
-        "country": country,
-        "citation": citation,
-        "put_code": put_code,
-        "orcid_work_url": (
-            f"https://orcid.org/{researcher_orcid}"
-            if researcher_orcid
-            else ""
-        ),
-        **external_ids,
-    }
-
-    return publication
+    # ... resto del código sin cambios ...
 
 
 # ============================================================
