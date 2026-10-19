@@ -966,50 +966,43 @@ def extract_citation(work):
 
 def classify_work(work):
     """
-    Clasifica un trabajo en article / conference / other.
+    Clasifica un trabajo excluyendo artículos de revista y ponencias de congresos.
+    Devuelve None para los tipos ignorados.
     """
 
-    work_type = clean_text(
-        work.get("type")
-    ).lower()
+    work_type = clean_text(work.get("type")).lower()
 
-    subtype = clean_text(
-        work.get("journal-title", {}).get("value")
-        if isinstance(work.get("journal-title"), dict)
-        else ""
-    )
-
+    # 1. EXCLUIR artículos de revista y journals
     if work_type in {
         "journal-article",
         "article",
         "review",
     }:
-        return "article"
+        return None
 
+    # 2. EXCLUIR ponencias, posters y congresos
     if work_type in {
         "conference-paper",
         "conference-abstract",
         "conference-poster",
-    }:
-        return "conference"
+    } or "conference" in work_type:
+        return None
 
+    # 3. INCLUIR Capítulos de libro
+    if work_type == "book-chapter":
+        return "incollection"
+
+    # 4. INCLUIR Libros y reseñas de libros
     if work_type in {
         "book",
-        "book-chapter",
         "book-review",
+        "monograph",
+        "edited-book",
     }:
         return "book"
 
-    if work_type in {
-        "book-chapter",
-    }:
-        return "incollection"
-
-    if "conference" in work_type:
-        return "conference"
-
+    # 5. INCLUIR cualquier otro tipo (tesis, informes, patentes, conjuntos de datos, etc.)
     return "other"
-
 
 def bibtex_entry_type(publication):
     """
