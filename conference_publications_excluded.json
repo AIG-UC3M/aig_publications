@@ -24,7 +24,7 @@
     ],
     "source": "{'value': 'Crossref'}",
     "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; IVAN GONZALEZ",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -68,7 +68,7 @@
     ],
     "source": "{'value': 'Crossref'}",
     "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; IVAN GONZALEZ",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -91,7 +91,7 @@
     ],
     "source": "{'value': 'Crossref'}",
     "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; IVAN GONZALEZ",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -158,7 +158,7 @@
     ],
     "source": "{'value': 'Crossref'}",
     "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; IVAN GONZALEZ",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -179,7 +179,7 @@
     ],
     "source": "{'value': 'Crossref'}",
     "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; IVAN GONZALEZ",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -200,7 +200,7 @@
     ],
     "source": "{'value': 'Crossref'}",
     "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; Miguel Ángel Fernández Torres",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -244,7 +244,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; IVAN GONZALEZ",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -289,7 +289,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; IVAN GONZALEZ",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -327,10 +327,14 @@
     "pmid": "",
     "pmcid": "",
     "url": "http://dx.doi.org/10.1109/tcsvt.2019.2909427",
-    "authors": [],
+    "authors": [
+      "Miguel-Angel Fernandez-Torres",
+      "Ivan Gonzalez-Diaz",
+      "Fernando Diaz-de-Maria"
+    ],
     "source": "{'value': 'F. Díaz-de-María'}",
     "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; IVAN GONZALEZ; Miguel Ángel Fernández Torres",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -344,10 +348,17 @@
     "pmid": "",
     "pmcid": "",
     "url": "http://dx.doi.org/10.1007/s11042-017-5339-9",
-    "authors": [],
+    "authors": [
+      "Fernández-Martínez, F.",
+      "Hernández-García, A.",
+      "Fernández-Torres, M.A.",
+      "González-Díaz, I.",
+      "García-Faura, Á.",
+      "de María, F.D."
+    ],
     "source": "{'value': 'F. Díaz-de-María'}",
     "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; IVAN GONZALEZ; Miguel Ángel Fernández Torres",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -392,7 +403,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; IVAN GONZALEZ; Miguel Ángel Fernández Torres",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -478,7 +489,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; IVAN GONZALEZ",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -563,7 +574,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; ASCENSIÓN GALLARDO-ANTOLÍN; IVAN GONZALEZ",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -586,7 +597,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; Carmen Peláez-Moreno",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -607,7 +618,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; IVAN GONZALEZ",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -671,7 +682,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; IVAN GONZALEZ",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -693,7 +704,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; ASCENSIÓN GALLARDO-ANTOLÍN",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -757,7 +768,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; Carmen Peláez-Moreno",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -778,7 +789,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; IVAN GONZALEZ",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -822,7 +833,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; Carmen Peláez-Moreno",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -1034,7 +1045,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; IVAN GONZALEZ",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -1056,7 +1067,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "book",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; Carmen Peláez-Moreno",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -1079,7 +1090,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; ASCENSIÓN GALLARDO-ANTOLÍN; Carmen Peláez-Moreno",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -1103,7 +1114,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "book",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; ASCENSIÓN GALLARDO-ANTOLÍN; Carmen Peláez-Moreno",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -1125,7 +1136,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; ASCENSIÓN GALLARDO-ANTOLÍN; Carmen Peláez-Moreno",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -1147,7 +1158,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; ASCENSIÓN GALLARDO-ANTOLÍN; Carmen Peláez-Moreno",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -1170,7 +1181,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "book",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; ASCENSIÓN GALLARDO-ANTOLÍN; Carmen Peláez-Moreno",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -1213,7 +1224,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; ASCENSIÓN GALLARDO-ANTOLÍN; Carmen Peláez-Moreno",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -1236,7 +1247,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "book",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; ASCENSIÓN GALLARDO-ANTOLÍN; Carmen Peláez-Moreno",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -1257,7 +1268,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
+    "researcher": "Fernando Díaz-de-María; ASCENSIÓN GALLARDO-ANTOLÍN; Carmen Peláez-Moreno",
     "orcid": "0000-0002-6437-914X"
   },
   {
@@ -1512,7 +1523,10 @@
     "pmid": "",
     "pmcid": "",
     "url": "https://link.springer.com/chapter/10.1007/978-3-030-31372-2_12",
-    "authors": [],
+    "authors": [
+      "Ascensión Gallardo-Antolín",
+      "Juan M. Montero"
+    ],
     "source": "{'value': 'ASCENSIÓN GALLARDO-ANTOLÍN'}",
     "raw_type": "book-chapter",
     "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
@@ -1537,7 +1551,7 @@
     ],
     "source": "{'value': 'Crossref'}",
     "raw_type": "journal-article",
-    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN; Carmen Peláez-Moreno",
     "orcid": "0000-0002-9322-3128"
   },
   {
@@ -1558,7 +1572,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN; Carmen Peláez-Moreno",
     "orcid": "0000-0002-9322-3128"
   },
   {
@@ -1615,10 +1629,14 @@
     "pmid": "",
     "pmcid": "",
     "url": "http://dx.doi.org/10.1109/access.2018.2882055",
-    "authors": [],
+    "authors": [
+      "Antonio Rodriguez-Hidalgo",
+      "Carmen Pelaez-Moreno",
+      "Ascension Gallardo-Antolin"
+    ],
     "source": "{'value': 'ASCENSIÓN GALLARDO-ANTOLÍN'}",
     "raw_type": "journal-article",
-    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN; Carmen Peláez-Moreno",
     "orcid": "0000-0002-9322-3128"
   },
   {
@@ -1680,7 +1698,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "book",
-    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN; Carmen Peláez-Moreno",
     "orcid": "0000-0002-9322-3128"
   },
   {
@@ -1768,7 +1786,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN; Carmen Peláez-Moreno",
     "orcid": "0000-0002-9322-3128"
   },
   {
@@ -1789,39 +1807,14 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "book",
-    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
-    "orcid": "0000-0002-9322-3128"
-  },
-  {
-    "put_code": "48225542",
-    "title": "A Comparison of Multivariate SARIMA and SVM Models for Emergency Department Admission Prediction",
-    "type": "journal-article",
-    "journal": "Proceedings of the 6th International Conference on Health Informatics (HEALTHINF 2013)",
-    "date": "2013-01-01",
-    "year": "2013",
-    "doi": "",
-    "pmid": "",
-    "pmcid": "",
-    "url": "http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcAuth=ORCID&SrcApp=OrcidOrg&DestLinkType=FullRecord&DestApp=INSPEC&KeyUT=INSPEC:13535510&KeyUID=INSPEC:13535510",
-    "authors": [
-      "Zlotnik, A.",
-      "Montero Martinez, J.M.",
-      "Gallardo-Antolin, A.",
-      "Stacey, D.",
-      "Sole-Casals, J.",
-      "Fred, A.",
-      "Gamboa, H."
-    ],
-    "source": "{'value': 'ResearcherID'}",
-    "raw_type": "journal-article",
-    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN; Carmen Peláez-Moreno",
     "orcid": "0000-0002-9322-3128"
   },
   {
     "put_code": "13528558",
     "title": "Auditory-Inspired Morphological Processing of Speech Spectrograms: Applications in Automatic Speech Recognition and Speech Enhancement",
     "type": "journal-article",
-    "journal": "",
+    "journal": "Cognitive Computation",
     "date": "2013-01-01",
     "year": "2013",
     "doi": "10.1007/s12559-012-9196-6",
@@ -1836,7 +1829,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN; Carmen Peláez-Moreno",
     "orcid": "0000-0002-9322-3128"
   },
   {
@@ -1907,7 +1900,7 @@
     "put_code": "13528563",
     "title": "Speech denoising using non-negative matrix factorization with Kullback-Leibler divergence and sparseness constraints",
     "type": "book",
-    "journal": "",
+    "journal": "Advances in Speech and Language Technologies For Iberian Languages",
     "date": "2012-01-01",
     "year": "2012",
     "doi": "10.1007/978-3-642-35292-8_22",
@@ -1951,33 +1944,10 @@
     "orcid": "0000-0002-9322-3128"
   },
   {
-    "put_code": "48225547",
-    "title": "Feature Extraction Assessment for an Acoustic-Event Classification Task using the Entropy Triangle",
-    "type": "journal-article",
-    "journal": "12th Annual Conference of the International Speech Communication Association 2011 (Interspeech 2011), Vols 1-5",
-    "date": "2011-01-01",
-    "year": "2011",
-    "doi": "",
-    "pmid": "",
-    "pmcid": "",
-    "url": "http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcAuth=ORCID&SrcApp=OrcidOrg&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=WOS:000316502200081&KeyUID=WOS:000316502200081",
-    "authors": [
-      "Mejia-Navarrete, David",
-      "Gallardo-Antolin, Ascension",
-      "Pelaez-Moreno, Carmen",
-      "Valverde-Albacete, Francisco J.",
-      "Int  Speech Commun Assoc"
-    ],
-    "source": "{'value': 'ResearcherID'}",
-    "raw_type": "journal-article",
-    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
-    "orcid": "0000-0002-9322-3128"
-  },
-  {
     "put_code": "13528565",
     "title": "Morphological processing of spectrograms for speech enhancement",
     "type": "book",
-    "journal": "",
+    "journal": "Advances in Nonlinear Speech Processing",
     "date": "2011-01-01",
     "year": "2011",
     "doi": "10.1007/978-3-642-25020-0_29",
@@ -1991,7 +1961,7 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "book",
-    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN; Carmen Peláez-Moreno",
     "orcid": "0000-0002-9322-3128"
   },
   {
@@ -2021,7 +1991,7 @@
     "put_code": "13528567",
     "title": "Automatic placement of outer volume suppression slices in MR spectroscopic imaging of the human brain",
     "type": "journal-article",
-    "journal": "",
+    "journal": "Magnetic Resonance in Medicine",
     "date": "2010-01-01",
     "year": "2010",
     "doi": "10.1002/mrm.22275",
@@ -2047,7 +2017,7 @@
     "put_code": "13528566",
     "title": "Histogram equalization-based features for speech, music, and song discrimination",
     "type": "journal-article",
-    "journal": "",
+    "journal": "IEEE Signal Processing Letters",
     "date": "2010-01-01",
     "year": "2010",
     "doi": "10.1109/lsp.2010.2049877",
@@ -2064,35 +2034,10 @@
     "orcid": "0000-0002-9322-3128"
   },
   {
-    "put_code": "48225551",
-    "title": "EXPRESSIVE SPEECH IDENTIFICATIONS BASED ON HIDDEN MARKOV MODEL",
-    "type": "journal-article",
-    "journal": "Healthinf 2009: Proceedings of the International Conference on Health Informatics",
-    "date": "2009-01-01",
-    "year": "2009",
-    "doi": "",
-    "pmid": "",
-    "pmcid": "",
-    "url": "http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcAuth=ORCID&SrcApp=OrcidOrg&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=WOS:000266586700082&KeyUID=WOS:000266586700082",
-    "authors": [
-      "Lutfi, Syaheerah L.",
-      "Montero, J. M.",
-      "Barra-Chicote, R.",
-      "Lucas-Cuesta, J. M.",
-      "Gallardo-Antolin, A.",
-      "Azevedo, L",
-      "Londral, AR"
-    ],
-    "source": "{'value': 'ResearcherID'}",
-    "raw_type": "journal-article",
-    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
-    "orcid": "0000-0002-9322-3128"
-  },
-  {
     "put_code": "13528569",
     "title": "A simulated annealing approach to speaker segmentation in audio databases",
     "type": "journal-article",
-    "journal": "",
+    "journal": "Engineering Applications of Artificial Intelligence",
     "date": "2008-01-01",
     "year": "2008",
     "doi": "10.1016/j.engappai.2007.07.002",
@@ -2111,107 +2056,10 @@
     "orcid": "0000-0002-9322-3128"
   },
   {
-    "put_code": "48225553",
-    "title": "Automatic Phonetic Segmentation of Spanish Emotional Speech",
-    "type": "journal-article",
-    "journal": "Interspeech 2007: 8th Annual Conference of the International Speech Communication Association, Vols 1-4",
-    "date": "2007-01-01",
-    "year": "2007",
-    "doi": "",
-    "pmid": "",
-    "pmcid": "",
-    "url": "http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcAuth=ORCID&SrcApp=OrcidOrg&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=WOS:000269998601222&KeyUID=WOS:000269998601222",
-    "authors": [
-      "Gallardo-Antolin, A.",
-      "Barra, R.",
-      "Schroeder, M.",
-      "Krstulovic, S.",
-      "Montero, J. M.",
-      "ISCA"
-    ],
-    "source": "{'value': 'ResearcherID'}",
-    "raw_type": "journal-article",
-    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
-    "orcid": "0000-0002-9322-3128"
-  },
-  {
-    "put_code": "13528571",
-    "title": "SVMs for automatic speech recognition: A survey",
-    "type": "book",
-    "journal": "",
-    "date": "2007-01-01",
-    "year": "2007",
-    "doi": "",
-    "pmid": "",
-    "pmcid": "",
-    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-39149093062&partnerID=MN8TOARS",
-    "authors": [
-      "Solera-Ureña, R.",
-      "Padrell-Sendra, J.",
-      "Martín-Iglesias, D.",
-      "Gallardo-Antolín, A.",
-      "Peláez-Moreno, C.",
-      "Díaz-de-María, F."
-    ],
-    "source": "{'value': 'Scopus - Elsevier'}",
-    "raw_type": "book",
-    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
-    "orcid": "0000-0002-9322-3128"
-  },
-  {
-    "put_code": "48225555",
-    "title": "SVMs for Automatic Speech Recognition: A survey",
-    "type": "book-chapter",
-    "journal": "Progress in Nonlinear Speech Processing",
-    "date": "2007-01-01",
-    "year": "2007",
-    "doi": "",
-    "pmid": "",
-    "pmcid": "",
-    "url": "http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcAuth=ORCID&SrcApp=OrcidOrg&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=WOS:000246085300011&KeyUID=WOS:000246085300011",
-    "authors": [
-      "Solera-Urena, R.",
-      "Padrell-Sendra, J.",
-      "Martin-Iglesias, D.",
-      "Gallardo-Antolin, A.",
-      "Pelaez-Moreno, C.",
-      "Diaz-de-Maria, F.",
-      "Stylianou, Y",
-      "FaundezZanuy, M",
-      "Esposito, A"
-    ],
-    "source": "{'value': 'ResearcherID'}",
-    "raw_type": "book-chapter",
-    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
-    "orcid": "0000-0002-9322-3128"
-  },
-  {
-    "put_code": "48225558",
-    "title": "Multi-Stream Speaker Diarization Systems for the Meetings Domain",
-    "type": "journal-article",
-    "journal": "Interspeech 2006 and 9th International Conference on Spoken Language Processing, Vols 1-5",
-    "date": "2006-01-01",
-    "year": "2006",
-    "doi": "",
-    "pmid": "",
-    "pmcid": "",
-    "url": "http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcAuth=ORCID&SrcApp=OrcidOrg&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=WOS:000269965901284&KeyUID=WOS:000269965901284",
-    "authors": [
-      "Gallardo-Antolin, Ascension",
-      "Anguera, Xavier",
-      "Wooters, Chuck",
-      "ISCA"
-    ],
-    "source": "{'value': 'ResearcherID'}",
-    "raw_type": "journal-article",
-    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
-    "orcid": "0000-0002-9322-3128"
-  },
-  {
     "put_code": "13528576",
     "title": "Offline speaker segmentation using genetic algorithms and mutual information",
     "type": "journal-article",
-    "journal": "",
+    "journal": "Ieee Transactions on Evolutionary Computation",
     "date": "2006-01-01",
     "year": "2006",
     "doi": "10.1109/tevc.2005.857079",
@@ -2226,105 +2074,6 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
-    "orcid": "0000-0002-9322-3128"
-  },
-  {
-    "put_code": "13528578",
-    "title": "A speech recognizer based on multiclass SVMs with HMM-guided segmentation",
-    "type": "book",
-    "journal": "",
-    "date": "2005-01-01",
-    "year": "2005",
-    "doi": "",
-    "pmid": "",
-    "pmcid": "",
-    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-33745467338&partnerID=MN8TOARS",
-    "authors": [
-      "Martín-Iglesias, D.",
-      "Bernal-Chaves, J.",
-      "Peláez-Moreno, C.",
-      "Gallardo-Antolín, A.",
-      "Díaz-de-María, F."
-    ],
-    "source": "{'value': 'Scopus - Elsevier'}",
-    "raw_type": "book",
-    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
-    "orcid": "0000-0002-9322-3128"
-  },
-  {
-    "put_code": "48225560",
-    "title": "A speech recognizer based on multiclass SVMs with HMM-guided segmentation",
-    "type": "journal-article",
-    "journal": "Nonlinear Analyses and Algorithms for Speech Processing. International Conference on Non-Linear Speech Processing, NOLISP 2005. Revised Selected Papers (Lecture Notes in Artificial Intelligence Vol.3817)",
-    "date": "2005-01-01",
-    "year": "2005",
-    "doi": "",
-    "pmid": "",
-    "pmcid": "",
-    "url": "http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcAuth=ORCID&SrcApp=OrcidOrg&DestLinkType=FullRecord&DestApp=INSPEC&KeyUT=INSPEC:8804237&KeyUID=INSPEC:8804237",
-    "authors": [
-      "Martin-Iglesias, D.",
-      "Bernal-Chaves, J.",
-      "Pelaez-Moreno, C.",
-      "Gallardo-Antolin, A.",
-      "Diaz-de-Maria, F.",
-      "Faundez-Zanuy, M.",
-      "Janer, L.",
-      "Esposito, A.",
-      "Satue-Villar, A.",
-      "Roure, J.",
-      "Espinosa-Duro, V."
-    ],
-    "source": "{'value': 'ResearcherID'}",
-    "raw_type": "journal-article",
-    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
-    "orcid": "0000-0002-9322-3128"
-  },
-  {
-    "put_code": "13528582",
-    "title": "An application of SVM to lost packets reconstruction in voice-enabled services",
-    "type": "book",
-    "journal": "",
-    "date": "2002-01-01",
-    "year": "2002",
-    "doi": "",
-    "pmid": "",
-    "pmcid": "",
-    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84902154256&partnerID=MN8TOARS",
-    "authors": [
-      "Peláez-Moreno, C.",
-      "Parrado-Hernández, E.",
-      "Gallardo-Antolín, A.",
-      "Zambrano-Miranda, A.",
-      "Díaz-De-María, F."
-    ],
-    "source": "{'value': 'Scopus - Elsevier'}",
-    "raw_type": "book",
-    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
-    "orcid": "0000-0002-9322-3128"
-  },
-  {
-    "put_code": "48225563",
-    "title": "An application of SVM to lost packets reconstruction in voice-enabled services",
-    "type": "book-chapter",
-    "journal": "Artificial Neural Networks - Icann 2002",
-    "date": "2002-01-01",
-    "year": "2002",
-    "doi": "",
-    "pmid": "",
-    "pmcid": "",
-    "url": "http://gateway.webofknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcAuth=ORCID&SrcApp=OrcidOrg&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=WOS:000181441900190&KeyUID=WOS:000181441900190",
-    "authors": [
-      "Pelaez-Moreno, C",
-      "Parrado-Hernandez, E",
-      "Gallardo-Antolin, A",
-      "Zambrano-Miranda, A",
-      "Diaz-de-Maria, F",
-      "Dorronsoro, JR"
-    ],
-    "source": "{'value': 'ResearcherID'}",
-    "raw_type": "book-chapter",
     "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
     "orcid": "0000-0002-9322-3128"
   },
@@ -2820,7 +2569,7 @@
     "put_code": "44817396",
     "title": "Formal Independence Analysis",
     "type": "book-chapter",
-    "journal": "",
+    "journal": "Communications in Computer and Information Science",
     "date": "2018-01-01",
     "year": "2018",
     "doi": "10.1007/978-3-319-91473-2_51",
@@ -2843,7 +2592,7 @@
     "put_code": "32895335",
     "title": "The Linear Algebra in Extended Formal Concept Analysis Over Idempotent Semifields",
     "type": "book-chapter",
-    "journal": "",
+    "journal": "Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)",
     "date": "2017-01-01",
     "year": "2017",
     "doi": "10.1007/978-3-319-59271-8_14",
@@ -2910,7 +2659,7 @@
     "doi": "10.1016/j.eswa.2015.09.022",
     "pmid": "",
     "pmcid": "",
-    "url": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84945264248&partnerID=MN8TOARS",
     "authors": [
       "Francisco J. Valverde-Albacete",
       "José María González-Calabozo",
@@ -2992,8 +2741,11 @@
     "doi": "10.1016/j.fss.2014.09.022",
     "pmid": "",
     "pmcid": "",
-    "url": "",
-    "authors": [],
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84928208256&partnerID=MN8TOARS",
+    "authors": [
+      "Valverde-Albacete, F.J.",
+      "Peláez-Moreno, C."
+    ],
     "source": "{'value': 'Crossref'}",
     "raw_type": "journal-article",
     "researcher": "Carmen Peláez-Moreno",
@@ -3037,27 +2789,6 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "researcher": "Carmen Peláez-Moreno",
-    "orcid": "0000-0003-1425-6763"
-  },
-  {
-    "put_code": "52292394",
-    "title": "Deep maxout networks applied to noise-robust speech recognition",
-    "type": "book",
-    "journal": "Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)",
-    "date": "2014-01-01",
-    "year": "2014",
-    "doi": "",
-    "pmid": "",
-    "pmcid": "",
-    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84921419279&partnerID=MN8TOARS",
-    "authors": [
-      "de-la-Calle-Silos, F.",
-      "Gallardo-Antolín, A.",
-      "Peláez-Moreno, C."
-    ],
-    "source": "{'value': 'Scopus - Elsevier'}",
-    "raw_type": "book",
     "researcher": "Carmen Peláez-Moreno",
     "orcid": "0000-0003-1425-6763"
   },
@@ -3225,52 +2956,6 @@
     "orcid": "0000-0003-1425-6763"
   },
   {
-    "put_code": "13656873",
-    "title": "Hybrid models for automatic speech recognition: A comparison of classical ANN and kernel based methods",
-    "type": "book",
-    "journal": "",
-    "date": "2007-01-01",
-    "year": "2007",
-    "doi": "",
-    "pmid": "",
-    "pmcid": "",
-    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-38749092659&partnerID=MN8TOARS",
-    "authors": [
-      "García-Moral, A.I.",
-      "Solera-Ureña, R.",
-      "Peláez-Moreno, C.",
-      "Díaz-de-María, F."
-    ],
-    "source": "{'value': 'Scopus - Elsevier'}",
-    "raw_type": "book",
-    "researcher": "Carmen Peláez-Moreno",
-    "orcid": "0000-0003-1425-6763"
-  },
-  {
-    "put_code": "13656874",
-    "title": "SVMs for automatic speech recognition: A survey",
-    "type": "book",
-    "journal": "",
-    "date": "2007-01-01",
-    "year": "2007",
-    "doi": "",
-    "pmid": "",
-    "pmcid": "",
-    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-39149093062&partnerID=MN8TOARS",
-    "authors": [
-      "Solera-Ureña, R.",
-      "Padrell-Sendra, J.",
-      "Martín-Iglesias, D.",
-      "Gallardo-Antolín, A.",
-      "Peláez-Moreno, C.",
-      "Díaz-de-María, F."
-    ],
-    "source": "{'value': 'Scopus - Elsevier'}",
-    "raw_type": "book",
-    "researcher": "Carmen Peláez-Moreno",
-    "orcid": "0000-0003-1425-6763"
-  },
-  {
     "put_code": "13656877",
     "title": "Towards a generalisation of formal concept analysis for data mining purposes",
     "type": "book",
@@ -3284,52 +2969,6 @@
     "authors": [
       "Valverde-Albacete, F.J.",
       "Peláez-Moreno, C."
-    ],
-    "source": "{'value': 'Scopus - Elsevier'}",
-    "raw_type": "book",
-    "researcher": "Carmen Peláez-Moreno",
-    "orcid": "0000-0003-1425-6763"
-  },
-  {
-    "put_code": "13656880",
-    "title": "A speech recognizer based on multiclass SVMs with HMM-guided segmentation",
-    "type": "book",
-    "journal": "",
-    "date": "2005-01-01",
-    "year": "2005",
-    "doi": "",
-    "pmid": "",
-    "pmcid": "",
-    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-33745467338&partnerID=MN8TOARS",
-    "authors": [
-      "Martín-Iglesias, D.",
-      "Bernal-Chaves, J.",
-      "Peláez-Moreno, C.",
-      "Gallardo-Antolín, A.",
-      "Díaz-de-María, F."
-    ],
-    "source": "{'value': 'Scopus - Elsevier'}",
-    "raw_type": "book",
-    "researcher": "Carmen Peláez-Moreno",
-    "orcid": "0000-0003-1425-6763"
-  },
-  {
-    "put_code": "13656883",
-    "title": "An application of SVM to lost packets reconstruction in voice-enabled services",
-    "type": "book",
-    "journal": "",
-    "date": "2002-01-01",
-    "year": "2002",
-    "doi": "",
-    "pmid": "",
-    "pmcid": "",
-    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84902154256&partnerID=MN8TOARS",
-    "authors": [
-      "Peláez-Moreno, C.",
-      "Parrado-Hernández, E.",
-      "Gallardo-Antolín, A.",
-      "Zambrano-Miranda, A.",
-      "Díaz-De-María, F."
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "book",
@@ -3530,7 +3169,12 @@
     "pmid": "",
     "pmcid": "",
     "url": "http://dx.doi.org/10.1007/978-3-319-05696-8_4",
-    "authors": [],
+    "authors": [
+      "González-Díaz, I.",
+      "Benois-Pineau, J.",
+      "Buso, V.",
+      "Boujut, H."
+    ],
     "source": "{'value': 'IVAN GONZALEZ'}",
     "raw_type": "book-chapter",
     "researcher": "IVAN GONZALEZ",
