@@ -1895,3 +1895,55 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+def normalize_doi(doi):
+    """
+    Limpia y estandariza cualquier DOI.
+    """
+    if not doi:
+        return ""
+    doi = clean_text(doi).lower()
+    # Elimina prefijos comunes de URLs o etiquetas DOI
+    doi = re.sub(r"^(https?://(dx\.)?doi\.org/|doi:\s*)", "", doi, flags=re.IGNORECASE)
+    return doi.strip()
+
+
+def normalize_title_aggressive(value):
+    """
+    Normalización estricta de título ignorando acentos, guiones y símbolos.
+    """
+    value = clean_text(value)
+    if not value:
+        return ""
+    # Descomponer diacríticos (acentos) y eliminarlos
+    value = unicodedata.normalize("NFKD", value)
+    value = "".join(c for c in value if not unicodedata.combining(c))
+    value = value.lower()
+    # Reemplazar guiones, barras y puntuación por espacios
+    value = re.sub(r"[-_/\\]", " ", value)
+    value = re.sub(r"[^\w\s]", "", value)
+    # Colapsar espacios múltiples
+    value = re.sub(r"\s+", " ", value)
+    return value.strip()
+
+
+def publication_dedupe_key(publication):
+    """
+    Clave de deduplicación mejorada (prioriza DOI/PMID estandarizados,
+    luego título normalizado + año).
+    """
+    doi = normalize_doi(publication.get("doi"))
+    if doi:
+        return ("doi", doi)
+
+    pmid = clean_text(publication.get("pmid")).lower()
+    if pmid:
+        return ("pmid", pmid)
+
+    title = normalize_title_aggressive(publication.get("title"))
+    year = publication.get("year") or ""
+
+    # NO incluimos pub_type para evitar que clasificaciones distintas
+    # impidan deduplicar el mismo trabajo.
+    return ("fallback_title_year", title, str(year))
