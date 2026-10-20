@@ -1554,42 +1554,28 @@ def process_researcher(
     canonical_by_orcid,
     fallback_by_name,
 ):
-    """
-    Procesa todos los trabajos de un investigador.
-    """
-
     name = get_researcher_name(researcher)
     orcid = get_researcher_orcid(researcher)
 
-    if not name:
-        print(
-            f"[{position}/{total}] "
-            "Investigador sin nombre. Se omite."
-        )
+    if not name or not orcid:
         return []
 
-    if not orcid:
-        print(
-            f"[{position}/{total}] "
-            f"{name}: sin ORCID. Se omite."
-        )
-        return []
-
-    print(
-        f"[{position}/{total}] "
-        f"{name} ({orcid})"
-    )
+    print(f"[{position}/{total}] {name} ({orcid})")
 
     groups = get_orcid_work_groups(orcid)
-    summaries = extract_all_summaries(groups)
+    
+    # Tomamos solo la primera versión (la preferida) de cada grupo de ORCID
+    preferred_summaries = []
+    for group in groups:
+        summaries = group.get("work-summary", [])
+        if summaries:
+            preferred_summaries.append(summaries[0])
 
-    print(
-        f"    Works encontrados: {len(summaries)}"
-    )
+    print(f"    Grupos de Works únicos en ORCID: {len(preferred_summaries)}")
 
     publications = []
 
-    for summary in summaries:
+    for summary in preferred_summaries:
         put_code = summary.get("put-code")
 
         if not put_code:
@@ -1600,7 +1586,6 @@ def process_researcher(
         if not work:
             continue
 
-        # Convertimos a publicación
         pub = work_to_publication(
             work,
             summary,
@@ -1610,12 +1595,10 @@ def process_researcher(
             fallback_by_name,
         )
 
-        # SOLO guardamos si la función no devolvió None
         if pub is not None:
             publications.append(pub)
 
     return publications
-
 # ============================================================
 # AGRUPACIÓN
 # ============================================================
