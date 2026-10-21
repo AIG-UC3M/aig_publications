@@ -45,8 +45,24 @@ def normalize_specific_author(author):
     if re.search(r'Gonz[aá]lez(\s*D[ií]az)?', clean_a, re.IGNORECASE) and re.search(r'(Iv[aá]n|I\.)', clean_a, re.IGNORECASE):
         return "González-Díaz,I."
         
-    # 5. Miguel Ángel Fernández Torres
-    if re.search(r'Fern[aá]ndez\s*Torres', clean_a, re.IGNORECASE):
+    # 5. Miguel Ángel Fernández-Torres
+    # Admite:
+    # Fernandez-Torres, M.-A.
+    # Fernández-Torres, M. A.
+    # Fernandez Torres, Miguel Angel
+    # Miguel Ángel Fernández-Torres
+    if (
+        re.search(
+            r'Fern[aá]ndez\s*[-_]?\s*Torres',
+            clean_a,
+            re.IGNORECASE
+        )
+        and re.search(
+            r'\b(M\s*\.?\s*[-–—]?\s*A\.?|Miguel\s+Ángel|Miguel\s+Angel)\b',
+            clean_a,
+            re.IGNORECASE
+        )
+    ):
         return "Fernández-Torres, M. A."
 
     # Si no es uno de los 5 objetivos principales, aplicar normalización genérica
