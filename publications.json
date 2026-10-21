@@ -117,6 +117,31 @@
     "orcid": "0000-0002-6437-914X"
   },
   {
+    "put_code": "229351861",
+    "title": "Learning RL policies for anticipative assistive robots by simulating human-robot interactions in real scenarios using egocentric videos",
+    "type": "conference-paper",
+    "journal": "",
+    "date": "2023-12-01",
+    "year": "2023",
+    "doi": "10.1109/robio58561.2023.10354837",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.1109/ROBIO58561.2023.10354837",
+    "authors": [
+      "Silvia Abal-Fernández",
+      "César Caramazana-Zarzosa",
+      "María Beatriz Loureiro-Casalderrey",
+      "Santiago Martínez",
+      "Carlos Balaguer",
+      "F. Díaz-de-María",
+      "Iván González-Díaz"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "conference-paper",
+    "researcher": "Fernando Díaz-de-María",
+    "orcid": "0000-0002-6437-914X"
+  },
+  {
     "put_code": "138623844",
     "title": "Pain Level and Pain-Related Behaviour Classification Using GRU-Based Sparsely-Connected RNNs",
     "type": "journal-article",
@@ -583,6 +608,29 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
+    "researcher": "Fernando Díaz-de-María",
+    "orcid": "0000-0002-6437-914X"
+  },
+  {
+    "put_code": "53155654",
+    "title": "SVM classifiers for ASR: A discussion about parameterization",
+    "type": "conference-paper",
+    "journal": "European Signal Processing Conference",
+    "date": "2015-01-01",
+    "year": "2015",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84979879858&partnerID=MN8TOARS",
+    "authors": [
+      "Garcia-Cabellos, J.M.",
+      "Pelaez-Moreno, C.",
+      "Gallardo-Antolin, A.",
+      "Perez-Cruz, F.",
+      "Diaz-De-Maria, F."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
     "researcher": "Fernando Díaz-de-María",
     "orcid": "0000-0002-6437-914X"
   },
@@ -1409,6 +1457,28 @@
     "orcid": "0000-0002-6437-914X"
   },
   {
+    "put_code": "53155657",
+    "title": "UC3M at TRECVID 2010 semantic indexing task",
+    "type": "conference-paper",
+    "journal": "2010 TREC Video Retrieval Evaluation Notebook Papers",
+    "date": "2010-01-01",
+    "year": "2010",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84905180239&partnerID=MN8TOARS",
+    "authors": [
+      "González-Díaz, I.",
+      "Gómez-Verdejo, V.",
+      "Díaz-de-María, F.",
+      "Arenas-García, J."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "Fernando Díaz-de-María",
+    "orcid": "0000-0002-6437-914X"
+  },
+  {
     "put_code": "53155689",
     "title": "Uncertainty decoding on Frequency Filtered parameters for robust ASR",
     "type": "journal-article",
@@ -1557,6 +1627,29 @@
     "orcid": "0000-0002-6437-914X"
   },
   {
+    "put_code": "53155651",
+    "title": "UC3M at TRECVID 2009",
+    "type": "conference-paper",
+    "journal": "2009 TREC Video Retrieval Evaluation Notebook Papers",
+    "date": "2009-01-01",
+    "year": "2009",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84905715489&partnerID=MN8TOARS",
+    "authors": [
+      "González-Díaz, I.",
+      "Gómez-Verdejo, V.",
+      "Martínez-Ramon, M.",
+      "Díaz-de-María, F.",
+      "Arenas-García, J."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "Fernando Díaz-de-María",
+    "orcid": "0000-0002-6437-914X"
+  },
+  {
     "put_code": "53155687",
     "title": "Adaptive multipattern fast block-matching algorithm based on motion classification techniques",
     "type": "journal-article",
@@ -1593,6 +1686,32 @@
       "Adamek, T.",
       "O'Connor, N.E.",
       "Díaz-De-María, F."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "Fernando Díaz-de-María",
+    "orcid": "0000-0002-6437-914X"
+  },
+  {
+    "put_code": "53155647",
+    "title": "UC3M high level feature extraction at TRECVID 2008",
+    "type": "conference-paper",
+    "journal": "2008 TREC Video Retrieval Evaluation Notebook Papers",
+    "date": "2008-01-01",
+    "year": "2008",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84905186764&partnerID=MN8TOARS",
+    "authors": [
+      "González-Díaz, I.",
+      "García-García, D.",
+      "Solera-Ureña, R.",
+      "Madrid-Sánchez, J.",
+      "Gómez-Verdejo, V.",
+      "Martínez-Ramón, M.",
+      "Díaz-de-María, F.",
+      "Arenas-García, J."
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "conference-paper",
@@ -1644,6 +1763,28 @@
     "orcid": "0000-0002-6437-914X"
   },
   {
+    "put_code": "53155643",
+    "title": "Hybrid models for automatic speech recognition: A comparison of classical ANN and kernel based methods",
+    "type": "book",
+    "journal": "Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)",
+    "date": "2007-01-01",
+    "year": "2007",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-38749092659&partnerID=MN8TOARS",
+    "authors": [
+      "García-Moral, A.I.",
+      "Solera-Ureña, R.",
+      "Peláez-Moreno, C.",
+      "Díaz-de-María, F."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "book",
+    "researcher": "Fernando Díaz-de-María",
+    "orcid": "0000-0002-6437-914X"
+  },
+  {
     "put_code": "53155676",
     "title": "Improved motion classification techniques for adaptive multi-pattern fast block-matching algorithm",
     "type": "conference-paper",
@@ -1683,6 +1824,30 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
+    "researcher": "Fernando Díaz-de-María",
+    "orcid": "0000-0002-6437-914X"
+  },
+  {
+    "put_code": "53155658",
+    "title": "SVMs for automatic speech recognition: A survey",
+    "type": "book",
+    "journal": "Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)",
+    "date": "2007-01-01",
+    "year": "2007",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-39149093062&partnerID=MN8TOARS",
+    "authors": [
+      "Solera-Ureña, R.",
+      "Padrell-Sendra, J.",
+      "Martín-Iglesias, D.",
+      "Gallardo-Antolín, A.",
+      "Peláez-Moreno, C.",
+      "Díaz-de-María, F."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "book",
     "researcher": "Fernando Díaz-de-María",
     "orcid": "0000-0002-6437-914X"
   },
@@ -1731,6 +1896,138 @@
     "orcid": "0000-0002-6437-914X"
   },
   {
+    "put_code": "53155655",
+    "title": "Individual on-line variance adaptation of frequency filtered parameters for robust ASR",
+    "type": "conference-paper",
+    "journal": "INTERSPEECH 2006 and 9th International Conference on Spoken Language Processing, INTERSPEECH 2006 - ICSLP",
+    "date": "2006-01-01",
+    "year": "2006",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-44949144177&partnerID=MN8TOARS",
+    "authors": [
+      "Vicente-Peña, J.",
+      "Díaz-de-María, F.",
+      "Kleijn, B."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "Fernando Díaz-de-María",
+    "orcid": "0000-0002-6437-914X"
+  },
+  {
+    "put_code": "53155645",
+    "title": "Support Vector Machines for continuous speech recognition",
+    "type": "conference-paper",
+    "journal": "European Signal Processing Conference",
+    "date": "2006-01-01",
+    "year": "2006",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84862599566&partnerID=MN8TOARS",
+    "authors": [
+      "Padrell-Sendra, J.",
+      "Martín-Iglesias, D.",
+      "Díaz-De-María, F."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "Fernando Díaz-de-María",
+    "orcid": "0000-0002-6437-914X"
+  },
+  {
+    "put_code": "53155653",
+    "title": "A speech recognizer based on multiclass SVMs with HMM-guided segmentation",
+    "type": "book",
+    "journal": "Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)",
+    "date": "2005-01-01",
+    "year": "2005",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-33745467338&partnerID=MN8TOARS",
+    "authors": [
+      "Martín-Iglesias, D.",
+      "Bernal-Chaves, J.",
+      "Peláez-Moreno, C.",
+      "Gallardo-Antolín, A.",
+      "Díaz-de-María, F."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "book",
+    "researcher": "Fernando Díaz-de-María",
+    "orcid": "0000-0002-6437-914X"
+  },
+  {
+    "put_code": "53155652",
+    "title": "Design of a voice-enabled interface for real-time access to stock exchange from a PDA through GPRS",
+    "type": "conference-paper",
+    "journal": "9th European Conference on Speech Communication and Technology",
+    "date": "2005-01-01",
+    "year": "2005",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-33745207799&partnerID=MN8TOARS",
+    "authors": [
+      "Martín-Iglesias, D.",
+      "Pereiro-Estevan, Y.",
+      "García-Moral, A.I.",
+      "Gallardo-Antolín, A.",
+      "Díaz-De-María, F."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "Fernando Díaz-de-María",
+    "orcid": "0000-0002-6437-914X"
+  },
+  {
+    "put_code": "53155659",
+    "title": "Efficient gradient-based mode selection for intra 4×4 coding in H.264/AVC",
+    "type": "conference-paper",
+    "journal": "IWSSIP 2005 - Proceedings of 12th International Workshop on Systems, Signals and Image Processing",
+    "date": "2005-01-01",
+    "year": "2005",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-32544441293&partnerID=MN8TOARS",
+    "authors": [
+      "Pujol-Alcolado, J.C.",
+      "Martín-Navas, A.",
+      "De-Frutos, M.",
+      "Díaz-de-María, F."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "Fernando Díaz-de-María",
+    "orcid": "0000-0002-6437-914X"
+  },
+  {
+    "put_code": "53155650",
+    "title": "Optimal size of time window in nonlinear features for voice quality measurement",
+    "type": "book",
+    "journal": "Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)",
+    "date": "2005-01-01",
+    "year": "2005",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-33745470103&partnerID=MN8TOARS",
+    "authors": [
+      "Alonso, J.B.",
+      "Díaz-de-María, F.",
+      "Travieso, C.M.",
+      "Ferrer, M.A."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "book",
+    "researcher": "Fernando Díaz-de-María",
+    "orcid": "0000-0002-6437-914X"
+  },
+  {
     "put_code": "53155662",
     "title": "Recognizing GSM digital speech",
     "type": "journal-article",
@@ -1748,6 +2045,116 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
+    "researcher": "Fernando Díaz-de-María",
+    "orcid": "0000-0002-6437-914X"
+  },
+  {
+    "put_code": "53155641",
+    "title": "Linear equalization of the modulation spectra: A novel approach for noisy speech recognition",
+    "type": "conference-paper",
+    "journal": "ICASSP, IEEE International Conference on Acoustics, Speech and Signal Processing - Proceedings",
+    "date": "2003-01-01",
+    "year": "2003",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-0141702073&partnerID=MN8TOARS",
+    "authors": [
+      "Díaz-de-María, F.",
+      "Vicente-Peña, J.",
+      "Gallardo-Antolín, A.",
+      "Peláez-Moreno, C."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "Fernando Díaz-de-María",
+    "orcid": "0000-0002-6437-914X"
+  },
+  {
+    "put_code": "53155656",
+    "title": "An application of SVM to lost packets reconstruction in voice-enabled services",
+    "type": "book",
+    "journal": "Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)",
+    "date": "2002-01-01",
+    "year": "2002",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84902154256&partnerID=MN8TOARS",
+    "authors": [
+      "Peláez-Moreno, C.",
+      "Parrado-Hernández, E.",
+      "Gallardo-Antolín, A.",
+      "Zambrano-Miranda, A.",
+      "Díaz-De-María, F."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "book",
+    "researcher": "Fernando Díaz-de-María",
+    "orcid": "0000-0002-6437-914X"
+  },
+  {
+    "put_code": "53155642",
+    "title": "Filtering the spectral parameters to mitigate the influence of transmission errors on asr systems",
+    "type": "conference-paper",
+    "journal": "7th International Conference on Spoken Language Processing, ICSLP 2002",
+    "date": "2002-01-01",
+    "year": "2002",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85009273508&partnerID=MN8TOARS",
+    "authors": [
+      "Peláez-Moreno, C.",
+      "Gallardo-Antolín, A.",
+      "Vicente-Peña, J.",
+      "Díaz-De-maría, F."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "Fernando Díaz-de-María",
+    "orcid": "0000-0002-6437-914X"
+  },
+  {
+    "put_code": "53155649",
+    "title": "SVM-based lost packets concealment for ASR applications over IP",
+    "type": "conference-paper",
+    "journal": "European Signal Processing Conference",
+    "date": "2002-01-01",
+    "year": "2002",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84960921109&partnerID=MN8TOARS",
+    "authors": [
+      "Pelaez-Moreno, C.",
+      "Gallardo-Antolin, A.",
+      "Parrado-Hernandez, E.",
+      "Diaz-De-Maria, F."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "Fernando Díaz-de-María",
+    "orcid": "0000-0002-6437-914X"
+  },
+  {
+    "put_code": "53155648",
+    "title": "A robust front-end for ASR over IP and GSM networks: An integrated scenario",
+    "type": "conference-paper",
+    "journal": "EUROSPEECH 2001 - SCANDINAVIA - 7th European Conference on Speech Communication and Technology",
+    "date": "2001-01-01",
+    "year": "2001",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-64549102705&partnerID=MN8TOARS",
+    "authors": [
+      "Gallardo-Antolín, A.",
+      "Peláez-Moreno, C.",
+      "Díaz-De-María, F."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
     "researcher": "Fernando Díaz-de-María",
     "orcid": "0000-0002-6437-914X"
   },
@@ -1773,6 +2180,27 @@
     "orcid": "0000-0002-6437-914X"
   },
   {
+    "put_code": "53155644",
+    "title": "Avoiding distortions due to speech coding and transmission errors in GSM ASR tasks",
+    "type": "conference-paper",
+    "journal": "ICASSP, IEEE International Conference on Acoustics, Speech and Signal Processing - Proceedings",
+    "date": "1999-01-01",
+    "year": "1999",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-0032627262&partnerID=MN8TOARS",
+    "authors": [
+      "Gallardo-Antolin, A.",
+      "Diaz-de-Maria, F.",
+      "Valverde-Albacete, F."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "Fernando Díaz-de-María",
+    "orcid": "0000-0002-6437-914X"
+  },
+  {
     "put_code": "53155688",
     "title": "Improving CELP coders by backward adaptive non-linear prediction",
     "type": "journal-article",
@@ -1789,6 +2217,48 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
+    "researcher": "Fernando Díaz-de-María",
+    "orcid": "0000-0002-6437-914X"
+  },
+  {
+    "put_code": "53155640",
+    "title": "New inverse filter criterion for blind deconvolution of spiky signals using Gaussian mixtures",
+    "type": "conference-paper",
+    "journal": "ICASSP, IEEE International Conference on Acoustics, Speech and Signal Processing - Proceedings",
+    "date": "1996-01-01",
+    "year": "1996",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-0029726541&partnerID=MN8TOARS",
+    "authors": [
+      "Santamaria-Caballero, I.",
+      "Pantaleon-Prieto, C.",
+      "Diaz-de-Maria, F.",
+      "Artes-Rodriguez, A."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "Fernando Díaz-de-María",
+    "orcid": "0000-0002-6437-914X"
+  },
+  {
+    "put_code": "53155646",
+    "title": "Nonlinear prediction for speech coding using radial basis functions",
+    "type": "conference-paper",
+    "journal": "ICASSP, IEEE International Conference on Acoustics, Speech and Signal Processing - Proceedings",
+    "date": "1995-01-01",
+    "year": "1995",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-0028997025&partnerID=MN8TOARS",
+    "authors": [
+      "Diaz-de-Maria, Fernando",
+      "Figueiras-Vidal, Anibal R."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
     "researcher": "Fernando Díaz-de-María",
     "orcid": "0000-0002-6437-914X"
   },
@@ -1893,6 +2363,26 @@
     ],
     "source": "{'value': 'Crossref'}",
     "raw_type": "journal-article",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "orcid": "0000-0002-9322-3128"
+  },
+  {
+    "put_code": "222138119",
+    "title": "Leveraging Unlabeled Data for Lung Sound Classification Through Self-Supervised Contrastive Learning",
+    "type": "preprint",
+    "journal": "",
+    "date": "2024-01-01",
+    "year": "2024",
+    "doi": "10.2139/ssrn.4903335",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.2139/ssrn.4903335",
+    "authors": [
+      "Antonio Castejón-Barrio",
+      "Ascensión Gallardo Antolín"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "preprint",
     "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
     "orcid": "0000-0002-9322-3128"
   },
@@ -2315,6 +2805,29 @@
     "orcid": "0000-0002-9322-3128"
   },
   {
+    "put_code": "50748718",
+    "title": "Continuous expressive speaking styles synthesis based on CVSM and MR-HMM",
+    "type": "conference-paper",
+    "journal": "COLING 2016 - 26th International Conference on Computational Linguistics, Proceedings of COLING 2016: Technical Papers",
+    "date": "2016-01-01",
+    "year": "2016",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85054971416&partnerID=MN8TOARS",
+    "authors": [
+      "Lorenzo-Trueba, J.",
+      "Barra-Chicote, R.",
+      "Gallardo-Antolin, A.",
+      "Yamagishi, J.",
+      "Montero, J.M."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "orcid": "0000-0002-9322-3128"
+  },
+  {
     "put_code": "50748719",
     "title": "Emergency department visit forecasting and dynamic nursing staff allocation using machine learning techniques with readily available open-source software",
     "type": "journal-article",
@@ -2402,6 +2915,113 @@
     "orcid": "0000-0002-9322-3128"
   },
   {
+    "put_code": "50748716",
+    "title": "Random forest-based prediction of Parkinson's disease progression using acoustic, ASR and intelligibility features",
+    "type": "conference-paper",
+    "journal": "Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH",
+    "date": "2015-01-01",
+    "year": "2015",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84959144048&partnerID=MN8TOARS",
+    "authors": [
+      "Zlotnik, A.",
+      "Montero, J.M.",
+      "San-Segundo, R.",
+      "Gallardo-Antolín, A."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "orcid": "0000-0002-9322-3128"
+  },
+  {
+    "put_code": "50748712",
+    "title": "A comparison of open-source segmentation architectures for dealing with imperfect data from the media in speech synthesis",
+    "type": "conference-paper",
+    "journal": "Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH",
+    "date": "2014-01-01",
+    "year": "2014",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84910025448&partnerID=MN8TOARS",
+    "authors": [
+      "Gallardo-Antolín, A.",
+      "Montero, J.M.",
+      "King, S."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "orcid": "0000-0002-9322-3128"
+  },
+  {
+    "put_code": "50748713",
+    "title": "ASR feature extraction with morphologically-filtered power-normalized cochleograms",
+    "type": "conference-paper",
+    "journal": "Proceedings of the Annual Conference of the International Speech Communication Association, INTERSPEECH",
+    "date": "2014-01-01",
+    "year": "2014",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84910091401&partnerID=MN8TOARS",
+    "authors": [
+      "De-La-Calle-Silos, F.",
+      "Valverde-Albacete, F.J.",
+      "Gallardo-Antolín, A.",
+      "Peláez-Moreno, C."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "orcid": "0000-0002-9322-3128"
+  },
+  {
+    "put_code": "50748710",
+    "title": "Deep maxout networks applied to noise-robust speech recognition",
+    "type": "book",
+    "journal": "Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)",
+    "date": "2014-01-01",
+    "year": "2014",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84921419279&partnerID=MN8TOARS",
+    "authors": [
+      "de-la-Calle-Silos, F.",
+      "Gallardo-Antolín, A.",
+      "Peláez-Moreno, C."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "book",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "orcid": "0000-0002-9322-3128"
+  },
+  {
+    "put_code": "13528560",
+    "title": "A comparison of multivariate SARIMA and SVM models for emergency department admission prediction",
+    "type": "conference-paper",
+    "journal": "",
+    "date": "2013-01-01",
+    "year": "2013",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84877975832&partnerID=MN8TOARS",
+    "authors": [
+      "Zlotnik, A.",
+      "Martínez, J.M.M.",
+      "Gallardo-Antolín, A."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "orcid": "0000-0002-9322-3128"
+  },
+  {
     "put_code": "13528558",
     "title": "Auditory-Inspired Morphological Processing of Speech Spectrograms: Applications in Automatic Speech Recognition and Speech Enhancement",
     "type": "journal-article",
@@ -2420,6 +3040,109 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "orcid": "0000-0002-9322-3128"
+  },
+  {
+    "put_code": "13528559",
+    "title": "NMF-based spectral analysis for acoustic event classification tasks",
+    "type": "book",
+    "journal": "",
+    "date": "2013-01-01",
+    "year": "2013",
+    "doi": "10.1007/978-3-642-38847-7",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84888260920&partnerID=MN8TOARS",
+    "authors": [
+      "Ludeña-Choez, J.",
+      "Gallardo-Antolín, A."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "book",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "orcid": "0000-0002-9322-3128"
+  },
+  {
+    "put_code": "13528562",
+    "title": "NMF-based temporal feature integration for acoustic event classification",
+    "type": "conference-paper",
+    "journal": "",
+    "date": "2013-01-01",
+    "year": "2013",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84906264286&partnerID=MN8TOARS",
+    "authors": [
+      "Ludeña-Choez, J.",
+      "Gallardo-Antolín, A."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "orcid": "0000-0002-9322-3128"
+  },
+  {
+    "put_code": "13528563",
+    "title": "Speech denoising using non-negative matrix factorization with Kullback-Leibler divergence and sparseness constraints",
+    "type": "book",
+    "journal": "",
+    "date": "2012-01-01",
+    "year": "2012",
+    "doi": "10.1007/978-3-642-35292-8_22",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84871512717&partnerID=MN8TOARS",
+    "authors": [
+      "Ludeña-Choez, J.",
+      "Gallardo-Antolín, A."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "book",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "orcid": "0000-0002-9322-3128"
+  },
+  {
+    "put_code": "13528564",
+    "title": "Feature extraction assessment for an acoustic-event classification task using the entropy triangle",
+    "type": "conference-paper",
+    "journal": "",
+    "date": "2011-01-01",
+    "year": "2011",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84865714987&partnerID=MN8TOARS",
+    "authors": [
+      "Mejía-Navarrete, D.",
+      "Gallardo-Antolín, A.",
+      "Peláez-Moreno, C.",
+      "Valverde-Albacete, F.J."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "orcid": "0000-0002-9322-3128"
+  },
+  {
+    "put_code": "13528565",
+    "title": "Morphological processing of spectrograms for speech enhancement",
+    "type": "book",
+    "journal": "",
+    "date": "2011-01-01",
+    "year": "2011",
+    "doi": "10.1007/978-3-642-25020-0_29",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-81155133331&partnerID=MN8TOARS",
+    "authors": [
+      "Cadore, J.",
+      "Gallardo-Antolín, A.",
+      "Peláez-Moreno, C."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "book",
     "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
     "orcid": "0000-0002-9322-3128"
   },
@@ -2470,6 +3193,29 @@
     "orcid": "0000-0002-9322-3128"
   },
   {
+    "put_code": "13528568",
+    "title": "Expressive speech identifications based on hidden markov model",
+    "type": "conference-paper",
+    "journal": "",
+    "date": "2009-01-01",
+    "year": "2009",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-70450181058&partnerID=MN8TOARS",
+    "authors": [
+      "Lutfi, S.",
+      "Montero, J.M.",
+      "Barra-Chicote, R.",
+      "Lucas-Cuesta, J.M.",
+      "Gallardo-Antolin, A."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "orcid": "0000-0002-9322-3128"
+  },
+  {
     "put_code": "13528569",
     "title": "A simulated annealing approach to speaker segmentation in audio databases",
     "type": "journal-article",
@@ -2492,6 +3238,50 @@
     "orcid": "0000-0002-9322-3128"
   },
   {
+    "put_code": "13528570",
+    "title": "Automatic phonetic segmentation of spanish emotional speech",
+    "type": "conference-paper",
+    "journal": "",
+    "date": "2007-01-01",
+    "year": "2007",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-56149117453&partnerID=MN8TOARS",
+    "authors": [
+      "Gallardo-Antolín, A.",
+      "Barra, R.",
+      "Schröder, M.",
+      "Krstulovic, S.",
+      "Montero, J.M."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "orcid": "0000-0002-9322-3128"
+  },
+  {
+    "put_code": "13528573",
+    "title": "Multi-stream speaker diarization systems for the meetings domain",
+    "type": "conference-paper",
+    "journal": "",
+    "date": "2006-01-01",
+    "year": "2006",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-44949173184&partnerID=MN8TOARS",
+    "authors": [
+      "Gallardo-Antolín, A.",
+      "Anguera, X.",
+      "Wooters, C."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "orcid": "0000-0002-9322-3128"
+  },
+  {
     "put_code": "13528576",
     "title": "Offline speaker segmentation using genetic algorithms and mutual information",
     "type": "journal-article",
@@ -2510,6 +3300,80 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "orcid": "0000-0002-9322-3128"
+  },
+  {
+    "put_code": "13528581",
+    "title": "I-Gaia: An information processing layer for the DIET platform",
+    "type": "conference-paper",
+    "journal": "",
+    "date": "2002-01-01",
+    "year": "2002",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-0345046503&partnerID=MN8TOARS",
+    "authors": [
+      "Gallardo-Antolín, A.",
+      "Navia-Vázquez, A.",
+      "Molina-Bulla, H.Y.",
+      "Rodríguez-González, A.B.",
+      "Valverde-Albacete, F.J.",
+      "Cid-Sueiro, J.",
+      "Figueiras-Vidal, A.R.",
+      "Koutris, T.",
+      "Xirouhaki, C.",
+      "Koubarakis, M."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "orcid": "0000-0002-9322-3128"
+  },
+  {
+    "put_code": "50748709",
+    "title": "Improved variable preselection list length estimation using NNs in a large vocabulary telephone speech recognition system",
+    "type": "conference-paper",
+    "journal": "6th International Conference on Spoken Language Processing, ICSLP 2000",
+    "date": "2000-01-01",
+    "year": "2000",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85009154271&partnerID=MN8TOARS",
+    "authors": [
+      "Macías-Guarasa, J.",
+      "Ferreiros, J.",
+      "Colás, J.",
+      "Gallardo-Antolín, A.",
+      "Pardo, J.M."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "orcid": "0000-0002-9322-3128"
+  },
+  {
+    "put_code": "50748717",
+    "title": "Incorporating multiple-hmm acoustic modeling in a modular large vocabulary speech recognition system in telephone environment",
+    "type": "conference-paper",
+    "journal": "6th International Conference on Spoken Language Processing, ICSLP 2000",
+    "date": "2000-01-01",
+    "year": "2000",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85009152934&partnerID=MN8TOARS",
+    "authors": [
+      "Gallardo-Antolín, A.",
+      "Ferreiros, J.",
+      "Macías-Guarasa, J.",
+      "De Córdoba, R.",
+      "Pardo, J.M."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
     "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
     "orcid": "0000-0002-9322-3128"
   },
@@ -2560,6 +3424,27 @@
     "orcid": "0000-0003-1425-6763"
   },
   {
+    "put_code": "223201967",
+    "title": "On the Limits of Information Transmission in Concept Lattices",
+    "type": "book-chapter",
+    "journal": "",
+    "date": "2027-01-01",
+    "year": "2027",
+    "doi": "10.1007/978-3-032-34742-8_13",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.1007/978-3-032-34742-8_13",
+    "authors": [
+      "Emma Reyner-Fuentes",
+      "C. Peláez-Moreno",
+      "Francisco J. Valverde-Albacete"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "book-chapter",
+    "researcher": "Carmen Peláez-Moreno",
+    "orcid": "0000-0003-1425-6763"
+  },
+  {
     "put_code": "212911179",
     "title": "Building artificial situational awareness: Soundscape classification in daily-life scenarios of gender based violence victims",
     "type": "journal-article",
@@ -2577,6 +3462,30 @@
     ],
     "source": "{'value': 'Crossref'}",
     "raw_type": "journal-article",
+    "researcher": "Carmen Peláez-Moreno",
+    "orcid": "0000-0003-1425-6763"
+  },
+  {
+    "put_code": "216208303",
+    "title": "An AI Tool for Gender Bias Analysis in News Publications",
+    "type": "conference-paper",
+    "journal": "",
+    "date": "2026-06-08",
+    "year": "2026",
+    "doi": "10.1145/3811427.3811473",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.1145/3811427.3811473",
+    "authors": [
+      "Jorge Garcelán",
+      "Teresa Onorati",
+      "C. Peláez-Moreno",
+      "Clara Sainz de Baranda Andújar",
+      "Paloma Díaz",
+      "Ignacio Aedo"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "conference-paper",
     "researcher": "Carmen Peláez-Moreno",
     "orcid": "0000-0003-1425-6763"
   },
@@ -2646,6 +3555,27 @@
     "orcid": "0000-0003-1425-6763"
   },
   {
+    "put_code": "191259867",
+    "title": "Qualitative and Quantitative Analyses of C. elegans’ Perception with Concept Lattices as Information Channels",
+    "type": "book-chapter",
+    "journal": "",
+    "date": "2025-01-01",
+    "year": "2025",
+    "doi": "10.1007/978-3-032-03364-2_17",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.1007/978-3-032-03364-2_17",
+    "authors": [
+      "Emma Reyner-Fuentes",
+      "C. Peláez-Moreno",
+      "Francisco J. Valverde-Albacete"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "book-chapter",
+    "researcher": "Carmen Peláez-Moreno",
+    "orcid": "0000-0003-1425-6763"
+  },
+  {
     "put_code": "151281627",
     "title": "A Formalization of Multilabel Classification in Terms of Lattice Theory and Information Theory: Concerning Datasets",
     "type": "journal-article",
@@ -2662,6 +3592,27 @@
     ],
     "source": "{'value': 'Crossref'}",
     "raw_type": "journal-article",
+    "researcher": "Carmen Peláez-Moreno",
+    "orcid": "0000-0003-1425-6763"
+  },
+  {
+    "put_code": "164766773",
+    "title": "Discovering the Structure of Odorants in Caenorhabditis Elegans using Formal Concept Analysis",
+    "type": "book-chapter",
+    "journal": "",
+    "date": "2024-01-01",
+    "year": "2024",
+    "doi": "10.1007/978-3-031-67868-4_17",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.1007/978-3-031-67868-4_17",
+    "authors": [
+      "Emma Reyner-Fuentes",
+      "C. Peláez-Moreno",
+      "Francisco J. Valverde-Albacete"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "book-chapter",
     "researcher": "Carmen Peláez-Moreno",
     "orcid": "0000-0003-1425-6763"
   },
@@ -2688,6 +3639,29 @@
     ],
     "source": "{'value': 'Crossref'}",
     "raw_type": "journal-article",
+    "researcher": "Carmen Peláez-Moreno",
+    "orcid": "0000-0003-1425-6763"
+  },
+  {
+    "put_code": "115326047",
+    "title": "Encoding Non-global Time Representations into the Lattice of Divisibility",
+    "type": "book-chapter",
+    "journal": "",
+    "date": "2022-01-01",
+    "year": "2022",
+    "doi": "10.1007/978-3-031-08971-8_11",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.1007/978-3-031-08971-8_11",
+    "authors": [
+      "Francisco José Valverde-Albacete",
+      "C. Peláez-Moreno",
+      "Inma P. Cabrera",
+      "Pablo Cordero",
+      "Manuel Ojeda-Aciego"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "book-chapter",
     "researcher": "Carmen Peláez-Moreno",
     "orcid": "0000-0003-1425-6763"
   },
@@ -2791,6 +3765,30 @@
     "orcid": "0000-0003-1425-6763"
   },
   {
+    "put_code": "80825640",
+    "title": "A Hybrid Data Fusion Architecture for BINDI: A Wearable Solution to Combat Gender-Based Violence",
+    "type": "book-chapter",
+    "journal": "",
+    "date": "2020-01-01",
+    "year": "2020",
+    "doi": "10.1007/978-3-030-59000-0_17",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.1007/978-3-030-59000-0_17",
+    "authors": [
+      "Esther Rituerto-González",
+      "Jose Angel Miranda",
+      "Manuel Felipe Canabal",
+      "José M. Lanza-Gutiérrez",
+      "C. Peláez-Moreno",
+      "Celia López-Ongil"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "book-chapter",
+    "researcher": "Carmen Peláez-Moreno",
+    "orcid": "0000-0003-1425-6763"
+  },
+  {
     "put_code": "60350897",
     "title": "The Rényi Entropies Operate in Positive Semifields",
     "type": "journal-article",
@@ -2871,6 +3869,52 @@
     "orcid": "0000-0003-1425-6763"
   },
   {
+    "put_code": "52292392",
+    "title": "A data analysis application of formal independence analysis",
+    "type": "conference-paper",
+    "journal": "International Conference on Concept Lattices and Their Applications",
+    "date": "2018-01-01",
+    "year": "2018",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85052915418&partnerID=MN8TOARS",
+    "authors": [
+      "Valverde-Albacete, F.J.",
+      "Peláez-Moreno, C.",
+      "Cabrera, I.P.",
+      "Cordero, P.",
+      "Ojeda-Aciego, M."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "Carmen Peláez-Moreno",
+    "orcid": "0000-0003-1425-6763"
+  },
+  {
+    "put_code": "44817396",
+    "title": "Formal Independence Analysis",
+    "type": "book-chapter",
+    "journal": "",
+    "date": "2018-01-01",
+    "year": "2018",
+    "doi": "10.1007/978-3-319-91473-2_51",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.1007/978-3-319-91473-2_51",
+    "authors": [
+      "Francisco J. Valverde-Albacete",
+      "C. Peláez-Moreno",
+      "Inma P. Cabrera",
+      "Pablo Cordero",
+      "Manuel Ojeda-Aciego"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "book-chapter",
+    "researcher": "Carmen Peláez-Moreno",
+    "orcid": "0000-0003-1425-6763"
+  },
+  {
     "put_code": "63451357",
     "title": "On the relation between semifield-valued FCA and the idempotent singular value decomposition",
     "type": "conference-paper",
@@ -2887,6 +3931,26 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "conference-paper",
+    "researcher": "Carmen Peláez-Moreno",
+    "orcid": "0000-0003-1425-6763"
+  },
+  {
+    "put_code": "32895335",
+    "title": "The Linear Algebra in Extended Formal Concept Analysis Over Idempotent Semifields",
+    "type": "book-chapter",
+    "journal": "",
+    "date": "2017-01-01",
+    "year": "2017",
+    "doi": "10.1007/978-3-319-59271-8_14",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.1007/978-3-319-59271-8_14",
+    "authors": [
+      "Francisco José Valverde-Albacete",
+      "C. Peláez-Moreno"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "book-chapter",
     "researcher": "Carmen Peláez-Moreno",
     "orcid": "0000-0003-1425-6763"
   },
@@ -3052,6 +4116,26 @@
     "orcid": "0000-0003-1425-6763"
   },
   {
+    "put_code": "52292402",
+    "title": "Extending the HITS algorithm over dioids",
+    "type": "conference-paper",
+    "journal": "CEUR Workshop Proceedings",
+    "date": "2015-01-01",
+    "year": "2015",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84962295568&partnerID=MN8TOARS",
+    "authors": [
+      "Valverde-Albacete, F.J.",
+      "Peláez-Moreno, C."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "Carmen Peláez-Moreno",
+    "orcid": "0000-0003-1425-6763"
+  },
+  {
     "put_code": "52292419",
     "title": "The linear algebra in formal concept analysis over idempotent semifields",
     "type": "conference-paper",
@@ -3092,6 +4176,109 @@
     "orcid": "0000-0003-1425-6763"
   },
   {
+    "put_code": "52292395",
+    "title": "On concept lattices as information channels",
+    "type": "conference-paper",
+    "journal": "CEUR Workshop Proceedings",
+    "date": "2014-01-01",
+    "year": "2014",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84922161867&partnerID=MN8TOARS",
+    "authors": [
+      "Valverde-Albacete, F.J.",
+      "Peláez-Moreno, C.",
+      "Peñas, A."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "Carmen Peláez-Moreno",
+    "orcid": "0000-0003-1425-6763"
+  },
+  {
+    "put_code": "13656855",
+    "title": "A proposal for new evaluation metrics and result visualization technique for sentiment analysis tasks",
+    "type": "book",
+    "journal": "",
+    "date": "2013-01-01",
+    "year": "2013",
+    "doi": "10.1007/978-3-642-40802-1_5",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84886418866&partnerID=MN8TOARS",
+    "authors": [
+      "Valverde-Albacete, F.J.",
+      "Carrillo-de-Albornoz, J.",
+      "Peláez-Moreno, C."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "book",
+    "researcher": "Carmen Peláez-Moreno",
+    "orcid": "0000-0003-1425-6763"
+  },
+  {
+    "put_code": "52292404",
+    "title": "Spectral lattices of reducible matrices over completed idempotent semifields",
+    "type": "conference-paper",
+    "journal": "CEUR Workshop Proceedings",
+    "date": "2013-01-01",
+    "year": "2013",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84924371055&partnerID=MN8TOARS",
+    "authors": [
+      "Valverde-Albacete, F.J.",
+      "Peláez-Moreno, C."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "Carmen Peláez-Moreno",
+    "orcid": "0000-0003-1425-6763"
+  },
+  {
+    "put_code": "52292398",
+    "title": "Systems vs. methods: An analysis of the affordances of Formal Concept Analysis for Information Retrieval",
+    "type": "conference-paper",
+    "journal": "CEUR Workshop Proceedings",
+    "date": "2013-01-01",
+    "year": "2013",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84922572809&partnerID=MN8TOARS",
+    "authors": [
+      "Valverde-Albacete, F.J.",
+      "Peláez-Moreno, C."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "Carmen Peláez-Moreno",
+    "orcid": "0000-0003-1425-6763"
+  },
+  {
+    "put_code": "52292403",
+    "title": "WebGeneKFCA: An on-line conceptual analysis tool for Genomic Expression data",
+    "type": "conference-paper",
+    "journal": "CEUR Workshop Proceedings",
+    "date": "2012-01-01",
+    "year": "2012",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84922712575&partnerID=MN8TOARS",
+    "authors": [
+      "Fernández-Calabozo, J.M.",
+      "Peláez-Moreno, C.",
+      "Valverde-Albacete, F.J."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "Carmen Peláez-Moreno",
+    "orcid": "0000-0003-1425-6763"
+  },
+  {
     "put_code": "13656863",
     "title": "Extending conceptualisation modes for generalised Formal Concept Analysis",
     "type": "journal-article",
@@ -3108,6 +4295,27 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
+    "researcher": "Carmen Peláez-Moreno",
+    "orcid": "0000-0003-1425-6763"
+  },
+  {
+    "put_code": "13656864",
+    "title": "Gene expression array exploration using script K-formal concept analysis",
+    "type": "book",
+    "journal": "",
+    "date": "2011-01-01",
+    "year": "2011",
+    "doi": "10.1007/978-3-642-20514-9_11",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-79955749909&partnerID=MN8TOARS",
+    "authors": [
+      "González Calabozo, J.M.",
+      "Peláez-Moreno, C.",
+      "Valverde-Albacete, F.J."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "book",
     "researcher": "Carmen Peláez-Moreno",
     "orcid": "0000-0003-1425-6763"
   },
@@ -3133,6 +4341,26 @@
     "orcid": "0000-0003-1425-6763"
   },
   {
+    "put_code": "13656868",
+    "title": "Detecting features from confusion matrices using generalized formal concept analysis",
+    "type": "book",
+    "journal": "",
+    "date": "2010-01-01",
+    "year": "2010",
+    "doi": "10.1007/978-3-642-13803-4_47",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-77954610453&partnerID=MN8TOARS",
+    "authors": [
+      "Peláez-Moreno, C.",
+      "Valverde-Albacete, F.J."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "book",
+    "researcher": "Carmen Peláez-Moreno",
+    "orcid": "0000-0003-1425-6763"
+  },
+  {
     "put_code": "13656866",
     "title": "Two information-theoretic tools to assess the performance of multi-class classifiers",
     "type": "journal-article",
@@ -3149,6 +4377,109 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
+    "researcher": "Carmen Peláez-Moreno",
+    "orcid": "0000-0003-1425-6763"
+  },
+  {
+    "put_code": "13656869",
+    "title": "Eliciting a hierarchical structure of human consonant perception task errors using Formal Concept Analysis",
+    "type": "conference-paper",
+    "journal": "",
+    "date": "2009-01-01",
+    "year": "2009",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-70450177444&partnerID=MN8TOARS",
+    "authors": [
+      "Peláez-Moreno, C.",
+      "García-Moral, A.I.",
+      "Valverde-Albacete, F.J."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "Carmen Peláez-Moreno",
+    "orcid": "0000-0003-1425-6763"
+  },
+  {
+    "put_code": "13656870",
+    "title": "Spectral lattices of ℝ̄,+-formal contexts",
+    "type": "book",
+    "journal": "",
+    "date": "2008-01-01",
+    "year": "2008",
+    "doi": "10.1007/978-3-540-78137-0_9",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-49949114006&partnerID=MN8TOARS",
+    "authors": [
+      "Valverde-Albacete, F.J.",
+      "Peláez-Moreno, C."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "book",
+    "researcher": "Carmen Peláez-Moreno",
+    "orcid": "0000-0003-1425-6763"
+  },
+  {
+    "put_code": "13656872",
+    "title": "Further galois connections between semimodules over idempotent semirings",
+    "type": "conference-paper",
+    "journal": "",
+    "date": "2007-01-01",
+    "year": "2007",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84885234086&partnerID=MN8TOARS",
+    "authors": [
+      "Valverde-Albacete, F.J.",
+      "Peláez-Moreno, C."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "Carmen Peláez-Moreno",
+    "orcid": "0000-0003-1425-6763"
+  },
+  {
+    "put_code": "13656877",
+    "title": "Towards a generalisation of formal concept analysis for data mining purposes",
+    "type": "book",
+    "journal": "",
+    "date": "2006-01-01",
+    "year": "2006",
+    "doi": "10.1007/11671404_11",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-33745533977&partnerID=MN8TOARS",
+    "authors": [
+      "Valverde-Albacete, F.J.",
+      "Peláez-Moreno, C."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "book",
+    "researcher": "Carmen Peláez-Moreno",
+    "orcid": "0000-0003-1425-6763"
+  },
+  {
+    "put_code": "13656879",
+    "title": "Automatic data selection for MLP-based feature extraction for ASR",
+    "type": "conference-paper",
+    "journal": "",
+    "date": "2005-01-01",
+    "year": "2005",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-33745209928&partnerID=MN8TOARS",
+    "authors": [
+      "Peláez-Moreno, C.",
+      "Zhu, Q.",
+      "Chen, B.",
+      "Morgan, N."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
     "researcher": "Carmen Peláez-Moreno",
     "orcid": "0000-0003-1425-6763"
   },
@@ -3374,6 +4705,51 @@
     "orcid": "0000-0003-4644-8479"
   },
   {
+    "put_code": "13807990",
+    "title": "Modeling instrumental activities of daily living in egocentric vision as sequences of active objects and context for Alzheimer disease research",
+    "type": "conference-paper",
+    "journal": "",
+    "date": "2013-01-01",
+    "year": "2013",
+    "doi": "10.1145/2505323.2505328",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84887163723&partnerID=MN8TOARS",
+    "authors": [
+      "González Díaz, I.",
+      "Buso, V.",
+      "Benois-Pineau, J.",
+      "Bourmaud, G.",
+      "Megret, R."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "IVAN GONZALEZ",
+    "orcid": "0000-0003-4644-8479"
+  },
+  {
+    "put_code": "13808002",
+    "title": "A rate control algorithm for low-delay H.264 video coding with stored-b pictures",
+    "type": "conference-paper",
+    "journal": "",
+    "date": "2007-01-01",
+    "year": "2007",
+    "doi": "10.1109/icassp.2007.366117",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-34547534765&partnerID=MN8TOARS",
+    "authors": [
+      "Sanz-Rodríguez, S.",
+      "De-Frutos-López, M.",
+      "González-Díaz, I.",
+      "Cid-Sueiro, J."
+    ],
+    "source": "{'value': 'Scopus - Elsevier'}",
+    "raw_type": "conference-paper",
+    "researcher": "IVAN GONZALEZ",
+    "orcid": "0000-0003-4644-8479"
+  },
+  {
     "put_code": "224190741",
     "title": "Bridging the weather and climate divide with artificial intelligence",
     "type": "journal-article",
@@ -3493,6 +4869,52 @@
     "orcid": "0000-0002-0801-199X"
   },
   {
+    "put_code": "208420439",
+    "title": "Identifying the Restructuring of Forced Responses and Internal Variability in Soil Moisture–Precipitation Coupling Mechanisms",
+    "type": "preprint",
+    "journal": "",
+    "date": "2026-03-14",
+    "year": "2026",
+    "doi": "10.5194/egusphere-egu26-8630",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.5194/egusphere-egu26-8630",
+    "authors": [
+      "Mengxue Zhang",
+      "Feini Huang",
+      "Andrei Gavrilov",
+      "Nathan Mankovich",
+      "Miguel-Ángel Fernández-Torres",
+      "Gustau Camps-Valls"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "preprint",
+    "researcher": "Miguel Ángel Fernández Torres",
+    "orcid": "0000-0002-0801-199X"
+  },
+  {
+    "put_code": "208401938",
+    "title": "Towards Sub-Seasonal Flash Drought Prediction Using a Vision Transformer Approach",
+    "type": "preprint",
+    "journal": "",
+    "date": "2026-03-13",
+    "year": "2026",
+    "doi": "10.5194/egusphere-egu26-3518",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.5194/egusphere-egu26-3518",
+    "authors": [
+      "Noelia Otero",
+      "Miguel Ángel Fernández-Torres",
+      "Atahan Özer",
+      "Jackie Ma"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "preprint",
+    "researcher": "Miguel Ángel Fernández Torres",
+    "orcid": "0000-0002-0801-199X"
+  },
+  {
     "put_code": "202988605",
     "title": "A large-scale, multitask, multisensory dataset for climate-aware crop monitoring in the US from 2018–2022",
     "type": "journal-article",
@@ -3535,6 +4957,30 @@
     ],
     "source": "{'value': 'Crossref'}",
     "raw_type": "journal-article",
+    "researcher": "Miguel Ángel Fernández Torres",
+    "orcid": "0000-0002-0801-199X"
+  },
+  {
+    "put_code": "186056901",
+    "title": "Understanding European Heatwaves with Variational Autoencoders",
+    "type": "preprint",
+    "journal": "",
+    "date": "2025-06-16",
+    "year": "2025",
+    "doi": "10.5194/egusphere-2025-2460",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.5194/egusphere-2025-2460",
+    "authors": [
+      "Aytaç Paçal",
+      "Birgit Hassler",
+      "Katja Weigel",
+      "Miguel-Ángel Fernández-Torres",
+      "Gustau Camps-Valls",
+      "Veronika Eyring"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "preprint",
     "researcher": "Miguel Ángel Fernández Torres",
     "orcid": "0000-0002-0801-199X"
   },
@@ -3686,6 +5132,30 @@
     ],
     "source": "{'value': 'Crossref'}",
     "raw_type": "journal-article",
+    "researcher": "Miguel Ángel Fernández Torres",
+    "orcid": "0000-0002-0801-199X"
+  },
+  {
+    "put_code": "154983618",
+    "title": "Detecting spatio-temporal dynamics of western European heatwaves using deep learning",
+    "type": "preprint",
+    "journal": "",
+    "date": "2025-01-20",
+    "year": "2025",
+    "doi": "10.5194/egusphere-egu24-6655",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.5194/egusphere-egu24-6655",
+    "authors": [
+      "Tamara Happe",
+      "Jasper Wijnands",
+      "Miguel Ángel Fernández-Torres",
+      "Paolo Scussolini",
+      "Laura Muntjewerf",
+      "Dim Coumou"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "preprint",
     "researcher": "Miguel Ángel Fernández Torres",
     "orcid": "0000-0002-0801-199X"
   },
@@ -3908,6 +5378,55 @@
     "orcid": "0000-0002-0801-199X"
   },
   {
+    "put_code": "129694234",
+    "title": "USCC: A Benchmark Dataset for Crop Yield Prediction under Climate Extremes",
+    "type": "preprint",
+    "journal": "",
+    "date": "2023-05-15",
+    "year": "2023",
+    "doi": "10.5194/egusphere-egu23-15540",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.5194/egusphere-egu23-15540",
+    "authors": [
+      "Adrian Höhl",
+      "Stella Ofori-Ampofo",
+      "Ivica Obadic",
+      "Miguel-Ángel Fernández-Torres",
+      "Ridvan Salih Kuzu",
+      "Xiaoxiang Zhu"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "preprint",
+    "researcher": "Miguel Ángel Fernández Torres",
+    "orcid": "0000-0002-0801-199X"
+  },
+  {
+    "put_code": "129445449",
+    "title": "XAIDA4Detection: A Toolbox for the Detection and Characterization of Spatio-Temporal Extreme Events",
+    "type": "preprint",
+    "journal": "",
+    "date": "2023-05-15",
+    "year": "2023",
+    "doi": "10.5194/egusphere-egu23-4816",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.5194/egusphere-egu23-4816",
+    "authors": [
+      "Jordi Cortés-Andrés",
+      "Maria Gonzalez-Calabuig",
+      "Mengxue Zhang",
+      "Tristan Williams",
+      "Miguel-Ángel Fernández-Torres",
+      "Oscar J. Pellicer-Valero",
+      "Gustau Camps-Valls"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "preprint",
+    "researcher": "Miguel Ángel Fernández Torres",
+    "orcid": "0000-0002-0801-199X"
+  },
+  {
     "put_code": "182564796",
     "title": "Assessing the Impact of Using Short Videos for Teaching at Higher Education: Empirical Evidence from Log-Files in a Learning Management System",
     "type": "journal-article",
@@ -3949,6 +5468,75 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "other",
+    "researcher": "Miguel Ángel Fernández Torres",
+    "orcid": "0000-0002-0801-199X"
+  },
+  {
+    "put_code": "110560979",
+    "title": "Explainable deep learning for wildfire danger estimation",
+    "type": "preprint",
+    "journal": "",
+    "date": "2022-03-28",
+    "year": "2022",
+    "doi": "10.5194/egusphere-egu22-11787",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.5194/egusphere-egu22-11787",
+    "authors": [
+      "Michele Ronco",
+      "Ioannis Prapas",
+      "Spyros Kondylatos",
+      "Ioannis Papoutsis",
+      "Gustau Camps-Valls",
+      "Miguel-Ángel Fernández-Torres",
+      "Maria Piles Guillem",
+      "Nuno Carvalhais"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "preprint",
+    "researcher": "Miguel Ángel Fernández Torres",
+    "orcid": "0000-0002-0801-199X"
+  },
+  {
+    "put_code": "110560977",
+    "title": "Learning ENSO-related Principal Modes of Vegetation via a Granger-Causal Variational Autoencoder",
+    "type": "preprint",
+    "journal": "",
+    "date": "2022-03-28",
+    "year": "2022",
+    "doi": "10.5194/egusphere-egu22-11388",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.5194/egusphere-egu22-11388",
+    "authors": [
+      "Gherardo Varando",
+      "Miguel-Ángel Fernández-Torres",
+      "Gustau Camps-Valls"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "preprint",
+    "researcher": "Miguel Ángel Fernández Torres",
+    "orcid": "0000-0002-0801-199X"
+  },
+  {
+    "put_code": "110560980",
+    "title": "Recent Advances in Deep Learning for Spatio-Temporal Drought Monitoring, Forecasting and Model Understanding",
+    "type": "preprint",
+    "journal": "",
+    "date": "2022-03-28",
+    "year": "2022",
+    "doi": "10.5194/egusphere-egu22-11872",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.5194/egusphere-egu22-11872",
+    "authors": [
+      "María González-Calabuig",
+      "Jordi Cortés-Andrés",
+      "Miguel-Ángel Fernández-Torres",
+      "Gustau Camps-Valls"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "preprint",
     "researcher": "Miguel Ángel Fernández Torres",
     "orcid": "0000-0002-0801-199X"
   },
@@ -4032,6 +5620,28 @@
     ],
     "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
+    "researcher": "Miguel Ángel Fernández Torres",
+    "orcid": "0000-0002-0801-199X"
+  },
+  {
+    "put_code": "89938579",
+    "title": "Spatio-Temporal Gaussianization Flows for Extreme Event Detection",
+    "type": "other",
+    "journal": "",
+    "date": "2021-03-04",
+    "year": "2021",
+    "doi": "10.5194/egusphere-egu21-15729",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.5194/egusphere-egu21-15729",
+    "authors": [
+      "Miguel-Ángel Fernández-Torres",
+      "J. Emmanuel Johnson",
+      "María Piles",
+      "Gustau Camps-Valls"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "other",
     "researcher": "Miguel Ángel Fernández Torres",
     "orcid": "0000-0002-0801-199X"
   },
