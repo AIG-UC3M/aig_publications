@@ -509,22 +509,22 @@ def looks_like_article(pub):
     journal = clean_text(pub.get("journal"))
     doi = clean_text(pub.get("doi"))
 
+    # Ampliamos los tipos aceptados desde ORCID
     article_types = {
         "journal-article",
         "article",
         "journal article",
+        "conference-paper",
+        "conference-abstract",
+        "publication-issue",
+        "other",
     }
 
     if work_type in article_types:
         return True
 
-    if work_type == "other" and journal:
-        return True
-
-    if not work_type and journal:
-        return True
-
-    if journal and doi:
+    # Si tiene DOI o Revista/Journal asociada, considerarlo artículo independientemente del tipo
+    if journal or doi:
         return True
 
     return False
