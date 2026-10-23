@@ -1,5 +1,30 @@
 [
   {
+    "put_code": "",
+    "title": "The Risks of Imperfect Knowledge: Reliability Trade-Offs in Physics-Aware Neural Networks for Climate Projections",
+    "type": "conference-paper",
+    "journal": "Artificial Neural Networks and Machine Learning – ICANN 2026 (Lecture Notes in Computer Science)",
+    "date": "",
+    "year": "2026",
+    "doi": "10.1007/978-3-032-38404-1_58",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.1007/978-3-032-38404-1_58",
+    "authors": [
+      "Zhang, M.",
+      "Cohrs, K. -H.",
+      "Fernández-Torres, M. -Á.",
+      "Rodrigo-Bonet, E."
+    ],
+    "source": "conferences_no.bib",
+    "raw_type": "inproceedings",
+    "researcher": "",
+    "orcid": "",
+    "bibtex_key": "MZhang2026_4",
+    "booktitle": "Artificial Neural Networks and Machine Learning – ICANN 2026 (Lecture Notes in Computer Science)",
+    "pages": "729--740"
+  },
+  {
     "put_code": "216208303",
     "title": "An AI Tool for Gender Bias Analysis in News Publications",
     "type": "conference-paper",
@@ -22,6 +47,77 @@
     "raw_type": "conference-paper",
     "researcher": "Carmen Peláez-Moreno",
     "orcid": "0000-0003-1425-6763"
+  },
+  {
+    "put_code": "",
+    "title": "Explainable Feature Selection for Dementia Recognition from Acoustic and Linguistic Cues",
+    "type": "conference-paper",
+    "journal": "Forum Acusticum Euronoise",
+    "date": "",
+    "year": "2025",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "",
+    "authors": [
+      "Gallardo-Antolín, A.",
+      "Oiza-Zapata, I.",
+      "Ferreiros-López, J.",
+      "Fernández-Martínez, F.",
+      "San-Segundo, R."
+    ],
+    "source": "conferences_no.bib",
+    "raw_type": "inproceedings",
+    "researcher": "",
+    "orcid": "",
+    "bibtex_key": "AGallardoAntolin2025_1",
+    "booktitle": "Forum Acusticum Euronoise"
+  },
+  {
+    "put_code": "",
+    "title": "Noise Prewhitening using Supervised Nonnegative Matrix Factorization and Wiener Filtering",
+    "type": "conference-paper",
+    "journal": "International Conference on Computer and Applications (IEEE/ICCA 2024)",
+    "date": "",
+    "year": "2024",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "",
+    "authors": [
+      "Fakhry, M.",
+      "Gallardo-Antolín, A."
+    ],
+    "source": "conferences_no.bib",
+    "raw_type": "inproceedings",
+    "researcher": "",
+    "orcid": "",
+    "bibtex_key": "MahmoudFakhry2024_2",
+    "booktitle": "International Conference on Computer and Applications (IEEE/ICCA 2024)",
+    "pages": "772--776"
+  },
+  {
+    "put_code": "",
+    "title": "Analysis of Systolic Murmurs in Heart Sounds using Multiresolution Complex Gabor Dictionary",
+    "type": "conference-paper",
+    "journal": "International Conference on Computer and Applications (IEEE/ICCA 2024)",
+    "date": "",
+    "year": "2024",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "",
+    "authors": [
+      "Fakhry, M.",
+      "Gallardo-Antolín, A."
+    ],
+    "source": "conferences_no.bib",
+    "raw_type": "inproceedings",
+    "researcher": "",
+    "orcid": "",
+    "bibtex_key": "MahmoudFakhry2024_3",
+    "booktitle": "International Conference on Computer and Applications (IEEE/ICCA 2024)",
+    "pages": "783--787"
   },
   {
     "put_code": "163654990",
