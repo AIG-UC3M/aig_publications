@@ -215,6 +215,30 @@
     "orcid": "0000-0002-9322-3128"
   },
   {
+    "put_code": "",
+    "title": "Converting Raw Data Into Actionable Information: A topical review of artificial intelligence, machine learning, and digital twins in disaster management",
+    "type": "journal-article",
+    "journal": "IEEE Geoscience and Remote Sensing Magazine",
+    "date": "",
+    "year": "2026",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "",
+    "authors": [
+      "Albayrak, A. R.",
+      "Kuglitsch, M. M.",
+      "Luterbacher, J.",
+      "Fernández-Torres, M. Á."
+    ],
+    "source": "publications_no.bib",
+    "raw_type": "journal-article",
+    "bibtex_key": "ARAlbayrak2026_3",
+    "volume": "",
+    "number": "",
+    "pages": ""
+  },
+  {
     "put_code": "212911179",
     "title": "Building artificial situational awareness: Soundscape classification in daily-life scenarios of gender based violence victims",
     "type": "journal-article",
@@ -695,6 +719,28 @@
     "orcid": "0000-0002-9322-3128"
   },
   {
+    "put_code": "",
+    "title": "A Hybrid Neural Network with Multistage Feature Fusion for Detecting Heart Failure and Murmurs from Time–Frequency Representations of Phonocardiograms",
+    "type": "journal-article",
+    "journal": "Systems and Soft Computing",
+    "date": "",
+    "year": "2025",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "",
+    "authors": [
+      "Fakhry, M.",
+      "Gallardo-Antolín, A."
+    ],
+    "source": "publications_no.bib",
+    "raw_type": "journal-article",
+    "bibtex_key": "MFakhry2025_1",
+    "volume": "7",
+    "number": "",
+    "pages": "200391"
+  },
+  {
     "put_code": "154175488",
     "title": "URI-CADS: A Fully Automated Computer-Aided Diagnosis System for Ultrasound Renal Imaging",
     "type": "journal-article",
@@ -920,6 +966,32 @@
     "raw_type": "book-chapter",
     "researcher": "Carmen Peláez-Moreno",
     "orcid": "0000-0003-1425-6763"
+  },
+  {
+    "put_code": "",
+    "title": "Detecting Spatiotemporal Dynamics of Western European Heatwaves Using Deep Learning",
+    "type": "journal-article",
+    "journal": "Artificial Intelligence for the Earth Systems",
+    "date": "",
+    "year": "2024",
+    "doi": "",
+    "pmid": "",
+    "pmcid": "",
+    "url": "",
+    "authors": [
+      "Happé, T.",
+      "Wijnands, J. S.",
+      "Fernández-Torres, M. Á.",
+      "Scussolini, P.",
+      "Muntjewerf, L.",
+      "Coumou, D."
+    ],
+    "source": "publications_no.bib",
+    "raw_type": "journal-article",
+    "bibtex_key": "THappe2024_4",
+    "volume": "",
+    "number": "",
+    "pages": ""
   },
   {
     "put_code": "182564797",
@@ -1773,6 +1845,31 @@
     "orcid": "0000-0003-1425-6763"
   },
   {
+    "put_code": "65590346",
+    "title": "Probabilistic Topic Model for Context-Driven Visual Attention Understanding",
+    "type": "journal-article",
+    "journal": "IEEE Transactions on Circuits and Systems for Video Technology",
+    "date": "2019-01-01",
+    "year": "2020",
+    "doi": "10.1109/tcsvt.2019.2909427",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.1109/tcsvt.2019.2909427",
+    "authors": [
+      "Fernández-Torres, M. Á.",
+      "González-Díaz,I.",
+      "Díaz-de-María, F."
+    ],
+    "source": "publications_no.bib",
+    "raw_type": "journal-article",
+    "bibtex_key": "FernandezTorresMA2020_17",
+    "volume": "30",
+    "number": "6",
+    "pages": "1653--1667",
+    "researcher": "Fernando Díaz-de-María",
+    "orcid": "0000-0002-6437-914X"
+  },
+  {
     "put_code": "85320328",
     "title": "Interpretable Global-Local Dynamics for the Prediction of Eye Fixations in Autonomous Driving Scenarios",
     "type": "journal-article",
@@ -1815,7 +1912,7 @@
   },
   {
     "put_code": "89776750",
-    "title": "An attention Long Short-Term Memory based system for automatic classification of speech intelligibility",
+    "title": "An Attention Long Short-Term Memory Based System for Automatic Classification of Speech Intelligibility",
     "type": "journal-article",
     "journal": "Engineering Applications of Artificial Intelligence",
     "date": "2020-01-01",
@@ -1824,9 +1921,16 @@
     "pmid": "",
     "pmcid": "",
     "url": "https://www.sciencedirect.com/science/article/pii/S0952197620302827",
-    "authors": [],
-    "source": "{'value': 'ASCENSIÓN GALLARDO-ANTOLÍN'}",
+    "authors": [
+      "Fernández-Díaz, M.",
+      "Gallardo-Antolín, A."
+    ],
+    "source": "publications_no.bib",
     "raw_type": "journal-article",
+    "bibtex_key": "MFernandezDiaz2020_2",
+    "volume": "96",
+    "number": "",
+    "pages": "103976",
     "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
     "orcid": "0000-0002-9322-3128"
   },
@@ -1915,43 +2019,30 @@
     "orcid": "0000-0003-1425-6763"
   },
   {
-    "put_code": "65590346",
-    "title": "Probabilistic Topic Model for Context-Driven Visual Attention Understanding",
-    "type": "journal-article",
-    "journal": "IEEE Transactions on Circuits and Systems for Video Technology",
-    "date": "2019-01-01",
-    "year": "2019",
-    "doi": "10.1109/tcsvt.2019.2909427",
-    "pmid": "",
-    "pmcid": "",
-    "url": "http://dx.doi.org/10.1109/tcsvt.2019.2909427",
-    "authors": [],
-    "source": "{'value': 'F. Díaz-de-María'}",
-    "raw_type": "journal-article",
-    "researcher": "Fernando Díaz-de-María",
-    "orcid": "0000-0002-6437-914X"
-  },
-  {
     "put_code": "65596245",
     "title": "Predicting image aesthetics for intelligent tourism information systems",
     "type": "journal-article",
-    "journal": "Electronics (Switzerland)",
+    "journal": "Electronics",
     "date": "2019-01-01",
     "year": "2019",
     "doi": "10.3390/electronics8060671",
     "pmid": "",
     "pmcid": "",
-    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85071183949&partnerID=MN8TOARS",
+    "url": "https://doi.org/10.3390/electronics8060671",
     "authors": [
       "Kleinlein, R.",
       "García-Faura, Á.",
-      "Jiménez, C.L.",
-      "Montero, J.M.",
-      "Díaz-De-maría, F.",
+      "Jiménez, C. L.",
+      "Montero, J. M.",
+      "Díaz-de-María, F.",
       "Fernández-Martínez, F."
     ],
-    "source": "{'value': 'Scopus - Elsevier'}",
+    "source": "publications_no.bib",
     "raw_type": "journal-article",
+    "bibtex_key": "KleinleinR2019_18",
+    "volume": "8",
+    "number": "6",
+    "pages": "671",
     "researcher": "Fernando Díaz-de-María",
     "orcid": "0000-0002-6437-914X"
   },
@@ -2226,15 +2317,19 @@
     "doi": "10.1109/tsp.2018.2802465",
     "pmid": "",
     "pmcid": "",
-    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85041525978&partnerID=MN8TOARS",
+    "url": "https://doi.org/10.1109/tsp.2018.2802465",
     "authors": [
-      "Martinez-Enriquez, E.",
+      "Martínez-Enríquez, E.",
       "Cid-Sueiro, J.",
-      "Diaz-De-Maria, F.",
+      "Díaz-de-María, F.",
       "Ortega, A."
     ],
-    "source": "{'value': 'Scopus - Elsevier'}",
+    "source": "publications_no.bib",
     "raw_type": "journal-article",
+    "bibtex_key": "MartinezEnriquezE2018_16",
+    "volume": "66",
+    "number": "8",
+    "pages": "2098--2111",
     "researcher": "Fernando Díaz-de-María",
     "orcid": "0000-0002-6437-914X"
   },
@@ -2311,10 +2406,21 @@
     "doi": "10.1007/s11042-017-5339-9",
     "pmid": "",
     "pmcid": "",
-    "url": "http://dx.doi.org/10.1007/s11042-017-5339-9",
-    "authors": [],
-    "source": "{'value': 'F. Díaz-de-María'}",
+    "url": "https://doi.org/10.1007/s11042-017-5339-9",
+    "authors": [
+      "Fernández-Martínez, F.",
+      "Hernández-García, A.",
+      "Fernández-Torres, M. Á.",
+      "González-Díaz,I.",
+      "García-Faura, Á.",
+      "Díaz-de-María, F."
+    ],
+    "source": "publications_no.bib",
     "raw_type": "journal-article",
+    "bibtex_key": "FernandezMartinezF2018_14",
+    "volume": "77",
+    "number": "15",
+    "pages": "18903--18933",
     "researcher": "Fernando Díaz-de-María",
     "orcid": "0000-0002-6437-914X"
   },
@@ -2392,15 +2498,19 @@
     "doi": "10.1109/tcsvt.2016.2633418",
     "pmid": "",
     "pmcid": "",
-    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85043494920&partnerID=MN8TOARS",
+    "url": "https://doi.org/10.1109/tcsvt.2016.2633418",
     "authors": [
-      "Martinez-Enriquez, E.",
+      "Martínez-Enríquez, E.",
       "Cid-Sueiro, J.",
-      "Diaz-De-Maria, F.",
+      "Díaz-de-María, F.",
       "Ortega, A."
     ],
-    "source": "{'value': 'Scopus - Elsevier'}",
+    "source": "publications_no.bib",
     "raw_type": "journal-article",
+    "bibtex_key": "MartinezEnriquezE2018_15",
+    "volume": "28",
+    "number": "4",
+    "pages": "933--946",
     "researcher": "Fernando Díaz-de-María",
     "orcid": "0000-0002-6437-914X"
   },
@@ -2792,14 +2902,18 @@
     "doi": "10.1109/tmm.2016.2524995",
     "pmid": "",
     "pmcid": "",
-    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84963813280&partnerID=MN8TOARS",
+    "url": "https://doi.org/10.1109/tmm.2016.2524995",
     "authors": [
-      "Jimenez-Moreno, A.",
-      "Martinez-Enriquez, E.",
-      "Diaz-De-Maria, F."
+      "Jiménez-Moreno, A.",
+      "Martínez-Enríquez, E.",
+      "Díaz-de-María, F."
     ],
-    "source": "{'value': 'Scopus - Elsevier'}",
+    "source": "publications_no.bib",
     "raw_type": "journal-article",
+    "bibtex_key": "JimenezMorenoA2016_13",
+    "volume": "18",
+    "number": "4",
+    "pages": "563--575",
     "researcher": "Fernando Díaz-de-María",
     "orcid": "0000-0002-6437-914X"
   },
@@ -3263,15 +3377,19 @@
     "doi": "10.1109/tmm.2014.2347257",
     "pmid": "",
     "pmcid": "",
-    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84908139516&partnerID=MN8TOARS",
+    "url": "https://doi.org/10.1109/tmm.2014.2347257",
     "authors": [
-      "Jimenez-Moreno, A.",
-      "Martinez-Enriquez, E.",
+      "Jiménez-Moreno, A.",
+      "Martínez-Enríquez, E.",
       "Kumar, V.",
-      "Diaz-De-Maria, F."
+      "Díaz-de-María, F."
     ],
-    "source": "{'value': 'Scopus - Elsevier'}",
+    "source": "publications_no.bib",
     "raw_type": "journal-article",
+    "bibtex_key": "JimenezMorenoA2014_12",
+    "volume": "16",
+    "number": "7",
+    "pages": "1--11",
     "researcher": "Fernando Díaz-de-María",
     "orcid": "0000-0002-6437-914X"
   },
@@ -3306,15 +3424,19 @@
     "doi": "10.1109/tcsvt.2013.2276857",
     "pmid": "",
     "pmcid": "",
-    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84896528947&partnerID=MN8TOARS",
+    "url": "https://doi.org/10.1109/tcsvt.2013.2276857",
     "authors": [
-      "Gonzalez-De-Suso, J.L.",
-      "Jimenez-Moreno, A.",
-      "Martinez-Enriquez, E.",
-      "Diaz-De-Maria, F."
+      "González-de-Suso, J. L.",
+      "Jiménez-Moreno, A.",
+      "Martínez-Enríquez, E.",
+      "Díaz-de-María, F."
     ],
-    "source": "{'value': 'Scopus - Elsevier'}",
+    "source": "publications_no.bib",
     "raw_type": "journal-article",
+    "bibtex_key": "GonzalezDeSusoJL2014_11",
+    "volume": "24",
+    "number": "3",
+    "pages": "452--464",
     "researcher": "Fernando Díaz-de-María",
     "orcid": "0000-0002-6437-914X"
   },
@@ -3616,14 +3738,18 @@
     "doi": "10.1109/tmm.2013.2241414",
     "pmid": "",
     "pmcid": "",
-    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84880833947&partnerID=MN8TOARS",
+    "url": "https://doi.org/10.1109/tmm.2013.2241414",
     "authors": [
       "Jiménez-Moreno, A.",
       "Martínez-Enríquez, E.",
-      "Díaz-De-María, F."
+      "Díaz-de-María, F."
     ],
-    "source": "{'value': 'Scopus - Elsevier'}",
+    "source": "publications_no.bib",
     "raw_type": "journal-article",
+    "bibtex_key": "JimenezMorenoA2013_10",
+    "volume": "15",
+    "number": "5",
+    "pages": "1094--1109",
     "researcher": "Fernando Díaz-de-María",
     "orcid": "0000-0002-6437-914X"
   },
@@ -3680,15 +3806,19 @@
     "doi": "10.1109/maes.2013.6477866",
     "pmid": "",
     "pmcid": "",
-    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84897749098&partnerID=MN8TOARS",
+    "url": "https://doi.org/10.1109/maes.2013.6477866",
     "authors": [
       "Gallardo-Antolín, A.",
-      "García-Moral, A.I.",
+      "García-Moral, A. I.",
       "Pereiro-Estevan, Y.",
-      "Díaz-De-María, F."
+      "Díaz-de-María, F."
     ],
-    "source": "{'value': 'Scopus - Elsevier'}",
+    "source": "publications_no.bib",
     "raw_type": "journal-article",
+    "bibtex_key": "GallardoAntolinA2013_9",
+    "volume": "28",
+    "number": "2",
+    "pages": "24--33",
     "researcher": "Fernando Díaz-de-María",
     "orcid": "0000-0002-6437-914X"
   },
@@ -3894,13 +4024,17 @@
     "doi": "10.1109/tcsvt.2012.2198089",
     "pmid": "",
     "pmcid": "",
-    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84864692647&partnerID=MN8TOARS",
+    "url": "https://doi.org/10.1109/tcsvt.2012.2198089",
     "authors": [
       "Sanz-Rodríguez, S.",
-      "Díaz-De-María, F."
+      "Díaz-de-María, F."
     ],
-    "source": "{'value': 'Scopus - Elsevier'}",
+    "source": "publications_no.bib",
     "raw_type": "journal-article",
+    "bibtex_key": "SanzRodriguezS2012_8",
+    "volume": "22",
+    "number": "8",
+    "pages": "1199--1212",
     "researcher": "Fernando Díaz-de-María",
     "orcid": "0000-0002-6437-914X"
   },
@@ -3981,14 +4115,18 @@
     "doi": "10.1016/j.patcog.2010.11.018",
     "pmid": "",
     "pmcid": "",
-    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-78651329531&partnerID=MN8TOARS",
+    "url": "https://doi.org/10.1016/j.patcog.2010.11.018",
     "authors": [
       "García-García, D.",
       "Parrado-Hernández, E.",
-      "Diaz-De-Maria, F."
+      "Díaz-de-María, F."
     ],
-    "source": "{'value': 'Scopus - Elsevier'}",
+    "source": "publications_no.bib",
     "raw_type": "journal-article",
+    "bibtex_key": "GarciaGarciaD2011_5",
+    "volume": "44",
+    "number": "5",
+    "pages": "1014--1022",
     "researcher": "Fernando Díaz-de-María",
     "orcid": "0000-0002-6437-914X"
   },
@@ -4002,13 +4140,17 @@
     "doi": "10.1109/tcsvt.2011.2143330",
     "pmid": "",
     "pmcid": "",
-    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-80052538639&partnerID=MN8TOARS",
+    "url": "https://doi.org/10.1109/tcsvt.2011.2143330",
     "authors": [
-      "Sanz-Rodriguez, S.",
-      "Diaz-De-Maria, F."
+      "Sanz-Rodríguez, S.",
+      "Díaz-de-María, F."
     ],
-    "source": "{'value': 'Scopus - Elsevier'}",
+    "source": "publications_no.bib",
     "raw_type": "journal-article",
+    "bibtex_key": "SanzRodriguezS2011_7",
+    "volume": "21",
+    "number": "9",
+    "pages": "1263--1277",
     "researcher": "Fernando Díaz-de-María",
     "orcid": "0000-0002-6437-914X"
   },
@@ -4217,15 +4359,19 @@
     "doi": "10.1109/tcsvt.2011.2134010",
     "pmid": "",
     "pmcid": "",
-    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-80455178886&partnerID=MN8TOARS",
+    "url": "https://doi.org/10.1109/tcsvt.2011.2134010",
     "authors": [
       "Martínez-Enríquez, E.",
       "Jiménez-Moreno, A.",
-      "Ángel-Pellón, M.",
-      "Díaz-De-María, F."
+      "Pellón, M. A.",
+      "Díaz-de-María, F."
     ],
-    "source": "{'value': 'Scopus - Elsevier'}",
+    "source": "publications_no.bib",
     "raw_type": "journal-article",
+    "bibtex_key": "MartinezEnriquezE2011_6",
+    "volume": "21",
+    "number": "11",
+    "pages": "1719--1732",
     "researcher": "Fernando Díaz-de-María",
     "orcid": "0000-0002-6437-914X"
   },
