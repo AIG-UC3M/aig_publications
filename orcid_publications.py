@@ -16,6 +16,7 @@ from urllib3.util.retry import Retry
 # ============================================================
 
 INPUT_FILE = "researchers1.json"
+MANUAL_BIB = "publications_no.bib"
 
 OUTPUT_JSON = "publications.json"
 OUTPUT_ALL = "publications_all_orcid.json"
@@ -628,7 +629,16 @@ def publication_to_bibtex(pub, index):
 
     if pub.get("journal"):
         lines.append(f"  journal = {{{bibtex_escape(pub['journal'])}}},")
+        
+    if pub.get("volume"):
+        lines.append(f"  volume = {{{bibtex_escape(pub['volume'])}}},")
 
+    if pub.get("number"):
+        lines.append(f"  number = {{{bibtex_escape(pub['number'])}}},")
+
+    if pub.get("pages"):
+        lines.append(f"  pages = {{{bibtex_escape(pub['pages'])}}},")
+        
     if pub.get("year"):
         lines.append(f"  year = {{{bibtex_escape(pub['year'])}}},")
 
@@ -800,6 +810,205 @@ def process_researcher(researcher, position, total):
     return publications
 
 
+
+# ============================================================
+# FUSIÓN CON PUBLICACIONES MANUALES
+# ============================================================
+
+def parse_bibtex_entries(filename):
+    """Lee entradas BibTeX sencillas con campos entre llaves o comillas."""
+    if not os.path.exists(filename):
+        print(f"AVISO: no existe {filename}; se usarán solo las publicaciones de ORCID.")
+        return []
+
+    with open(filename, "r", encoding="utf-8") as file:
+        content = file.read()
+
+    entries = []
+    entry_start = re.compile(r"@(\w+)\s*\{\s*([^,\s]+)\s*,", re.IGNORECASE)
+
+    for match in entry_start.finditer(content):
+        entry_type = match.group(1).lower()
+        entry_key = match.group(2).strip()
+        pos = match.end()
+        fields = {}
+
+        while pos < len(content):
+            # Saltar espacios, comas y saltos de línea
+            while pos < len(content) and content[pos] in " \t\r\n,":
+                pos += 1
+
+            if pos >= len(content) or content[pos] == "}":
+                break
+
+            field_match = re.match(r"([A-Za-z][A-Za-z0-9_-]*)\s*=\s*", content[pos:])
+            if not field_match:
+                # Evitar bloquearse si hay un campo con formato no esperado
+                next_comma = content.find(",", pos)
+                if next_comma == -1:
+                    break
+                pos = next_comma + 1
+                continue
+
+            field_name = field_match.group(1).lower()
+            pos += field_match.end()
+
+            while pos < len(content) and content[pos].isspace():
+                pos += 1
+
+            if pos >= len(content):
+                break
+
+            # Leer el valor respetando llaves anidadas
+            if content[pos] == "{":
+                pos += 1
+                depth = 1
+                value_start = pos
+
+                while pos < len(content) and depth > 0:
+                    if content[pos] == "{":
+                        depth += 1
+                    elif content[pos] == "}":
+                        depth -= 1
+                    pos += 1
+
+                value = content[value_start:pos - 1]
+            elif content[pos] == '"':
+                pos += 1
+                value_start = pos
+
+                while pos < len(content):
+                    if content[pos] == '"' and content[pos - 1] != "\\":
+                        break
+                    pos += 1
+
+                value = content[value_start:pos]
+                pos += 1
+            else:
+                value_start = pos
+                while pos < len(content) and content[pos] not in ",}\r\n":
+                    pos += 1
+                value = content[value_start:pos].strip()
+
+            fields[field_name] = value.strip()
+
+        entries.append({
+            "entry_type": entry_type,
+            "entry_key": entry_key,
+            "fields": fields,
+        })
+
+    return entries
+
+
+def manual_entry_to_publication(entry):
+    """Convierte una entrada BibTeX al formato usado por este script."""
+    fields = entry["fields"]
+
+    author_text = fields.get("author", "")
+    authors = [
+        normalize_author_name(author.strip())
+        for author in re.split(r"\s+and\s+", author_text)
+        if author.strip()
+    ]
+
+    doi = normalize_doi(fields.get("doi", ""))
+    url = fields.get("url", "")
+
+    if not url and doi:
+        url = f"https://doi.org/{doi}"
+
+    return {
+        "put_code": "",
+        "title": fields.get("title", ""),
+        "type": "journal-article",
+        "journal": fields.get("journal", ""),
+        "date": "",
+        "year": fields.get("year", ""),
+        "doi": doi,
+        "pmid": fields.get("pmid", ""),
+        "pmcid": fields.get("pmcid", ""),
+        "url": url,
+        "authors": authors,
+        "source": "publications_no.bib",
+        "raw_type": "journal-article",
+        "bibtex_key": entry["entry_key"],
+        "volume": fields.get("volume", ""),
+        "number": fields.get("number", ""),
+        "pages": fields.get("pages", ""),
+    }
+
+# ============================================================
+# PUBLICACIONES DEL BIB
+# ============================================================
+def merge_publications(orcid_publications, manual_publications):
+    """
+    Combina ambas fuentes.
+    Conserva los campos manuales si están disponibles y completa
+    los datos ausentes con la información de ORCID.
+    """
+    merged = []
+    matched = set()
+
+    # Primero las publicaciones manuales para preservar sus metadatos
+    for manual in manual_publications:
+        result = dict(manual)
+        result["authors"] = list(manual.get("authors") or [])
+        merged.append(result)
+
+    for pub in orcid_publications:
+        doi = normalize_doi(pub.get("doi"))
+        title = normalize_title(pub.get("title"))
+        year = clean_text(pub.get("year"))
+
+        duplicate_index = None
+
+        for index, existing in enumerate(merged):
+            existing_doi = normalize_doi(existing.get("doi"))
+            existing_title = normalize_title(existing.get("title"))
+            existing_year = clean_text(existing.get("year"))
+
+            # Si ambos tienen DOI, el DOI debe coincidir.
+            # Si falta alguno, se compara título y año.
+            same_doi = bool(doi and existing_doi and doi == existing_doi)
+            same_title_year = bool(
+                title and existing_title and title == existing_title
+                and year and existing_year and year == existing_year
+            )
+
+            if same_doi or same_title_year:
+                duplicate_index = index
+                break
+
+        if duplicate_index is None:
+            merged.append(dict(pub))
+            continue
+
+        existing = merged[duplicate_index]
+
+        # Completar campos vacíos sin borrar datos manuales
+        for key, value in pub.items():
+            if key == "authors":
+                if not existing.get("authors") and value:
+                    existing["authors"] = value
+            elif not existing.get(key) and value:
+                existing[key] = value
+
+        matched.add(duplicate_index)
+
+    # Orden cronológico inverso: más recientes primero
+    merged.sort(
+        key=lambda p: (clean_text(p.get("year")) or "0000", normalize_title(p.get("title"))),
+        reverse=True,
+    )
+
+    print(f"Publicaciones manuales leídas: {len(manual_publications)}")
+    print(f"Publicaciones combinadas: {len(merged)}")
+    print(f"Duplicados manuales/ORCID fusionados: {len(matched)}")
+
+    return merged
+
+
 # ============================================================
 # MAIN
 # ============================================================
@@ -826,22 +1035,54 @@ def main():
     print("=" * 70)
 
     print(f"Trabajos recuperados de ORCID: {len(all_publications)}")
+    
     save_json(all_publications, OUTPUT_ALL)
 
+    # Deduplicar primero las publicaciones obtenidas de ORCID
     unique_publications = deduplicate_publications(all_publications)
-    print(f"Trabajos después de deduplicar: {len(unique_publications)}")
+    print(f"Trabajos ORCID después de deduplicar: {len(unique_publications)}")
 
-    articles = []
+    # Mantener la clasificación y el archivo de excluidos de ORCID
+    orcid_articles = []
     excluded = []
 
     for pub in unique_publications:
         if looks_like_article(pub):
-            articles.append(pub)
+            orcid_articles.append(pub)
         else:
             excluded.append(pub)
 
+    # Leer las publicaciones que faltan en ORCID
+    manual_entries = parse_bibtex_entries(MANUAL_BIB)
+    manual_publications = [
+        manual_entry_to_publication(entry)
+        for entry in manual_entries
+        if entry["entry_type"] == "article"
+        and entry["fields"].get("title")
+    ]
+
+    # Fusionar artículos de ORCID con los del archivo manual
+    articles = merge_publications(orcid_articles, manual_publications)
+
+    # Generar todos los resultados a partir de la colección fusionada
     save_json(excluded, OUTPUT_EXCLUDED)
     save_json(articles, OUTPUT_JSON)
+    save_bibtex(articles, OUTPUT_BIB)
+    save_html(articles, OUTPUT_HTML)
+
+    elapsed = time.time() - start_time
+
+    print()
+    print("=" * 70)
+    print("RESULTADOS")
+    print("=" * 70)
+    print(f"Trabajos recuperados de ORCID: {len(all_publications)}")
+    print(f"Artículos de ORCID:            {len(orcid_articles)}")
+    print(f"Artículos manuales:            {len(manual_publications)}")
+    print(f"Artículos finales fusionados:  {len(articles)}")
+    print(f"Trabajos excluidos:             {len(excluded)}")
+    print(f"Tiempo total:                   {elapsed:.1f} segundos")
+
     save_bibtex(articles, OUTPUT_BIB)
     save_html(articles, OUTPUT_HTML)
 
