@@ -48,55 +48,55 @@ El sistema permite mantener actualizada automáticamente la producción científ
 
 El siguiente diagrama ilustra la arquitectura del sistema, destacando el **flujo principal automatizado con ORCID**, la **integración de referencias manuales**, la **normalización CI/CD con GitHub Actions** y el **script auxiliar con OpenAlex**:
 
-```mermaid
 flowchart TD
     subgraph Entrada [Entrada de Datos]
         A[researchers1.json] -->|ORCID IDs / Nombres| B[Scripts ORCID: orcid_*.py]
         A -->|ORCID IDs| OA_Script[generate_bibtex.py]
-        M1[publications_manual.bib] -->|Fusión Manual| B
-        M2[conferences_and_meetings.bib] -->|Fusión Manual| B
-        M3[other_works_manual.bib] -->|Fusión Manual| B
+        M1[publications_manual.bib] -->|Fusion Manual| B
+        M2[conferences_and_meetings.bib] -->|Fusion Manual| B
+        M3[other_works_manual.bib] -->|Fusion Manual| B
     end
 
     subgraph Workflows [GitHub Actions CI/CD - Semanal]
         Cron[Cron Semanal: Lunes 06:05] -->|Trigger| GHA_Update[Workflows update-*_auto.yml]
-        PushBib[Push en **.bib] -->|Trigger| GHA_Norm[Workflow normalize_bib_auto.yml]
+        PushBib[Push en archivos .bib] -->|Trigger| GHA_Norm[Workflow normalize_bib_auto.yml]
     end
 
-    subgraph Auth [Autenticación & API Client]
-        GHA_Update -->|1. actions/checkout@v6| RepoCopy[Copia Repositorio en Runner]
-        GHA_Update -->|2. OAuth POST /oauth/token| OAuth[API ORCID Auth]
+    subgraph Auth [Autenticacion y API Client]
+        GHA_Update -->|1. checkout| RepoCopy[Copia del repositorio en Runner]
+        GHA_Update -->|2. OAuth POST token| OAuth[API ORCID Auth]
         OAuth -->|ORCID_ACCESS_TOKEN| B
         RepoCopy --> B
-        B -->|Peticiones REST v3.0| ORCID_API[API Pública ORCID - pub.orcid.org]
+        B -->|Peticiones REST v3.0| ORCID_API[API Publica ORCID]
     end
 
-    subgraph Process [Procesamiento & Normalización]
-        ORCID_API -->|JSON crudo ORCID| C[Clasificación por Tipo de Obra]
-        C -->|Paso 1| D[Normalización de Autores]
-        D -->|Mapeo ORCID ID + RegEx| D1[Nombres Canónicos]
-        D1 -->|Paso 2| E[Deduplicación Jerárquica]
-        E -->|DOI > PMID > PMCID > Título+Año| F[Escapado de Caracteres BibTeX]
+    subgraph Process [Procesamiento y Normalizacion]
+        ORCID_API -->|JSON crudo ORCID| C[Clasificacion por Tipo de Obra]
+        C -->|Paso 1| D[Normalizacion de Autores]
+        D -->|Mapeo ORCID ID y RegEx| D1[Nombres Canonicos]
+        D1 -->|Paso 2| E[Deduplicacion Jerarquica]
+        E -->|DOI > PMID > PMCID > Titulo y Ano| F[Escapado de Caracteres BibTeX]
     end
 
-    subgraph NormStep [Normalización Post-Process CI/CD]
+    subgraph NormStep [Normalizacion Post-Process CI/CD]
         GHA_Norm --> N1[normalize_bib.py]
-        F -->|Genera .bib| N1
-        N1 -->|Limpia y estandariza author = {...}| N2[Archivos BibTeX Limpios]
+        F -->|Genera archivos BibTeX| N1
+        N1 -->|"Limpia y estandariza el campo author"| N2[Archivos BibTeX Limpios]
     end
 
-    subgraph Salida [Generación de Artefactos Finales]
-        F --> OutJSON[Archivos .json]
-        F --> OutHTML[Archivos .html]
-        N2 --> OutBIB[Archivos .bib Finales]
-        OutJSON & OutHTML & OutBIB -->|Git Commit & Push| MainRepo[Rama main GitHub]
+    subgraph Salida [Generacion de Artefactos Finales]
+        F --> OutJSON[Archivos JSON]
+        F --> OutHTML[Archivos HTML]
+        N2 --> OutBIB[Archivos BibTeX Finales]
+        OutJSON --> MainRepo[Rama main GitHub]
+        OutHTML --> MainRepo
+        OutBIB -->|Git Commit y Push| MainRepo
     end
 
     subgraph Auxiliar [Herramienta Auxiliar Independiente]
         OA_Script -->|Consulta REST| OpenAlex_API[API OpenAlex]
-        OpenAlex_API -->|Filtra Preprints / Repositorios| OA_BIB[publications.bib auxiliar]
+        OpenAlex_API -->|Filtra Preprints y Repositorios| OA_BIB[publications.bib auxiliar]
     end
-```
 
 ---
 
