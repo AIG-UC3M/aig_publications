@@ -59,8 +59,8 @@ flowchart TD
     end
 
     subgraph Workflows [GitHub Actions CI/CD - Semanal]
-        Cron[Cron Semanal: Lunes 06:05] -->|Trigger| GHA_Update[Workflows update-*_auto.yml]
-        PushBib[Push en archivos .bib] -->|Trigger| GHA_Norm[Workflow normalize_bib_auto.yml]
+        Cron[Cron Semanal: Lunes 06:05] -->|Trigger| GHA_Update[Workflows update-*.yml]
+        PushBib[Push en archivos .bib] -->|Trigger| GHA_Norm[Workflow normalize_bib.yml]
     end
 
     subgraph Auth [Autenticacion y API Client]
@@ -101,8 +101,8 @@ flowchart TD
 ```
 
     subgraph Workflows [GitHub Actions CI/CD - Semanal]
-        Cron[Cron Semanal: Lunes 06:05] -->|Trigger| GHA_Update[Workflows update-*_auto.yml]
-        PushBib[Push en archivos .bib] -->|Trigger| GHA_Norm[Workflow normalize_bib_auto.yml]
+        Cron[Cron Semanal: Lunes 06:05] -->|Trigger| GHA_Update[Workflows update-*_.yml]
+        PushBib[Push en archivos .bib] -->|Trigger| GHA_Norm[Workflow normalize_bib.yml]
     end
 
     subgraph Auth [Autenticacion y API Client]
@@ -148,10 +148,10 @@ flowchart TD
 ```
 .
 ├── .github/workflows/
-│   ├── update-publications_auto.yml   # Workflow semanal para artículos de revista (ORCID)
-│   ├── update_conferences_auto.yml    # Workflow semanal para actas/comunicaciones de congresos (ORCID)
-│   ├── update-other-works_auto.yml    # Workflow semanal para otros trabajos académicos (ORCID)
-│   └── normalize_bib_auto.yml         # Workflow disparado al modificar archivos .bib
+│   ├── update-publications.yml   # Workflow semanal para artículos de revista (ORCID)
+│   ├── update_conferences.yml    # Workflow semanal para actas/comunicaciones de congresos (ORCID)
+│   ├── update-other-works.yml    # Workflow semanal para otros trabajos académicos (ORCID)
+│   └── normalize_bib.yml         # Workflow disparado al modificar archivos .bib
 │
 ├── orcid_publications.py              # Extracción y procesado de artículos de revista desde ORCID
 ├── orcid_conferences.py               # Extracción y procesado de ponencias/congresos desde ORCID
@@ -202,10 +202,10 @@ flowchart TD
 
 ### Workflows de GitHub Actions (`.yml`)
 
-- **`update-publications_auto.yml`**: Sincronización semanal de artículos de revista desde ORCID.
-- **`update_conferences_auto.yml`**: Sincronización semanal de actas y comunicaciones de congresos desde ORCID.
-- **`update-other-works_auto.yml`**: Sincronización semanal de otros trabajos científicos desde ORCID.
-- **`normalize_bib_auto.yml`**: Integración continua que estandariza automáticamente cualquier archivo `.bib` modificado en el repositorio.
+- **`update-publications.yml`**: Sincronización semanal de artículos de revista desde ORCID.
+- **`update_conferences.yml`**: Sincronización semanal de actas y comunicaciones de congresos desde ORCID.
+- **`update-other-works.yml`**: Sincronización semanal de otros trabajos científicos desde ORCID.
+- **`normalize_bib.yml`**: Integración continua que estandariza automáticamente cualquier archivo `.bib` modificado en el repositorio.
 
 ---
 
@@ -257,9 +257,9 @@ Cuando se procesan o refinan los archivos `.bib`, el script `normalize_bib.py` r
 La automatización de la integración continua (CI/CD) se organiza mediante cuatro workflows YAML dentro de `.github/workflows/`:
 
 ### Eventos Disparadores (`on:`)
-- **Programación Semanal (`schedule`)**: Los workflows `update-publications_auto.yml`, `update_conferences_auto.yml` y `update-other-works_auto.yml` están configurados mediante expresiones cron (`cron: "5 6 * * 1"`) para ejecutarse automáticamente todos los **lunes a las 06:05 AM** (hora de Europa/Madrid).
+- **Programación Semanal (`schedule`)**: Los workflows `update-publications.yml`, `update_conferences.yml` y `update-other-works.yml` están configurados mediante expresiones cron (`cron: "5 6 * * 1"`) para ejecutarse automáticamente todos los **lunes a las 06:05 AM** (hora de Europa/Madrid).
 - **Ejecución Manual (`workflow_dispatch`)**: Permite a cualquier administrador desencadenar los workflows bajo demanda desde la pestaña *Actions* de GitHub.
-- **Disparador por Cambio de Archivo (`push`)**: El workflow `normalize_bib_auto.yml` se activa automáticamente en cualquier evento `push` hacia la rama `main` que modifique o cree archivos con extensión `**.bib`.
+- **Disparador por Cambio de Archivo (`push`)**: El workflow `normalize_bib.yml` se activa automáticamente en cualquier evento `push` hacia la rama `main` que modifique o cree archivos con extensión `**.bib`.
 
 ### Secuencia de Pasos en el Runner
 Cada runner de GitHub Actions (`ubuntu-latest` / `ubuntu-24.04`) ejecuta la siguiente secuencia ordenada:
