@@ -288,18 +288,28 @@ Cada runner de GitHub Actions (`ubuntu-latest` / `ubuntu-24.04`) ejecuta la sigu
 
 - **`researchers1.json`**:
 ```json
-{
-  "researchers": [
-    {
-      "name": "Fernando Díaz de María",
-      "orcid": "0000-0002-XXXX-XXXX"
-    },
-    {
-      "name": "Ascensión Gallardo Antolín",
-      "orcid": "0000-0003-XXXX-XXXX"
-    }
-  ]
-}
+[
+  {
+    "name": "Fernando Díaz-de-María",
+    "orcid": "0000-0002-6437-914X"
+  },
+  {
+    "name": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "orcid": "0000-0002-9322-3128"
+  },
+  {
+    "name": "Carmen Peláez-Moreno",
+    "orcid": "0000-0003-1425-6763"
+  },
+  {
+    "name": "IVAN GONZALEZ",
+    "orcid": "0000-0003-4644-8479"
+  },
+  {
+    "name": "Miguel Ángel Fernández Torres",
+    "orcid": "0000-0002-0801-199X"
+  }
+]
 ```
 
 ### Complemento Manual de Referencias
