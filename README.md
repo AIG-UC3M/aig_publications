@@ -38,7 +38,7 @@ Este repositorio contiene un sistema automatizado desarrollado en Python y GitHu
 El sistema permite mantener actualizada automáticamente la producción científica de un grupo de investigadores. A partir de un archivo JSON (`researchers1.json`) que contiene los nombres y **ORCID IDs** de cada investigador:
 
 1. **Flujo Principal (ORCID)**: El núcleo del sistema consulta semanalmente la API pública v3.0 de **ORCID** para extraer, clasificar (artículos de revista, congresos y otros trabajos), normalizar autores y deduplicar registros.
-2. **Integración Híbrida con Referencias Manuales**: Se fusionan los datos extraídos de ORCID con archivos `.bib` manuscritos (`publications_manual.bib`, `conferences_and_meetings.bib`, `"conferences_no.bib"`) para incorporar aportaciones o ponencias que no figuren en la plataforma de ORCID sin generar duplicados.
+2. **Integración Híbrida con Referencias Manuales**: Se fusionan los datos extraídos de ORCID con archivos `.bib` manuscritos (`conferences_no.bib`, `conferences_and_meetings.bib`, `"conferences_no.bib"`) para incorporar aportaciones o ponencias que no figuren en la plataforma de ORCID sin generar duplicados.
 3. **Herramienta Auxiliar (OpenAlex)**: Se incluye el script `generate_bibtex.py` como utilidad independiente para realizar consultas secundarias o complementarias en la API de **OpenAlex**.
 4. **Generación Multiformato**: Produce automáticamente archivos `.bib`, `.json` y `.html` listos para su difusión o inclusión en la web institucional.
 
