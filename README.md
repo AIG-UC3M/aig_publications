@@ -53,9 +53,9 @@ flowchart TD
     subgraph Entrada [Entrada de Datos]
         A[researchers1.json] -->|ORCID IDs / Nombres| B[Scripts ORCID: orcid_*.py]
         A -->|ORCID IDs| OA_Script[generate_bibtex.py]
-        M1[conferences_no.bib] -->|Fusion Manual| B
-        M2[conferences_and_meetings.bib] -->|Fusion Manual| B
-        M3[other_works_manual.bib] -->|Fusion Manual| B
+        M1[publications_no.bib] -->|Fusion Manual| B
+        M2[conferences_no.bib] -->|Fusion Manual| B
+        M3[conferences_and_meetings.bib] -->|Fusion Manual| B
     end
 
     subgraph Workflows [GitHub Actions CI/CD - Semanal]
