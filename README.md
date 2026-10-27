@@ -161,9 +161,9 @@ flowchart TD
 ├── generate_bibtex.py                 # [Auxiliar] Extracción y generación de BibTeX desde OpenAlex API
 │
 ├── researchers1.json                  # Archivo de entrada con el listado de investigadores y ORCIDs
-├── publications_manual.bib            # [Manual] Artículos de revista no presentes en ORCID
-├── conferences_and_meetings.bib       # [Manual] Ponencias, pósteres y conferencias no presentes en ORCID
-├── other_works_manual.bib             # [Manual] Otros trabajos (capítulos, informes) no presentes en ORCID
+├── publications_no.bib                # [Manual] Artículos de revista no presentes en ORCID
+├── conferences_no.bib                 # [Manual] Papers de conferencias no presentes en ORCID
+├── conferences_and_meetings.bib       # [Manual] Otros trabajos (capítulos, informes, presentaciones orales, pósters) no presentes en ORCID
 └── README.md                          # Documentación del proyecto
 ```
 
