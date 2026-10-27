@@ -188,6 +188,285 @@ def unwrap_markdown_url(value):
     return value
 
 
+import os
+import re
+
+
+def parse_local_bib(filename="conferences_and_meetings.bib"):
+    """
+    Lee un archivo BibTeX local y devuelve una lista de publicaciones.
+
+    Cada publicación incluye:
+    - title
+    - authors
+    - year
+    - journal
+    - type
+    - doi
+    - url
+    - source
+    """
+
+    # Si el archivo no existe, probar una alternativa
+    if not os.path.exists(filename):
+        alternative = "conferences_and_meetings_bib.txt"
+
+        if os.path.exists(alternative):
+            filename = alternative
+        else:
+            print(f"No se encuentra el archivo BibTeX: {filename}")
+            return []
+
+    # Leer el archivo
+    try:
+        with open(filename, "r", encoding="utf-8-sig") as bib_file:
+            content = bib_file.read()
+    except OSError as error:
+        print(f"Error al leer {filename}: {error}")
+        return []
+
+    publications = []
+
+    # Extraer las entradas BibTeX
+    entries = _extract_bib_entries(content)
+
+    for entry_type, entry_content in entries:
+        fields = _parse_bib_fields(entry_content)
+
+        title = _clean_bib_value(fields.get("title", ""))
+        author_text = _clean_bib_value(fields.get("author", ""))
+        year = _clean_bib_value(fields.get("year", ""))
+
+        # Separar los autores usando "and"
+        authors = [
+            author.strip()
+            for author in re.split(r"\s+and\s+", author_text, flags=re.IGNORECASE)
+            if author.strip()
+        ]
+
+        # Obtener DOI y URL
+        doi = _clean_bib_value(fields.get("doi", ""))
+
+        url = _clean_bib_value(
+            fields.get("url", fields.get("howpublished", ""))
+        )
+
+        # Obtener revista o nombre del congreso
+        journal = _clean_bib_value(
+            fields.get("booktitle", fields.get("journal", ""))
+        )
+
+        # Ignorar entradas sin título
+        if not title:
+            continue
+
+        publication = {
+            "title": title,
+            "authors": authors,
+            "year": year,
+            "journal": journal,
+            "type": entry_type.lower(),
+            "doi": doi,
+            "url": url,
+            "source": "local_bib",
+        }
+
+        publications.append(publication)
+
+    return publications
+
+
+def _extract_bib_entries(content):
+    """
+    Extrae entradas BibTeX respetando las llaves anidadas
+    y las llaves o comillas que aparecen dentro de los campos.
+    """
+
+    entries = []
+    position = 0
+    length = len(content)
+
+    while position < length:
+        at_position = content.find("@", position)
+
+        if at_position == -1:
+            break
+
+        match = re.match(
+            r"@([a-zA-Z]+)\s*([\{\(])",
+            content[at_position:]
+        )
+
+        if not match:
+            position = at_position + 1
+            continue
+
+        entry_type = match.group(1).lower()
+        opening_char = match.group(2)
+
+        closing_char = "}" if opening_char == "{" else ")"
+        content_start = at_position + match.end()
+
+        # Ignorar comentarios, preámbulos y definiciones de macros
+        if entry_type in {"comment", "preamble", "string"}:
+            position = content_start
+            continue
+
+        depth = 1
+        in_quotes = False
+        escaped = False
+        cursor = content_start
+
+        while cursor < length and depth > 0:
+            char = content[cursor]
+
+            if escaped:
+                escaped = False
+            elif char == "\\":
+                escaped = True
+            elif char == '"':
+                in_quotes = not in_quotes
+            elif not in_quotes:
+                if char == opening_char:
+                    depth += 1
+                elif char == closing_char:
+                    depth -= 1
+
+            cursor += 1
+
+        if depth == 0:
+            entry_content = content[content_start:cursor - 1]
+            entries.append((entry_type, entry_content))
+            position = cursor
+        else:
+            # Entrada incompleta: detener el análisis
+            break
+
+    return entries
+
+
+def _parse_bib_fields(entry_content):
+    """
+    Convierte el contenido de una entrada BibTeX en un diccionario.
+    """
+
+    fields = {}
+    position = 0
+    length = len(entry_content)
+
+    # Saltar la clave de la entrada, por ejemplo: Smith2024,
+    comma_position = entry_content.find(",")
+
+    if comma_position == -1:
+        return fields
+
+    position = comma_position + 1
+
+    while position < length:
+        # Saltar espacios y comas
+        while position < length and (
+            entry_content[position].isspace()
+            or entry_content[position] == ","
+        ):
+            position += 1
+
+        if position >= length:
+            break
+
+        # Leer el nombre del campo
+        field_match = re.match(
+            r"([a-zA-Z][a-zA-Z0-9_-]*)\s*=",
+            entry_content[position:]
+        )
+
+        if not field_match:
+            position += 1
+            continue
+
+        field_name = field_match.group(1).lower()
+        position += field_match.end()
+
+        # Saltar espacios antes del valor
+        while position < length and entry_content[position].isspace():
+            position += 1
+
+        if position >= length:
+            break
+
+        # Leer el valor del campo
+        value_start = position
+        first_char = entry_content[position]
+
+        if first_char == "{":
+            depth = 1
+            position += 1
+            value_start = position
+
+            while position < length and depth > 0:
+                if entry_content[position] == "{":
+                    depth += 1
+                elif entry_content[position] == "}":
+                    depth -= 1
+
+                position += 1
+
+            value = entry_content[value_start:position - 1]
+
+        elif first_char == '"':
+            position += 1
+            value_start = position
+            escaped = False
+
+            while position < length:
+                char = entry_content[position]
+
+                if escaped:
+                    escaped = False
+                elif char == "\\":
+                    escaped = True
+                elif char == '"':
+                    break
+
+                position += 1
+
+            value = entry_content[value_start:position]
+            position += 1
+
+        else:
+            # Valores sin llaves ni comillas
+            while position < length and entry_content[position] != ",":
+                position += 1
+
+            value = entry_content[value_start:position].strip()
+
+        fields[field_name] = value.strip()
+
+    return fields
+
+
+def _clean_bib_value(value):
+    """
+    Limpia un valor BibTeX básico y elimina llaves exteriores.
+    """
+
+    if value is None:
+        return ""
+
+    value = str(value).strip()
+
+    # Eliminar llaves exteriores repetidas
+    while (
+        len(value) >= 2
+        and value.startswith("{")
+        and value.endswith("}")
+    ):
+        value = value[1:-1].strip()
+
+    # Normalizar espacios y saltos de línea
+    value = re.sub(r"\s+", " ", value)
+
+    return value.strip()
+
 # ============================================================
 # NOMBRES DE AUTORES
 # ============================================================
@@ -1930,3 +2209,48 @@ def publication_dedupe_key(publication):
     # NO incluimos pub_type para evitar que clasificaciones distintas
     # impidan deduplicar el mismo trabajo.
     return ("fallback_title_year", title, str(year))
+
+
+    
+# --------------------------------------------------------
+# 1. Recuperar publicaciones desde ORCID
+# --------------------------------------------------------
+# Aquí va tu código existente para recuperar las publicaciones
+# de ORCID y guardarlas en la lista all_publications.
+
+print(f"Trabajos recuperados de ORCID: {len(all_publications)}")
+
+
+# --------------------------------------------------------
+# 2. Cargar referencias locales adicionales
+# --------------------------------------------------------
+local_pubs = parse_local_bib("conferences_and_meetings.bib")
+
+print(f"Referencias locales leídas del .bib: {len(local_pubs)}")
+
+
+# --------------------------------------------------------
+# 3. Combinar las publicaciones de ORCID y las locales
+# --------------------------------------------------------
+all_publications.extend(local_pubs)
+
+
+# --------------------------------------------------------
+# 4. Eliminar duplicados
+# --------------------------------------------------------
+# La función deduplicate_publications debe estar definida
+# previamente en tu script.
+
+publications = deduplicate_publications(all_publications)
+
+print(
+    f"Trabajos totales después de deduplicar: "
+    f"{len(publications)}"
+)
+
+
+# --------------------------------------------------------
+# 5. Generar los archivos finales
+# --------------------------------------------------------
+save_bibtex(publications, OUTPUT_BIB)
+
