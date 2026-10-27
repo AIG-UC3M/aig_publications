@@ -173,19 +173,19 @@ flowchart TD
 - **`orcid_publications.py`**:
   - Conecta a la API v3.0 de ORCID (`pub.orcid.org`).
   - Procesa la lista de investigadores de `researchers1.json`.
-  - Fusiona las publicaciones de ORCID con `publications_manual.bib`.
+  - Fusiona las publicaciones de ORCID con `publications_no.bib`.
   - Filtra artículos de revista e implementa deduplicación y normalización.
   - Genera `publications.bib`, `publications.json` y `publications.html`.
 
 - **`orcid_conferences.py`**:
-  - Extrae comunicaciones, ponencias, pósteres y resúmenes de congresos desde ORCID.
-  - Fusiona con las ponencias/pósteres locales de `conferences_and_meetings.bib`.
+  - Extrae publicaciones de congresos desde ORCID.
+  - Fusiona con las ponencias/pósteres locales de `conferences_no.bib`.
   - Implementa filtros específicos (`looks_like_conference`).
   - Genera `conference_publications.bib`, `conference_publications.json` y `conference_publications.html`.
 
 - **`orcid_other_works.py`**:
   - Recupera libros, capítulos, informes, preprints, patentes y datasets desde ORCID.
-  - Fusiona con `other_works_manual.bib`.
+  - Fusiona con `conferences_and_meetings.bib`.
   - Construye un mapa canónico de nombres por ORCID ID.
   - Genera `other_works.bib`, `other_works.json` y `other_works.html`.
 
