@@ -314,9 +314,9 @@ Cada runner de GitHub Actions (`ubuntu-latest` / `ubuntu-24.04`) ejecuta la sigu
 
 ### Complemento Manual de Referencias
 
-- **`publications_manual.bib`**: Archivo BibTeX redactado a mano que incluye artículos de revista ausentes en ORCID.
-- **`conferences_and_meetings.bib`**: Archivo BibTeX redactado a mano que recopila comunicaciones, presentaciones orales y pósteres de congresos.
-- **`other_works_manual.bib`**: Archivo BibTeX redactado a mano para incluir capítulos de libros, informes, patentes o datasets no registrados en ORCID.
+- **`publications_no.bib`**: Archivo BibTeX redactado a mano que incluye artículos de revista ausentes en ORCID.
+- **`conferences_no.bib`**: Archivo BibTeX redactado a mano que recopila comunicaciones y publicaciones de congresos ausentes en ORCID.
+- **`conferences_and_meetings.bib`**: Archivo BibTeX redactado a mano para incluir capítulos de libros, informes, patentes, presentaciones orales, pósteres de congresos o datasets no registrados en ORCID.
 
 ### Salida Generada
 
