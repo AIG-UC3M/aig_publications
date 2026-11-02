@@ -841,6 +841,26 @@
     "orcid": "0000-0002-0801-199X"
   },
   {
+    "put_code": "231669842",
+    "title": "Noise Prewhitening Using Supervised Nonnegative Matrix Factorization and Wiener Filtering",
+    "type": "conference-paper",
+    "journal": "",
+    "date": "2024-12-01",
+    "year": "2024",
+    "doi": "10.1109/icca62237.2024.10928079",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.1109/ICCA62237.2024.10928079",
+    "authors": [
+      "Mahmoud Fakhry",
+      "A. Gallardo-Antolín"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "conference-paper",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "orcid": "0000-0002-9322-3128"
+  },
+  {
     "put_code": "222138119",
     "title": "Leveraging Unlabeled Data for Lung Sound Classification Through Self-Supervised Contrastive Learning",
     "type": "preprint",
@@ -968,16 +988,16 @@
     "orcid": "0000-0003-1425-6763"
   },
   {
-    "put_code": "",
+    "put_code": "231325405",
     "title": "Detecting Spatiotemporal Dynamics of Western European Heatwaves Using Deep Learning",
     "type": "journal-article",
     "journal": "Artificial Intelligence for the Earth Systems",
-    "date": "",
+    "date": "2024-10-01",
     "year": "2024",
-    "doi": "",
+    "doi": "10.1175/aies-d-23-0107.1",
     "pmid": "",
     "pmcid": "",
-    "url": "",
+    "url": "https://doi.org/10.1175/AIES-D-23-0107.1",
     "authors": [
       "Happé, T.",
       "Wijnands, J. S.",
@@ -991,7 +1011,9 @@
     "bibtex_key": "THappe2024_4",
     "volume": "",
     "number": "",
-    "pages": ""
+    "pages": "",
+    "researcher": "Miguel Ángel Fernández Torres",
+    "orcid": "0000-0002-0801-199X"
   },
   {
     "put_code": "182564797",
@@ -1090,6 +1112,26 @@
     "raw_type": "journal-article",
     "researcher": "IVAN GONZALEZ",
     "orcid": "0000-0003-4644-8479"
+  },
+  {
+    "put_code": "231669843",
+    "title": "Analysis of Systolic Murmurs in Heart Sounds Using Multiresolution Complex Gabor Dictionary",
+    "type": "conference-paper",
+    "journal": "",
+    "date": "2024-12-01",
+    "year": "2024",
+    "doi": "10.1109/icca62237.2024.10927981",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.1109/ICCA62237.2024.10927981",
+    "authors": [
+      "Mahmoud Fakhry",
+      "A. Gallardo-Antolín"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "conference-paper",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "orcid": "0000-0002-9322-3128"
   },
   {
     "put_code": "182564783",
