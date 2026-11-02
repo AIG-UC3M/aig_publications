@@ -2660,6 +2660,46 @@
     "orcid": "0000-0002-9322-3128"
   },
   {
+    "put_code": "231669843",
+    "title": "Analysis of Systolic Murmurs in Heart Sounds Using Multiresolution Complex Gabor Dictionary",
+    "type": "conference-paper",
+    "journal": "",
+    "date": "2024-12-01",
+    "year": "2024",
+    "doi": "10.1109/icca62237.2024.10927981",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.1109/ICCA62237.2024.10927981",
+    "authors": [
+      "Mahmoud Fakhry",
+      "Ascensión Gallardo-Antolín"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "conference-paper",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "orcid": "0000-0002-9322-3128"
+  },
+  {
+    "put_code": "231669842",
+    "title": "Noise Prewhitening Using Supervised Nonnegative Matrix Factorization and Wiener Filtering",
+    "type": "conference-paper",
+    "journal": "",
+    "date": "2024-12-01",
+    "year": "2024",
+    "doi": "10.1109/icca62237.2024.10928079",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.1109/ICCA62237.2024.10928079",
+    "authors": [
+      "Mahmoud Fakhry",
+      "Ascensión Gallardo-Antolín"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "conference-paper",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "orcid": "0000-0002-9322-3128"
+  },
+  {
     "put_code": "165434723",
     "title": "Bayesian learning of feature spaces for multitask regression",
     "type": "journal-article",
@@ -9067,6 +9107,30 @@
     ],
     "source": "{'value': 'Crossref'}",
     "raw_type": "preprint",
+    "researcher": "Miguel Ángel Fernández Torres",
+    "orcid": "0000-0002-0801-199X"
+  },
+  {
+    "put_code": "231325405",
+    "title": "Detecting Spatiotemporal Dynamics of Western European Heatwaves Using Deep Learning",
+    "type": "journal-article",
+    "journal": "Artificial Intelligence for the Earth Systems",
+    "date": "2024-10-01",
+    "year": "2024",
+    "doi": "10.1175/aies-d-23-0107.1",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.1175/AIES-D-23-0107.1",
+    "authors": [
+      "T. Happé",
+      "J. S. Wijnands",
+      "M. Á. Fernández-Torres",
+      "P. Scussolini",
+      "L. Muntjewerf",
+      "D. Coumou"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "journal-article",
     "researcher": "Miguel Ángel Fernández Torres",
     "orcid": "0000-0002-0801-199X"
   },

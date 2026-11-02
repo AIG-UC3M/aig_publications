@@ -3591,6 +3591,30 @@
     "orcid": "0000-0002-0801-199X"
   },
   {
+    "put_code": "231325405",
+    "title": "Detecting Spatiotemporal Dynamics of Western European Heatwaves Using Deep Learning",
+    "type": "journal-article",
+    "journal": "Artificial Intelligence for the Earth Systems",
+    "date": "2024-10-01",
+    "year": "2024",
+    "doi": "10.1175/aies-d-23-0107.1",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.1175/AIES-D-23-0107.1",
+    "authors": [
+      "T. Happé",
+      "J. S. Wijnands",
+      "M. Á. Fernández-Torres",
+      "P. Scussolini",
+      "L. Muntjewerf",
+      "D. Coumou"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "journal-article",
+    "researcher": "Miguel Ángel Fernández Torres",
+    "orcid": "0000-0002-0801-199X"
+  },
+  {
     "put_code": "162831644",
     "title": "The AIDE Toolbox: Artificial intelligence for disentangling extreme events [Software and Data Sets]",
     "type": "journal-article",
