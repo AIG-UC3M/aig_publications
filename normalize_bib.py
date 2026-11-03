@@ -28,9 +28,18 @@ def normalize_specific_author(author):
     # Normalizar espacios múltiples
     clean_a = re.sub(r'\s+', ' ', clean_a)
     
-    # 1. Fernando Díaz de María
-    if re.search(r'D[ií]az\s*de\s*Mar[ií]a', clean_a, re.IGNORECASE):
-        return "Díaz-de-María, F."
+# 1. Fernando Díaz de María
+# Admite:
+# Diaz-De-Maria, F.
+# Díaz-de-María, F.
+# Fernando Diaz de Maria
+# Fernando Díaz-De-María
+if re.search(
+    r'D[ií]az\s*[-_]?\s*de\s*[-_]?\s*Mar[ií]a',
+    clean_a,
+    re.IGNORECASE
+):
+    return "Díaz-de-María, F."
         
     # 2. Ascensión Gallardo Antolín
     if re.search(r'Gallardo\s*[-_]?\s*Antol[ií]n', clean_a, re.IGNORECASE):
