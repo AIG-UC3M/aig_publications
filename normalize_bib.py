@@ -22,50 +22,37 @@ def find_input_bib_file():
 
 def normalize_specific_author(author):
     """
-    Normaliza variaciones conocidas de los 5 autores objetivo hacia su firma oficial.
+    Normaliza variaciones conocidas de los autores objetivo.
     """
     clean_a = author.strip()
-    # Normalizar espacios múltiples
     clean_a = re.sub(r'\s+', ' ', clean_a)
-    
-# 1. Fernando Díaz de María
-# Admite:
-# Diaz-De-Maria, F.
-# Díaz-de-María, F.
-# Fernando Diaz de Maria
-# Fernando Díaz-De-María
-if re.search(
-    r'D[ií]az\s*[-_]?\s*de\s*[-_]?\s*Mar[ií]a',
-    clean_a,
-    re.IGNORECASE
-):
-    return "Díaz-de-María, F."
-        
+
+    # 1. Fernando Díaz de María
+    if re.search(
+        r'D[ií]az\s*[-_]?\s*de\s*[-_]?\s*Mar[ií]a',
+        clean_a,
+        re.IGNORECASE
+    ):
+        return "Díaz-de-María, F."
+
     # 2. Ascensión Gallardo Antolín
     if re.search(r'Gallardo\s*[-_]?\s*Antol[ií]n', clean_a, re.IGNORECASE):
         return "Gallardo-Antolín, A."
-        
+
     # 3. Carmen Peláez Moreno
     if re.search(r'Pel[aá]ez\s*[-_]?\s*Moreno', clean_a, re.IGNORECASE):
         return "Peláez-Moreno, C."
-        
+
     # 4. Iván González Díaz
-    # Captura variaciones con un solo apellido o ambos ("Ivan Gonzalez", "González Díaz, Iván", etc.)
-    if re.search(r'Gonz[aá]lez(\s*D[ií]az)?', clean_a, re.IGNORECASE) and re.search(r'(Iv[aá]n|I\.)', clean_a, re.IGNORECASE):
-        return "González-Díaz,I."
-        
-    # 5. Miguel Ángel Fernández-Torres
-    # Admite:
-    # Fernandez-Torres, M.-A.
-    # Fernández-Torres, M. A.
-    # Fernandez Torres, Miguel Angel
-    # Miguel Ángel Fernández-Torres
     if (
-        re.search(
-            r'Fern[aá]ndez\s*[-_]?\s*Torres',
-            clean_a,
-            re.IGNORECASE
-        )
+        re.search(r'Gonz[aá]lez(\s*D[ií]az)?', clean_a, re.IGNORECASE)
+        and re.search(r'(Iv[aá]n|I\.)', clean_a, re.IGNORECASE)
+    ):
+        return "González-Díaz, I."
+
+    # 5. Miguel Ángel Fernández-Torres
+    if (
+        re.search(r'Fern[aá]ndez\s*[-_]?\s*Torres', clean_a, re.IGNORECASE)
         and re.search(
             r'\b(M\s*\.?\s*[-–—]?\s*A\.?|Miguel\s+Ángel|Miguel\s+Angel)\b',
             clean_a,
@@ -74,7 +61,7 @@ if re.search(
     ):
         return "Fernández-Torres, M. A."
 
-    # Si no es uno de los 5 objetivos principales, aplicar normalización genérica
+    # Normalización genérica
     return generic_clean_author(clean_a)
 
 def format_single_name(name_str):
