@@ -1883,31 +1883,6 @@
     "orcid": "0000-0003-1425-6763"
   },
   {
-    "put_code": "65590346",
-    "title": "Probabilistic Topic Model for Context-Driven Visual Attention Understanding",
-    "type": "journal-article",
-    "journal": "IEEE Transactions on Circuits and Systems for Video Technology",
-    "date": "2019-01-01",
-    "year": "2020",
-    "doi": "10.1109/tcsvt.2019.2909427",
-    "pmid": "",
-    "pmcid": "",
-    "url": "https://doi.org/10.1109/tcsvt.2019.2909427",
-    "authors": [
-      "Fernández-Torres, M. Á.",
-      "González-Díaz, I.",
-      "Díaz-de-María, F."
-    ],
-    "source": "publications_no.bib",
-    "raw_type": "journal-article",
-    "bibtex_key": "FernandezTorresMA2020_17",
-    "volume": "30",
-    "number": "6",
-    "pages": "1653--1667",
-    "researcher": "Fernando Díaz-de-María",
-    "orcid": "0000-0002-6437-914X"
-  },
-  {
     "put_code": "85320328",
     "title": "Interpretable Global-Local Dynamics for the Prediction of Eye Fixations in Autonomous Driving Scenarios",
     "type": "journal-article",
@@ -2055,6 +2030,23 @@
     "raw_type": "journal-article",
     "researcher": "Carmen Peláez-Moreno",
     "orcid": "0000-0003-1425-6763"
+  },
+  {
+    "put_code": "65590346",
+    "title": "Probabilistic Topic Model for Context-Driven Visual Attention Understanding",
+    "type": "journal-article",
+    "journal": "IEEE Transactions on Circuits and Systems for Video Technology",
+    "date": "2019-01-01",
+    "year": "2019",
+    "doi": "10.1109/tcsvt.2019.2909427",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://dx.doi.org/10.1109/tcsvt.2019.2909427",
+    "authors": [],
+    "source": "{'value': 'F. Díaz-de-María'}",
+    "raw_type": "journal-article",
+    "researcher": "Fernando Díaz-de-María",
+    "orcid": "0000-0002-6437-914X"
   },
   {
     "put_code": "65596245",
