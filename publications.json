@@ -3797,19 +3797,15 @@
     "doi": "10.1109/maes.2013.6477866",
     "pmid": "",
     "pmcid": "",
-    "url": "https://doi.org/10.1109/maes.2013.6477866",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84897749098&partnerID=MN8TOARS",
     "authors": [
       "Gallardo-Antolín, A.",
-      "García-Moral, A. I.",
+      "García-Moral, A.I.",
       "Pereiro-Estevan, Y.",
-      "Díaz-de-María, F."
+      "Díaz-De-María, F."
     ],
-    "source": "publications_no.bib",
+    "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "bibtex_key": "GallardoAntolinA2013_9",
-    "volume": "28",
-    "number": "2",
-    "pages": "24--33",
     "researcher": "Fernando Díaz-de-María",
     "orcid": "0000-0002-6437-914X"
   },
