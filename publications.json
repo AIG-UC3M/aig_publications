@@ -2520,19 +2520,15 @@
     "doi": "10.1109/tcsvt.2016.2633418",
     "pmid": "",
     "pmcid": "",
-    "url": "https://doi.org/10.1109/tcsvt.2016.2633418",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-85043494920&partnerID=MN8TOARS",
     "authors": [
-      "Martínez-Enríquez, E.",
+      "Martinez-Enriquez, E.",
       "Cid-Sueiro, J.",
-      "Díaz-de-María, F.",
+      "Diaz-De-Maria, F.",
       "Ortega, A."
     ],
-    "source": "publications_no.bib",
+    "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "bibtex_key": "MartinezEnriquezE2018_15",
-    "volume": "28",
-    "number": "4",
-    "pages": "933--946",
     "researcher": "Fernando Díaz-de-María",
     "orcid": "0000-0002-6437-914X"
   },
