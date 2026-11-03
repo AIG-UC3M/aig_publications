@@ -3423,19 +3423,15 @@
     "doi": "10.1109/tcsvt.2013.2276857",
     "pmid": "",
     "pmcid": "",
-    "url": "https://doi.org/10.1109/tcsvt.2013.2276857",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84896528947&partnerID=MN8TOARS",
     "authors": [
-      "González-de-Suso, J. L.",
-      "Jiménez-Moreno, A.",
-      "Martínez-Enríquez, E.",
-      "Díaz-de-María, F."
+      "Gonzalez-De-Suso, J.L.",
+      "Jimenez-Moreno, A.",
+      "Martinez-Enriquez, E.",
+      "Diaz-De-Maria, F."
     ],
-    "source": "publications_no.bib",
+    "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "bibtex_key": "GonzalezDeSusoJL2014_11",
-    "volume": "24",
-    "number": "3",
-    "pages": "452--464",
     "researcher": "Fernando Díaz-de-María",
     "orcid": "0000-0002-6437-914X"
   },
