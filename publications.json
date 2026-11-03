@@ -4153,18 +4153,14 @@
     "doi": "10.1016/j.patcog.2010.11.018",
     "pmid": "",
     "pmcid": "",
-    "url": "https://doi.org/10.1016/j.patcog.2010.11.018",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-78651329531&partnerID=MN8TOARS",
     "authors": [
       "García-García, D.",
       "Parrado-Hernández, E.",
-      "Díaz-de-María, F."
+      "Diaz-De-Maria, F."
     ],
-    "source": "publications_no.bib",
+    "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "bibtex_key": "GarciaGarciaD2011_5",
-    "volume": "44",
-    "number": "5",
-    "pages": "1014--1022",
     "researcher": "Fernando Díaz-de-María",
     "orcid": "0000-0002-6437-914X"
   },
