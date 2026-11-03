@@ -2909,18 +2909,14 @@
     "doi": "10.1109/tmm.2016.2524995",
     "pmid": "",
     "pmcid": "",
-    "url": "https://doi.org/10.1109/tmm.2016.2524995",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84963813280&partnerID=MN8TOARS",
     "authors": [
-      "Jiménez-Moreno, A.",
-      "Martínez-Enríquez, E.",
-      "Díaz-de-María, F."
+      "Jimenez-Moreno, A.",
+      "Martinez-Enriquez, E.",
+      "Diaz-De-Maria, F."
     ],
-    "source": "publications_no.bib",
+    "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "bibtex_key": "JimenezMorenoA2016_13",
-    "volume": "18",
-    "number": "4",
-    "pages": "563--575",
     "researcher": "Fernando Díaz-de-María",
     "orcid": "0000-0002-6437-914X"
   },
