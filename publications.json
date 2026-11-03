@@ -3733,18 +3733,14 @@
     "doi": "10.1109/tmm.2013.2241414",
     "pmid": "",
     "pmcid": "",
-    "url": "https://doi.org/10.1109/tmm.2013.2241414",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84880833947&partnerID=MN8TOARS",
     "authors": [
       "Jiménez-Moreno, A.",
       "Martínez-Enríquez, E.",
-      "Díaz-de-María, F."
+      "Díaz-De-María, F."
     ],
-    "source": "publications_no.bib",
+    "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "bibtex_key": "JimenezMorenoA2013_10",
-    "volume": "15",
-    "number": "5",
-    "pages": "1094--1109",
     "researcher": "Fernando Díaz-de-María",
     "orcid": "0000-0002-6437-914X"
   },
