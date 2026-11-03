@@ -999,19 +999,15 @@
     "pmcid": "",
     "url": "https://doi.org/10.1175/AIES-D-23-0107.1",
     "authors": [
-      "Happé, T.",
-      "Wijnands, J. S.",
-      "Fernández-Torres, M. Á.",
-      "Scussolini, P.",
-      "Muntjewerf, L.",
-      "Coumou, D."
+      "T. Happé",
+      "J. S. Wijnands",
+      "M. Á. Fernández-Torres",
+      "P. Scussolini",
+      "L. Muntjewerf",
+      "D. Coumou"
     ],
-    "source": "publications_no.bib",
+    "source": "{'value': 'Crossref'}",
     "raw_type": "journal-article",
-    "bibtex_key": "THappe2024_4",
-    "volume": "",
-    "number": "",
-    "pages": "",
     "researcher": "Miguel Ángel Fernández Torres",
     "orcid": "0000-0002-0801-199X"
   },
