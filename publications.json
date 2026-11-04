@@ -4011,17 +4011,13 @@
     "doi": "10.1109/tcsvt.2012.2198089",
     "pmid": "",
     "pmcid": "",
-    "url": "https://doi.org/10.1109/tcsvt.2012.2198089",
+    "url": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84864692647&partnerID=MN8TOARS",
     "authors": [
       "Sanz-Rodríguez, S.",
-      "Díaz-de-María, F."
+      "Díaz-De-María, F."
     ],
-    "source": "publications_no.bib",
+    "source": "{'value': 'Scopus - Elsevier'}",
     "raw_type": "journal-article",
-    "bibtex_key": "SanzRodriguezS2012_8",
-    "volume": "22",
-    "number": "8",
-    "pages": "1199--1212",
     "researcher": "Fernando Díaz-de-María",
     "orcid": "0000-0002-6437-914X"
   },
