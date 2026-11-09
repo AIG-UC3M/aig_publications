@@ -215,16 +215,16 @@
     "orcid": "0000-0002-9322-3128"
   },
   {
-    "put_code": "",
+    "put_code": "232226116",
     "title": "Converting Raw Data Into Actionable Information: A topical review of artificial intelligence, machine learning, and digital twins in disaster management",
     "type": "journal-article",
     "journal": "IEEE Geoscience and Remote Sensing Magazine",
-    "date": "",
+    "date": "2026-06-01",
     "year": "2026",
-    "doi": "",
+    "doi": "10.1109/mgrs.2025.3642854",
     "pmid": "",
     "pmcid": "",
-    "url": "",
+    "url": "http://dx.doi.org/10.1109/mgrs.2025.3642854",
     "authors": [
       "Albayrak, A. R.",
       "Kuglitsch, M. M.",
@@ -237,7 +237,9 @@
     "bibtex_key": "ARAlbayrak2026_3",
     "volume": "",
     "number": "",
-    "pages": ""
+    "pages": "",
+    "researcher": "Miguel Ángel Fernández Torres",
+    "orcid": "0000-0002-0801-199X"
   },
   {
     "put_code": "212911179",
@@ -720,26 +722,28 @@
     "orcid": "0000-0002-9322-3128"
   },
   {
-    "put_code": "",
+    "put_code": "232339502",
     "title": "A Hybrid Neural Network with Multistage Feature Fusion for Detecting Heart Failure and Murmurs from Time–Frequency Representations of Phonocardiograms",
     "type": "journal-article",
     "journal": "Systems and Soft Computing",
-    "date": "",
+    "date": "2025-12-01",
     "year": "2025",
-    "doi": "",
+    "doi": "10.1016/j.sasc.2025.200391",
     "pmid": "",
     "pmcid": "",
     "url": "https://www.sciencedirect.com/science/article/pii/S2772941925002108",
     "authors": [
       "Fakhry, M.",
-      "Gallardo-Antolín, A."
+      "Gallardo Antolín, A."
     ],
     "source": "publications_no.bib",
     "raw_type": "journal-article",
     "bibtex_key": "MFakhry2025_1",
     "volume": "7",
     "number": "",
-    "pages": "200391"
+    "pages": "200391",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "orcid": "0000-0002-9322-3128"
   },
   {
     "put_code": "154175488",
@@ -1937,7 +1941,7 @@
     "url": "https://www.sciencedirect.com/science/article/pii/S0952197620302827",
     "authors": [
       "Fernández-Díaz, M. A.",
-      "Gallardo-Antolín, A."
+      "Gallardo Antolín, A."
     ],
     "source": "publications_no.bib",
     "raw_type": "journal-article",
@@ -4123,7 +4127,7 @@
     "url": "https://doi.org/10.1109/tcsvt.2011.2143330",
     "authors": [
       "Sanz-Rodríguez, S.",
-      "Díaz-de-María, F."
+      "Díaz de María, F."
     ],
     "source": "publications_no.bib",
     "raw_type": "journal-article",
@@ -4344,7 +4348,7 @@
       "Martínez-Enríquez, E.",
       "Jiménez-Moreno, A.",
       "Pellón, M. A.",
-      "Díaz-de-María, F."
+      "Díaz de María, F."
     ],
     "source": "publications_no.bib",
     "raw_type": "journal-article",
