@@ -1334,6 +1334,26 @@
     "orcid": "0000-0002-9322-3128"
   },
   {
+    "put_code": "232339502",
+    "title": "A hybrid neural network with multistage feature fusion for detecting heart failure and murmurs from time–frequency representations of phonocardiograms",
+    "type": "journal-article",
+    "journal": "Systems and Soft Computing",
+    "date": "2025-12-01",
+    "year": "2025",
+    "doi": "10.1016/j.sasc.2025.200391",
+    "pmid": "",
+    "pmcid": "",
+    "url": "https://doi.org/10.1016/j.sasc.2025.200391",
+    "authors": [
+      "Mahmoud Fakhry",
+      "Ascensión Gallardo-Antolín"
+    ],
+    "source": "{'value': 'Crossref'}",
+    "raw_type": "journal-article",
+    "researcher": "ASCENSIÓN GALLARDO-ANTOLÍN",
+    "orcid": "0000-0002-9322-3128"
+  },
+  {
     "put_code": "185116288",
     "title": "Alzheimer’s Disease Detection from Speech Using Shapley Additive Explanations for Feature Selection and Enhanced Interpretability",
     "type": "journal-article",
@@ -3260,6 +3280,39 @@
       "Jackie Ma"
     ],
     "source": "{'value': 'Crossref'}",
+    "raw_type": "journal-article",
+    "researcher": "Miguel Ángel Fernández Torres",
+    "orcid": "0000-0002-0801-199X"
+  },
+  {
+    "put_code": "232226116",
+    "title": "Converting Raw Data Into Actionable Information: A topical review of artificial intelligence, machine learning, and digital twins in disaster management",
+    "type": "journal-article",
+    "journal": "IEEE Geoscience and Remote Sensing Magazine",
+    "date": "2026-06-01",
+    "year": "2026",
+    "doi": "10.1109/mgrs.2025.3642854",
+    "pmid": "",
+    "pmcid": "",
+    "url": "http://dx.doi.org/10.1109/mgrs.2025.3642854",
+    "authors": [
+      "Arif R. Albayrak",
+      "Monique M. Kuglitsch",
+      "Jürg Luterbacher",
+      "Elena Xoplaki",
+      "Lorenzo Nava",
+      "Shanna McClain",
+      "Batuhan Osmanoglu",
+      "Brian Wee",
+      "Chester D. Karwatowski",
+      "Peter Williams",
+      "Miguel-Ángel Fernández-Torres",
+      "Eri Stern",
+      "Dylan Ray Boyd",
+      "Daniel D. Slate",
+      "Mythili Menon"
+    ],
+    "source": "{'value': 'Miguel Ángel Fernández Torres'}",
     "raw_type": "journal-article",
     "researcher": "Miguel Ángel Fernández Torres",
     "orcid": "0000-0002-0801-199X"
