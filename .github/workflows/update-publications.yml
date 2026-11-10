@@ -7,12 +7,6 @@ on:
 permissions:
   contents: write
 
-# Evita que este workflow se ejecute al mismo tiempo
-# que los otros workflows que también modifican main.
-concurrency:
-  group: actualizar-main
-  cancel-in-progress: false
-
 jobs:
   actualizar-publicaciones:
     runs-on: ubuntu-latest
