@@ -1,11 +1,8 @@
+
 name: Normalizar Autores en BIB
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - '**.bib'
+  workflow_call:
   workflow_dispatch:
 
 permissions:
@@ -23,6 +20,7 @@ jobs:
       - name: Descargar el repositorio
         uses: actions/checkout@v6
         with:
+          ref: main
           fetch-depth: 0
 
       - name: Configurar Python
