@@ -1,0 +1,37 @@
+name: Actualización semanal ORCID
+
+on:
+  schedule:
+    - cron: "5 6 * * 1"
+      timezone: "Europe/Madrid"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: actualizar-main
+  cancel-in-progress: false
+
+jobs:
+  otros-trabajos:
+    name: Actualizar otros trabajos
+    uses: ./.github/workflows/update-other-works.yml
+    secrets: inherit
+
+  publicaciones:
+    name: Actualizar publicaciones
+    needs: otros-trabajos
+    uses: ./.github/workflows/update-publications.yml
+    secrets: inherit
+
+  congresos:
+    name: Actualizar congresos
+    needs: publicaciones
+    uses: ./.github/workflows/update_conferences.yml
+    secrets: inherit
+
+  normalizar-bib:
+    name: Normalizar archivos BIB
+    needs: congresos
+    uses: ./.github/workflows/normalize_bib.yml
