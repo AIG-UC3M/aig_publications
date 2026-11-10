@@ -7,9 +7,6 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: actualizar-main
-  cancel-in-progress: false
 
 jobs:
   actualizar-otros-trabajos:
